@@ -1,0 +1,39 @@
+:root {
+  // Colors
+  --base-50: #fafaf9;
+  --base-100: #f5f5f4;
+  --base-200: #e7e5e4;
+  --base-300: #d6d3d1;
+  --base-400: #a8a29e;
+  --base-500: #78716c;
+  --base-600: #57534e;
+  --base-700: #44403c;
+  --base-800: #292524;
+  --base-900: #1c1917;
+  --base-950: #0c0a09;
+
+  --brand: #7F010D;
+  --brand-alt: #681109;
+
+  // Typography
+  --fs-xs: clamp(0.79rem, -0.3vi + 0.87rem, 0.64rem);
+  --fs-sm: clamp(0.89rem, -0.18vi + 0.93rem, 0.8rem);
+  --fs-md: clamp(1rem, 0vi + 1rem, 1rem);
+  --fs-lg: clamp(1.13rem, 0.25vi + 1.06rem, 1.25rem);
+  --fs-xl: clamp(1.27rem, 0.59vi + 1.12rem, 1.56rem);
+  --fs-xxl: clamp(1.42rem, 1.06vi + 1.16rem, 1.95rem);
+  --fs-xxxl: clamp(1.6rem, 1.68vi + 1.18rem, 2.44rem);
+
+  // Spacing
+  --sp-none: 0rem;
+  --sp-xs: 0.125rem;
+  --sp-sm: 0.25rem;
+  --sp-md: 0.5rem;
+  --sp-lg: 0.75rem;
+  --sp-xl: 1rem;
+  --sp-xxl: 2rem;
+  --sp-xxxl: 4rem;
+
+  // Misc
+  --border-radius: 8px;
+}

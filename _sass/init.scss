@@ -1,0 +1,18 @@
+html {
+  line-height: 1.5;
+  letter-spacing: 1%;
+  scroll-behavior: smooth;
+  transition: opacity 1s ease-in-out;
+  font-family: "Rubik", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  letter-spacing: -1%;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+}
+
+.small-text {
+  font-size: var(--fs-sm);
+  font-weight: 200;
+}
