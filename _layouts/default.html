@@ -9,11 +9,13 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="/assets/css/styles.css">
   <script type="text/javascript" src="/assets/javascript/navbar.js" defer></script>
+  <script type="text/javascript" src="/assets/javascript/button.js" defer></script>
   <title>{{ page.title }}</title>
 </head>
 <body>
   {% include components/navbar.html %}
-  <h1>Hazel Park Promise Zone</h1>
-  <h2>Test update</h2>
+  <div id="content">
+    {{ content }}
+  </div>
 </body>
 </html>

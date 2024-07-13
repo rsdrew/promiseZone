@@ -2,9 +2,6 @@ body {
   min-height: 100vh;
 }
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   background: var(--brand);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -12,7 +9,7 @@ nav {
 }
 nav .navbar {
   height: 100%;
-  max-width: 1250px;
+  max-width: 1400px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -51,21 +48,30 @@ nav .navbar .links li {
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
-  color: var(--base-100);
+  color: var(--base-200);
   font-weight: 600;
   text-transform: uppercase;
 }
 
-.links li:hover {
-  cursor: pointer;
-  background-color: var(--base-200) !important;
-  transition: background-color 200ms linear;
+.links li:not(.donate)::before {
+  content: "";
+  height: 4px;
+  width: 0;
+  border-radius: 100px;
+  background-color: var(--base-200);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all 200ms ease-in-out;
 }
 
-.links li a.hover,
-.links li i.arrow.hover {
-  color: var(--brand) !important;
-  transition: color 300ms ease-in-out;
+.links li:not(.donate):hover::before {
+  width: 100%;
+}
+
+.links li:hover:not(.donate) {
+  cursor: pointer;
 }
 
 .links li:hover .htmlcss-arrow,
@@ -91,6 +97,7 @@ nav .navbar .links li .sub-menu {
   background: var(--brand);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: var(--border-radius);
+  border: 4px solid var(--brand-alt);
   display: none;
   z-index: 2;
 }
@@ -132,7 +139,7 @@ nav .navbar .links li:hover .js-sub-menu {
 .links li {
   border-radius: var(--border-radius);
 }
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   nav .navbar {
     max-width: 100%;
     padding: 0.5rem 2rem;
@@ -146,7 +153,7 @@ nav .navbar .links li:hover .js-sub-menu {
     white-space: nowrap;
   }
 }
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   nav {
     /* position: relative; */
   }
@@ -241,6 +248,19 @@ nav .navbar .links li:hover .js-sub-menu {
   .navbar .nav-links.show-about-list .links .htmlcss-arrow,
   .navbar .nav-links.show-services-list .links .js-arrow {
     transform: rotate(180deg);
+  }
+  .links li.about-list::before,
+  .links li.services-list::before {
+    top: 3rem;
+  }
+
+  nav .navbar .links li .sub-menu {
+    margin-top: 0.25rem;
+    border: none;
+  }
+
+  .donate {
+    margin-top: 0.5rem;
   }
 }
 @media (max-width: 370px) {

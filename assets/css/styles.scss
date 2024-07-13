@@ -2,6 +2,8 @@
 ---
 @import "reset";
 @import "variables";
+@import "init";
 @import "utils";
 @import "home";
-@import "navbar";
+@import "components/navbar";
+@import "components/button";
