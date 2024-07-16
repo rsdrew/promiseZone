@@ -19,7 +19,7 @@ nav .navbar {
   padding: 0.5rem 2rem;
 }
 .navbar a {
-  font-family: "Roboto Slab", serif;
+  font-family: var(--ff-header);
   letter-spacing: 0%;
 }
 .navbar .logo a {

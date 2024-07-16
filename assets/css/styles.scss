@@ -1,9 +1,10 @@
 ---
 ---
-@import "reset";
-@import "variables";
-@import "init";
-@import "utils";
-@import "home";
+$baseurl: "{{ site.baseurl }}";
+@import "setup/reset";
+@import "setup/variables";
+@import "setup/init";
+@import "setup/utils";
+@import "pages/index";
 @import "components/navbar";
 @import "components/button";

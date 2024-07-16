@@ -1,10 +1,11 @@
 .button {
   border-radius: var(--border-radius);
-  padding: 1rem 2rem;
+  padding: 1em 2em;
+  margin: 1rem 1rem 1rem 0;
   background-color: var(--brand);
   color: var(--base-200);
   font-size: 1rem;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--ff-header);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -27,16 +28,25 @@
   box-shadow: 0px 0px 0px 0px var(--brand-alt);
 }
 
-.button.button-alt {
+.button.button--alt {
   background-color: var(--base-100);
-  color: var(--brand);
+  color: var(--base-800);
   box-shadow: 0px 0.5rem 0px 0px var(--base-300), var(--shadow);
 }
 
-.button.button-alt:hover {
+.button.button--alt:hover {
   box-shadow: 0px 0.25rem 0px 0px var(--base-300), 0 4px 8px 2px rgba(0,0,0,0.1);
 }
 
-.button.button-alt:active {
+.button.button--alt:active {
   box-shadow: 0px 0px 0px 0px var(--base-300);
+}
+
+.button--large {
+  font-size: 1.5rem;
+}
+@media (max-width: 700px) {
+  .button {
+    width: 100%;
+  }
 }

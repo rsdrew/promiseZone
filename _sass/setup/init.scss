@@ -4,13 +4,15 @@ html {
   scroll-behavior: smooth;
   transition: opacity 1s ease-in-out;
   font-family: "Rubik", sans-serif;
+  line-height: 1.3em;
   background-color: var(--base-200);
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   letter-spacing: -1%;
-  font-family: "Roboto Slab", serif;
+  font-family: var(--ff-header);
   font-weight: 700;
+  line-height: 1.1em;
 }
 
 #content {
