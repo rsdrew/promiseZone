@@ -1,10 +1,9 @@
 html {
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 1%;
   scroll-behavior: smooth;
   transition: opacity 1s ease-in-out;
   font-family: "Rubik", sans-serif;
-  line-height: 1.3em;
   background-color: var(--base-200);
 }
 
@@ -12,14 +11,143 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   letter-spacing: -1%;
   font-family: var(--ff-header);
   font-weight: 700;
-  line-height: 1.1em;
+  line-height: 1.1;
 }
 
 #content {
   padding: 0 1rem;
 }
 
-.small-text {
-  font-size: var(--fs-sm);
-  font-weight: 200;
+.container {
+  padding: var(--sp-xxxl);
+
+  & > * {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
 }
+
+/* TYPOGRAPHY */
+.text-header {
+  font-size: var(--fs-xxl);
+  font-weight: 700;
+  padding-bottom: var(--sp-xxl);
+
+  &--light {
+    color: var(--base-100);
+  }
+
+  &--dark {
+    color: var(--base-900);
+  }
+
+  &--brand {
+    color: var(--brand);
+  }
+
+  &--bold {
+    font-weight: 800;
+  }
+}
+
+p, .text-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 75ch;
+}
+
+.text-body {
+
+  &--light {
+    color: var(--base-200);
+  }
+
+  &--dark {
+    color: var(--base-800);
+  }
+
+  &--brand {
+    color: var(--brand);
+  }
+
+  &--bold {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  &--small {
+    font-size: var(--fs-sm);
+    font-weight: 200;
+  }
+}
+
+.text-lightest {
+  color: var(--base-100);
+}
+
+.text-light {
+  color: var(--base-200);
+}
+
+.text-dark {
+  color: var(--base-800);
+}
+
+.text-darkest {
+  color: var(--base-900);
+}
+
+.text-brand {
+  color: var(--brand);
+}
+
+.text-brand--alt {
+  color: var(--brand-alt);
+}
+
+.text-align-center {
+  text-align: center;
+}
+/* END TYPOGRAPHY */
+
+
+/* BACKGROUND COLORS */
+.bg-lightest {
+  background-color: var(--base-100);
+}
+
+.bg-light {
+  background-color: var(--base-200);
+}
+
+.bg-dark {
+  background-color: var(--base-800);
+}
+
+.bg-darkest {
+  background-color: var(--base-900);
+}
+/* END COLORS */
+
+/* LINES */
+.line {
+
+  background-color: var(--base-400);
+  border-radius: var(--border-radius);
+  
+  &--vertical {
+    width: 4px;
+    height: 100%;
+  }
+
+  &--horizontal {
+    height: 4px;
+    width: 100%;
+  }
+
+  &--brand {
+    background-color: var(--brand);
+  }
+}
+/* END LINES */

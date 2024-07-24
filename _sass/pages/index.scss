@@ -31,13 +31,60 @@
     font-weight: 400;
     font-family: var(--ff-body);
     max-width: 600px;
-    line-height: 1.3em;
+    line-height: 1.5;
   }
 
   &__button--apply-now {
     margin-right: 2rem;
   }
 
+}
+
+#tagline-wrapper {
+  background-color: var(--brand);
+}
+
+#tagline {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: var(--ff-header);
+  padding-bottom: 0;
+}
+
+#why-choose-text {
+  display: grid;
+  grid-template-columns: 1fr 4px 1fr;
+  gap: var(--sp-xl);
+  padding-top: var(--sp-xxl);
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  & > p {
+    max-width: 50ch;
+
+    @media (max-width: 700px) {
+      max-width: initial;
+    }
+  }
+
+  & > p:first-child {
+    margin-left: auto;
+
+    @media (max-width: 700px) {
+      margin-left: 0;
+      margin-bottom: var(--sp-xxl);
+    }
+  }
+
+  & > .line {
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 1000px) {
