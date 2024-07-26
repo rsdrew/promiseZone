@@ -87,6 +87,83 @@
   }
 }
 
+#making-a-difference-background {
+  background-image: url($baseurl + "/assets/images/backgrounds/graduation.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#making-a-difference-text {
+  padding: var(--sp-xl);
+  background: var(--base-100);
+  border-radius: var(--border-radius);
+  width: fit-content;
+}
+
+#stats-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xxl);
+  margin: var(--sp-xxxxl) auto;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 0;
+  }
+}
+
+.stat {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
+  text-align: center;
+  margin-inline: auto;
+
+  @media (max-width: 1000px) {
+    margin: var(--sp-xxl) auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transform: rotateZ(45deg);
+    background-color: var(--brand);
+    border-radius: var(--border-radius);
+    z-index: 0;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    top: 1.5rem;
+    font-family: var(--ff-header);
+    font-size: var(--fs-xxxl);
+    color: var(--base-100);
+    padding-bottom: var(--sp-xxl);
+    font-weight: 800;
+
+    @media (max-width: 1000px) {
+      padding-bottom: var(--sp-xxxl);
+    }
+  }
+
+  &__body {
+    line-height: 1.2;
+    font-size: var(--fs-lg);
+  }
+}
+
 @media (max-width: 1000px) {
   #hero {
     background-position: 30% 0;

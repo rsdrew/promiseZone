@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* TYPOGRAPHY */
 .text-header {
+  font-family: var(--ff-header);
   font-size: var(--fs-xxl);
   font-weight: 700;
   padding-bottom: var(--sp-xxl);
