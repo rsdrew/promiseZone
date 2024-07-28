@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--ff-header);
   font-size: var(--fs-xxl);
   font-weight: 700;
-  padding-bottom: var(--sp-xxl);
+  padding-bottom: var(--sp-xxxxl);
 
   &--light {
     color: var(--base-100);
@@ -129,6 +129,10 @@ p, .text-body {
 .bg-darkest {
   background-color: var(--base-900);
 }
+
+.bg-brand {
+  background-color: var(--brand);
+}
 /* END COLORS */
 
 /* LINES */
@@ -152,3 +156,13 @@ p, .text-body {
   }
 }
 /* END LINES */
+
+/* FONT FAMILIES */
+.ff-header {
+  font-family: var(--ff-header);
+}
+
+.ff-body {
+  font-family: var(--ff-body);
+}
+/* END FONT FAMILIIES*/

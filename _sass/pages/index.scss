@@ -202,6 +202,37 @@
   }
 }
 
+.services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-inline: auto;
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 50rem;
+  gap: var(--sp-xxxxl);
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-xxl);
+  }
+
+  .service {
+    display: flex;
+    flex-direction: row;
+    gap: var(--sp-xl);
+    align-items: center;
+
+    svg {
+      height: var(--sp-xxl);
+      width: var(--sp-xxl);
+    }
+  }
+}
+
+
+
 @media (max-width: 600px) {
   #hero {
     padding: 2rem;
