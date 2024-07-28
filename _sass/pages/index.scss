@@ -211,6 +211,13 @@
   width: -moz-fit-content;
   max-width: 50rem;
   gap: var(--sp-xxxxl);
+  justify-content: center;
+
+  @media (max-width: 500px) {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: var(--sp-xxl);
+  }
 
   &__column {
     display: flex;
@@ -227,6 +234,10 @@
     svg {
       height: var(--sp-xxl);
       width: var(--sp-xxl);
+    }
+
+    p {
+      text-wrap: nowrap;
     }
   }
 }
