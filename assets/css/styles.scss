@@ -8,4 +8,5 @@ $baseurl: "{{ site.baseurl }}";
 @import "pages/index";
 @import "components/navbar";
 @import "components/button";
+@import "components/testimonials";
 @import "components/footer";
