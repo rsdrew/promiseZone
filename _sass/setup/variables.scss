@@ -40,4 +40,6 @@
   // Misc
   --border-radius: 0.5rem;
   --shadow: 0px 8px 8px 2px rgba(0, 0, 0, 0.2);
+  --button-shadow-brand: 0px 0.5rem 0px 0px var(--brand-alt), var(--shadow);
+  --button-shadow-grey: 0px 0.5rem 0px 0px var(--base-400), var(--shadow);
 }

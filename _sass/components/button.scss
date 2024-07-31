@@ -10,7 +10,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   border: none;
-  box-shadow: 0px 0.5rem 0px 0px var(--brand-alt), var(--shadow);
+  box-shadow: var(--button-shadow-brand);
   position: relative;
   top: -0.5rem;
   left: 0;
@@ -39,7 +39,7 @@
 }
 
 .button.button--alt:active {
-  box-shadow: 0px 0px 0px 0px var(--base-300);
+  box-shadow: 0px 0px 0px 0px var(--base-200);
 }
 
 .button--large {
