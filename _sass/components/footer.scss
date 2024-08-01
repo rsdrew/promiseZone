@@ -1,3 +1,36 @@
+.newsletter {
+
+  box-shadow: var(--shadow--top);
+
+  h2 {
+    padding-bottom: var(--sp-xxl);
+  }
+
+  p {
+    padding-bottom: var(--sp-xxxl);
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    gap: var(--sp-xxl);
+    max-width: 60rem;
+    margin-inline: auto;
+
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+
+      button {
+        flex-grow: 1;
+      }
+    }
+
+    input[type="email"] {
+      flex-grow: 1;
+    }
+  }
+}
+
 .footer {
   background-color: var(--base-900);
   padding: var(--sp-xxl);

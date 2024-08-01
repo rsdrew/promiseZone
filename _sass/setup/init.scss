@@ -1,6 +1,5 @@
 html {
   line-height: 1.6;
-  letter-spacing: 1%;
   scroll-behavior: smooth;
   transition: opacity 1s ease-in-out;
   font-family: "Rubik", sans-serif;
@@ -14,12 +13,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.1;
 }
 
+input, textarea {
+  border-radius: var(--border-radius);
+  padding: var(--sp-lg);
+  font-size: var(--fs-lg);
+  box-shadow: var(--shadow);
+  min-width: 20rem;
+  min-height: var(--sp-xxxxl);
+  border: none;
+  background-color: var(--base-100);
+}
+
 #content {
   padding: 0 1rem;
 }
 
 .container {
-  padding: var(--sp-xxxl);
+  padding: var(--sp-xxxxl);
 
   @media (max-width: 1000px) {
     padding-inline: var(--sp-xxl);
@@ -39,7 +49,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /* TYPOGRAPHY */
 .text-subheader {
   font-family: var(--ff-header);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-xxl);
   font-weight: 600;
   padding-bottom: var(--sp-xxxl);
 
@@ -62,7 +72,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .text-header {
   font-family: var(--ff-header);
-  font-size: var(--fs-xxl);
+  font-size: var(--fs-xxxl);
   font-weight: 700;
   padding-bottom: var(--sp-xxxxl);
 
@@ -84,7 +94,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 p, .text-body {
-  font-size: 1rem;
+  font-size: var(--fs-lg);
   font-weight: 400;
   line-height: 1.6;
   max-width: 75ch;
@@ -107,7 +117,7 @@ p, .text-body {
   &--bold {
     font-family: var(--ff-header);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: var(--fs-xl);
   }
 
   &--small {
@@ -207,3 +217,9 @@ p, .text-body {
   font-family: var(--ff-body);
 }
 /* END FONT FAMILIIES*/
+
+/* MISC */
+.shadow {
+  box-shadow: var(--shadow);
+}
+/* END MISC */
