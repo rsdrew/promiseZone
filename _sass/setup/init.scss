@@ -93,6 +93,41 @@ input, textarea {
   }
 }
 
+.text-page-header {
+  position: relative;
+  font-family: var(--ff-header);
+  font-size: var(--fs-xxxxl);
+  font-weight: 900;
+  margin-bottom: var(--sp-xxxl);
+  width: -moz-fit-content;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background-color: var(--brand);
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+  }
+}
+
+.text-page-subheader {
+  font-family: var(--ff-body);
+  font-size: var(--fs-lg);
+  font-weight: 400;
+  max-width: 75ch;
+  line-height: 1.6;
+  padding-bottom: var(--sp-xxxl);
+
+  &--bold {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+  }
+}
+
 p, .text-body {
   font-size: var(--fs-lg);
   font-weight: 400;
