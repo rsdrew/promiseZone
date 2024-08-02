@@ -1,15 +1,9 @@
 .testimonials {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: var(--sp-xxl);
-
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .testimonial {
@@ -19,6 +13,15 @@
   overflow: hidden;
   background-color: var(--base-100);
   box-shadow: var(--shadow);
+  flex-basis: 31%;
+
+  @media (max-width: 1400px) {
+    flex-basis: 48%;
+  }
+
+  @media (max-width: 900px) {
+    flex-basis: 100%;
+  }
 
   &__top {
     padding: var(--sp-xxl);

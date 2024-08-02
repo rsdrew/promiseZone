@@ -51,6 +51,7 @@ nav .navbar .links li {
   color: var(--base-200);
   font-weight: 600;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .links li:not(.donate)::before {

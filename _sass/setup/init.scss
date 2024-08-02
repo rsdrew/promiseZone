@@ -18,7 +18,7 @@ input, textarea {
   padding: var(--sp-lg);
   font-size: var(--fs-lg);
   box-shadow: var(--shadow);
-  min-width: 20rem;
+  min-width: 10rem;
   min-height: var(--sp-xxxxl);
   border: none;
   background-color: var(--base-100);
@@ -101,6 +101,7 @@ input, textarea {
   margin-bottom: var(--sp-xxxl);
   width: -moz-fit-content;
   width: fit-content;
+  text-align: center;
 
   &::after {
     content: "";
