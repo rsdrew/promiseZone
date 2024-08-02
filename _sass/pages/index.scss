@@ -138,6 +138,7 @@
     background-color: var(--brand);
     border-radius: var(--border-radius);
     z-index: 0;
+    box-shadow: var(--shadow);
   }
 
   & > * {
