@@ -1,0 +1,12 @@
+<div class="staff">
+  <div class="staff__top">
+    <div class="staff__name text-align-center text-subheader text-subheader--light">{{ include.name }}</div>
+    <div class="staff__position text-align-center text-small text-italic text-body--light">{{ include.position }}</div>
+  </div>
+  <div class="staff__middle">
+    <img class="staff__picture" src="{{ site.baseurl }}/assets/images/staff/{{ include.filename }}.jpg" alt="{{ include.name }}" height="300" width="300" />
+  </div>
+  <div class="staff__bottom">
+    <p class="staff__text"><span class="text-body--bold">{{ include.name }}</span> {{ include.text }}</p>
+  </div>
+</div>

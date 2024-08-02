@@ -63,6 +63,11 @@ nav .navbar .links li {
   width: 100%;
 }
 
+.sub-menu a {
+  display: block;
+  width: 100%;
+}
+
 .links li:not(.donate)::before {
   content: "";
   height: 4px;
@@ -149,7 +154,7 @@ nav .navbar .links li:hover .js-sub-menu {
 .links li {
   border-radius: var(--border-radius);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   nav .navbar {
     max-width: 100%;
     padding: 0.5rem 2rem;
@@ -162,11 +167,7 @@ nav .navbar .links li:hover .js-sub-menu {
     padding: 0.5rem;
     white-space: nowrap;
   }
-}
-@media (max-width: 1200px) {
-  nav {
-    /* position: relative; */
-  }
+
   .navbar .bx-menu {
     display: block;
     cursor: pointer;
