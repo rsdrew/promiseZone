@@ -43,3 +43,19 @@ links.forEach((link) => {
     }
   });
 });
+
+// Have the navbar disappear and reappear when scrolling
+const nav = document.querySelector("nav");
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+  if (lastScrollY < window.scrollY) {
+    // Going down
+    nav.classList.add("navbar--hidden");
+  } else {
+    // Going up
+    nav.classList.remove("navbar--hidden");
+  }
+
+  lastScrollY = window.scrollY;
+});
