@@ -1,0 +1,102 @@
+.board-meetings {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--sp-xxl);
+  padding-bottom: var(--sp-xxxxl);
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+
+    .line {
+      height: 4px;
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-xxl);
+
+    &__dates,
+    &__location,
+    &__time {
+      display: grid;
+      grid-template-columns: var(--sp-xxxxl) 1fr;
+      align-items: center;
+      gap: var(--sp-xxl);
+    }
+  }
+
+  svg {
+    fill: var(--brand);
+    height: var(--sp-xxxxl);
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+.board-members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: var(--sp-xxl);
+}
+
+.board-member {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--base-100);
+  box-shadow: var(--shadow);
+  flex-basis: 31%;
+
+  @media (max-width: 1400px) {
+    flex-basis: 48%;
+  }
+
+  @media (max-width: 900px) {
+    flex-basis: 100%;
+  }
+
+  &__top {
+    padding: var(--sp-xxl);
+    padding-bottom: var(--sp-xl);
+    background-color: var(--brand);
+  }
+
+  &__middle {
+    background: linear-gradient(to bottom, var(--brand) 50%, var(--base-100) 50%);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__bottom {
+    padding: var(--sp-xxl);
+    padding-top: var(--sp-xl);
+    background-color: var(--base-100);
+    flex-grow: 1;
+  }
+
+  &__picture {
+    border-radius: 50%;
+    border: var(--sp-md) solid var(--brand);
+    max-width: 80vw;
+    max-height: 80vw;
+    object-fit: cover;
+  }
+
+  &__name {
+    padding-bottom: var(--sp-lg);
+  }
+
+  &__position {
+    padding-bottom: var(--sp-xl);
+  }
+
+  &__other-job {
+    max-width: 100%;
+  }
+}

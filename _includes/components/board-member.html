@@ -1,0 +1,12 @@
+<div class="board-member">
+  <div class="board-member__top">
+    <div class="board-member__name text-align-center text-subheader text-subheader--light">{{ include.name }}</div>
+  </div>
+  <div class="board-member__middle">
+    <img class="board-member__picture" src="{{ site.baseurl }}/assets/images/board/{{ include.filename }}.jpg" alt="{{ include.name }}" height="300" width="300" />
+  </div>
+  <div class="board-member__bottom">
+    <div class="board-member__position text-header text-align-center text-body--dark">{{ include.position }}</div>
+    <p class="board-member__other-job text-small text-italic text-align-center text-body-dark">{{ include.other-job }}</p>
+  </div>
+</div>
