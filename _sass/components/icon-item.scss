@@ -1,0 +1,73 @@
+.icon-item-list-background {
+  background-color: var(--base-100);
+  box-shadow: var(--shadow);
+  padding: var(--sp-xxxl);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--sp-xxxxl);
+}
+
+.icon-item-list {
+  display: grid;
+  justify-items: center;
+  column-gap: var(--sp-xxxxl);
+  row-gap: var(--sp-xxxxl);
+  
+
+  &--college-preparation {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--college-success-coaching {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+
+      .icon-item:last-child {
+        grid-column-end: span 2;
+      }
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+
+      .icon-item:last-child {
+        grid-column-end: auto;
+      }
+    }
+  }
+
+  .icon-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+
+    &__svg {
+      fill: var(--brand);
+      height: var(--sp-xxxxxl);
+      margin-bottom: var(--sp-xl);
+    }
+
+    &__title {
+      font-family: var(--ff-header);
+      font-size: var(--fs-xl);
+      font-weight: 600;
+      padding-bottom: var(--sp-xl);
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+  }
+}
