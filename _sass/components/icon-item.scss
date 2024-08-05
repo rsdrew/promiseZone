@@ -25,7 +25,8 @@
     }
   }
 
-  &--college-success-coaching {
+  &--college-success-coaching,
+  &--sat-test-prep {
     grid-template-columns: repeat(3, 1fr);
 
     @media (max-width: 1000px) {
