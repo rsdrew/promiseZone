@@ -1,0 +1,15 @@
+.two-column-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60rem;
+  gap: var(--sp-xxxxl);
+  padding-bottom: var(--sp-xxxxl);
+
+  h2 {
+    padding-bottom: 0;
+  }
+
+  @media (max-width:700px) {
+    grid-template-columns: 1fr;
+  }
+}
