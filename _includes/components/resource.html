@@ -1,0 +1,12 @@
+<div class="resource">
+  <div class="resource__logo">
+    {{ include.logo | replace: "BASEURL", site.baseurl | safe }}
+  </div>
+  <div class="resource__content">
+    <div class="resource__title text-header">{{ include.title }}</div>
+    <div class="resource__description text-body">{{ include.description }}</div>
+    <a class="resource__button" href="{{ include.link }}" target="_blank">
+      <button class="button">Visit</button>
+    </a>
+  </div>
+</div>

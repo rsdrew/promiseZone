@@ -1,0 +1,89 @@
+.resources {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xxl);
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+
+
+  .resource {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background-color: var(--base-100);
+
+    &__logo {
+      padding: var(--sp-xxl);
+      background-color: var(--base-700);
+      width: 100%;
+      height: 190px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+      svg {
+        fill: var(--base-100);
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+
+        path {
+          fill: var(--base-100);
+        }
+      }
+
+      .hazel-park-college-advising-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        p {padding-bottom: 0;}
+      }
+
+      #hazel-park {
+        font-weight: 200;
+      }
+    }
+
+    &__content {
+      padding: var(--sp-xxl);
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      padding-bottom: var(--sp-xxl);
+    }
+
+    &__description {
+      flex-grow: 1;
+      padding-bottom: var(--sp-xxxxl);
+    }
+
+    &__button {
+      width: 100%;
+
+      .button {
+        width: 100%;
+      }
+    }
+  } 
+}
