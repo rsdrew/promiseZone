@@ -1,0 +1,43 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+}
+
+.impact-report-buttons {
+  width: 100%;
+  padding-bottom: var(--sp-xxl);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--sp-xxxxl);
+
+  button {
+    min-width: fit-content;
+    width: 20rem;
+    text-wrap: nowrap;
+  }
+
+  @media (max-width: 800px) {
+    gap: var(--sp-xxl);
+    
+    button {
+      width: 100%;
+    }
+  }
+}
