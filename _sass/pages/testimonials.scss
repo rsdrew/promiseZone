@@ -45,6 +45,7 @@
   &__picture {
     border-radius: 50%;
     border: var(--sp-md) solid var(--brand);
+    object-fit: cover;
   }
 
   &__name {
