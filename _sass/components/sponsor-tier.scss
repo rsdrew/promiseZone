@@ -1,0 +1,44 @@
+.sponsor-tiers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-xxl);
+  margin-bottom: var(--sp-xxxxl);
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sponsor-tier {
+
+  background-color: var(--base-100);
+  padding: var(--sp-xxl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+
+  &__title {
+    font-family: var(--ff-header);
+    font-size: var(--fs-xxl);
+    font-weight: 700;
+  }
+
+  &__price {
+    font-family: var(--ff-header);
+    color: var(--brand);
+    font-size: var(--fs-xxxxl);
+    font-weight: 700;
+  }
+
+  &__contributes,
+  &__includes {
+    padding-bottom: var(--sp-xl);
+  }
+
+  .line {
+    margin: var(--sp-md) 0;
+  }
+}

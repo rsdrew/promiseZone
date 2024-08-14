@@ -1,0 +1,47 @@
+<div class="sponsor-tier">
+  <p class="sponsor-tier__title">{{ include.title }}</p>
+  <p class="sponsor-tier__price">{{ include.price }}</p>
+  <div class="line line--horizontal"></div>
+  <div class="sponsor-tier__contributes">
+    <p class="text-body text-body--bold">Contributes</p>
+    <p>Mentoring for <span class="text-bold">{{include.num-mentoring}}</span> students</p>
+    {% if include.num-tuition != "" %}
+    <div class="line line--horizontal line--light"></div>
+    <p>OCC tuition for <span class="text-bold">{{include.num-tuition}}</span> students</p>
+    {% endif %}
+  </div>
+  <div class="sponsor-tier__includes">
+    <p class="text-body text-body--bold">Includes</p>
+
+    <p>Business promoted as a community funder to over 1,500 contacts via e-blasts, social media, and the Promise Zone website</p>
+    <div class="line line--horizontal line--light"></div>
+
+    {% if include.ad-size == "full-and-half" %}
+      <p><span class="text-bold">Full-page ad</span> (5” x 8”) and <span class="text-bold">half-page ad</span> (5" x 4") in program booklet</p>
+    {% elsif include.ad-size == "full" %}
+      <p><span class="text-bold">Full-page ad</span> (5” x 8”) in program booklet</p>
+    {% elsif include.ad-size == "half" %}
+      <p><span class="text-bold">Half-page ad</span> (5” x 4”) in program booklet</p>
+    {% elsif include.ad-size == "quarter" %}
+      <p><span class="text-bold">Quarter-page ad</span> (2.5” x 4”) in program booklet</p>
+    {% endif %}
+
+    <div class="line line--horizontal line--light"></div>
+    <p>Company name and logo listed as <span class="text-bold">{{ include.sponsor-level }}</span> Sponsor on slideshow</p>
+
+    {% if include.num-tickets-for-dinner != "" %}
+      <div class="line line--horizontal line--light"></div>
+      <p><span class="text-bold">{{ include.num-tickets-for-dinner }}</span> tickets for dinner</p>
+    {% endif %}
+
+    {% if include.logo-displayed == "true" %}
+      <div class="line line--horizontal line--light"></div>
+      <p>Company logo displayed on premium, reserved table</p>
+    {% endif %}
+
+    {% if include.promotional-table == "true" %}
+      <div class="line line--horizontal line--light"></div>
+      <p>Promotional table setup in banquet center foyer</p>
+    {% endif %}
+  </div>
+</div>

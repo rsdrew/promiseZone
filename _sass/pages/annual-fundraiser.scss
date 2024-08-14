@@ -1,0 +1,42 @@
+.annual-fundraiser-ticket-button-wrapper {
+  padding-bottom: var(--sp-xxxxl);
+  display: flex;
+  justify-content: center;
+}
+
+.annual-fundraiser-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xxxxl);
+  background-color: var(--brand);
+  border-radius: var(--border-radius);
+  padding: var(--sp-xxxxl);
+  margin-bottom: var(--sp-xxxxl);
+  box-shadow: var(--shadow);
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg {
+    height: var(--sp-xxxxl);
+    fill: var(--base-100);
+    margin-bottom: var(--sp-xxl);
+  }
+}
+
+.annual-fundraiser-download-form-text {
+  padding-bottom: var(--sp-xxl);
+}
+
+.annual-fundraiser-download-form-button {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+}

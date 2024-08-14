@@ -47,7 +47,7 @@
       color: var(--base-100);
       text-transform: uppercase;
       font-family: var(--ff-header);
-      font-size: var(--fs-lg);
+      font-size: var(--fs-xl);
       font-weight: 600;
       padding-bottom: var(--sp-lg);
     }
@@ -55,6 +55,7 @@
     &__item {
       color: var(--base-200);
       font-family: var(--ff-body);
+      font-size: var(--fs-lg);
     }
   }
 
