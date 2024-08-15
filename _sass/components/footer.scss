@@ -31,12 +31,15 @@
   }
 }
 
-.footer {
+footer {
   background-color: var(--base-900);
+}
+
+.footer {
   padding: var(--sp-xxl);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--sp-xxl);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--sp-xxxxl);
 
   &__column {
     display: flex;
@@ -76,5 +79,15 @@
 
   a:not(.footer__email) {
     text-decoration: none;
+  }
+}
+
+.website-by {
+  width: 100%;
+  margin-inline: auto;
+  padding-bottom: var(--sp-xxl);
+
+  a {
+    color: var(--base-100);
   }
 }
