@@ -5,6 +5,7 @@ $baseurl: "{{ site.baseurl }}";
 @import "setup/variables";
 @import "setup/init";
 @import "setup/utils";
+@import "setup/animations";
 @import "pages/index";
 @import "pages/testimonials";
 @import "pages/staff";

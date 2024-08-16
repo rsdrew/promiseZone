@@ -1,0 +1,46 @@
+@mixin slide($direction, $distance, $delay:"") {
+  opacity: 0;
+  transform: translate#{$direction}($distance);
+  transition: transform 0.5s ease-out #{$delay}, opacity 0.5s ease-out #{$delay};
+
+  &.visible {
+    opacity: 1;
+    transform: translate#{$direction}(0);
+  }
+}
+
+.slide {
+
+  $slide-distance: 20px;
+
+  &-up {
+    &:nth-child(3n + 1) {
+      @include slide("Y", $slide-distance, "0s");
+    }
+
+    &:nth-child(3n + 2) {
+      @include slide("Y", $slide-distance, "0.2s");
+    }
+
+    &:nth-child(3n) {
+      @include slide("Y", $slide-distance, "0.4s");
+    }
+  }
+
+  &-left {
+    @include slide("X", $slide-distance);
+  }
+
+  &-right {
+    @include slide("X", -$slide-distance);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+
+  &.visible {
+    opacity: 1;
+  }
+}
