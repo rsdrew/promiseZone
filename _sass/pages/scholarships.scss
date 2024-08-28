@@ -73,6 +73,7 @@
   background-color: var(--base-100);
   outline: 6px solid var(--brand);
   border-radius: 50%;
+  transition: background-color 0.2s ease;
 }
 
 /* On mouse-over, add a grey background color */
