@@ -1,0 +1,20 @@
+<div id="{{include.id}}" class="card scholarship-option {% if include.selected == 'true' %} selected {% endif %}">
+  <div class="scholarship-option__logo">
+    {{ include.logo }}
+  </div>
+  <h4 class="text-body--bold text-align-center pb-xxxl">{{ include.name }}</h4>
+  <div class="scholarship-option__criteria">
+    <div class="scholarship-option__criteria__item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>{{ include.criteria--attending }}</p>  
+    </div>
+    <div class="scholarship-option__criteria__item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>{{ include.criteria--grade }}</p>
+    </div>
+    <div class="scholarship-option__criteria__item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>{{ include.criteria--semester }}</p>  
+    </div>
+  </div>
+</div>

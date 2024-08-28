@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   line-height: 1.1;
 }
 
-input, textarea {
+input[type="text"], input[type="email"], textarea {
   border-radius: var(--border-radius);
   padding: var(--sp-lg);
   font-size: var(--fs-lg);
@@ -209,6 +209,16 @@ p, .text-body {
 }
 /* END TYPOGRAPHY */
 
+/* SVGs */
+  svg.fill-brand {
+    fill: var(--brand);
+  }
+
+  svg.fill-white {
+    fill: var(-base-100);
+  }
+/* END SVGs */
+
 
 /* BACKGROUND COLORS */
 .bg-lightest {
@@ -268,6 +278,47 @@ p, .text-body {
 }
 /* END FONT FAMILIIES*/
 
+/* WIDTH */
+   .w-100 {
+    width: 100% !important;
+   }
+
+   .max-w-100 {
+    max-width: 100% !important;
+   }
+/* END WIDTH */
+
+/* PADDING AND MARGIN */
+  $sizes: (
+    none: var(--sp-none),
+    xs: var(--sp-xs),
+    sm: var(--sp-sm),
+    md: var(--sp-md),
+    lg: var(--sp-lg),
+    xl: var(--sp-xl),
+    xxl: var(--sp-xxl),
+    xxxl: var(--sp-xxxl),
+    xxxxl: var(--sp-xxxxl)
+  );
+
+  @mixin generate-padding-and-margin($property-shorthand, $full-property-name) {
+    @each $size, $value in $sizes {
+      .#{$property-shorthand}-#{$size} {
+        #{$full-property-name}: $value !important;
+      }
+    }
+  }
+
+  @include generate-padding-and-margin("p", "padding");
+  @include generate-padding-and-margin("m", "margin");
+
+  @each $side-shorthand, $full-side-name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+    @include generate-padding-and-margin("p#{$side-shorthand}", "padding-#{$full-side-name}");
+    @include generate-padding-and-margin("m#{$side-shorthand}", "margin-#{$full-side-name}");
+  }
+
+/* END PADDING AND MARGIN */
+
 /* MISC */
 .shadow {
   box-shadow: var(--shadow);
@@ -281,5 +332,38 @@ p, .text-body {
   @media (max-width: 750px) {
     height: 1000px;
   }
+}
+
+.card {
+  background-color: var(--base-100);
+  padding: var(--sp-xxl);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style for the selected state */
+input[type="radio"]:checked + .radio {
+  background-color: var(--brand);
+}
+
+.hidden {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
+
+  & * {
+    overflow: hidden;
+  }
+
+&.show {
+  grid-template-rows: 1fr;
+}
 }
 /* END MISC */

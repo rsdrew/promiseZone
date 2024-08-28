@@ -1,0 +1,61 @@
+/* Create a custom radio button */
+.grade-radio-button-wrapper {
+  position: absolute;
+  left: 0;
+  width: var(--sp-xl);
+  height: var(--sp-xl);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.grade-radio-button-real-input {
+  margin: 0;
+}
+
+.grade-radio-button-real-input,
+.grade-radio-button-checkmark {
+  height: var(--sp-xl) !important;
+  width: var(--sp-xl) !important;
+  cursor: pointer;
+  outline: 6px solid var(--brand);
+}
+
+.grade-radio-button-checkmark {
+  position: relative;
+  display: inline-block;
+  background-color: var(--base-100);
+  outline: 6px solid var(--brand);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* On mouse-over, add a grey background color */
+.grade-radio-button-checkmark:hover {
+  background-color: var(--base-200);
+}
+
+/* When the radio button is checked, add a background */
+input:checked ~ .grade-radio-button-checkmark {
+  background-color: var(--brand);
+}
+
+.grade-radio-button-grade {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // left: is caculated in grade-range-radio-option.js
+  text-wrap: nowrap;
+}
+
+.grade-radio-button-percentage {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--sp-xl);
+  text-wrap: nowrap;
+  font-size: var(--fs-lg);
+}

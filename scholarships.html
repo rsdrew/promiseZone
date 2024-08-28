@@ -3,8 +3,152 @@ layout: default
 title: Scholarships
 ---
 
+<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/download-waiver.js" defer></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/scholarships.js" defer></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/grade-range-radio-option.js" defer></script>
+
 <div class="container">
-  <h1 class="text-page-header">See what the Promise Zone can do for you!</h1>
+  <h1 class="text-page-header">Apply for your scholarship today!</h1>
   <h2 class="text-page-subheader"><span class="text-page-subheader--bold">We are dedicated to helping students in any scenario.</span> Complete the form below to discover your next steps to receive a Hazel Park Promise Zone Scholarship!</h2>
+
+  <h3 class="text-header text-align-center pb-xl">General Information</h3>
+  <p class="text-align-center pb-xxl">Review the information below that applies to ALL scholarship recipients.</p>
+
+  <div class="general-information-list card mb-xxxxl">
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students must attend a college/university in the state of Michigan</p>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students must reapply for a scholarship every semester</p>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students must complete FAFSA every year</p>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students must maintain a 2.0 GPA every semester</p>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students may receive scholarships for up to 6 years after graduation</p>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
+      <p>Students must fill out the waiver below and send it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if they haven’t already</p>
+    </div>
+    <div class="general-information-item">
+      <button type="button" id="download-waiver" class="button text-align-center">Download Waiver</button>
+    </div>
+  </div>
+
+  <h3 class="text-header text-align-center pb-xxl">Are you a Hazel Park resident?</h3>
+  <div class="card resident-options-card mb-xxxxl">
+    <div class="resident-options mb-xl">
+      <label class="resident-radio-button-label">Yes
+        <input type="radio" name="resident" checked value="true">
+        <span class="resident-radio-button-checkmark"></span>
+      </label>
+      <label class="resident-radio-button-label">No
+        <input type="radio" name="resident" value="false">
+        <span class="resident-radio-button-checkmark"></span>
+      </label>
+    </div>
+    <p class="text-italic text-align-center max-w-100">Hazel Park residents have access to all of our scholarships and services.</p>
+    <p class="text-italic text-align-center max-w-100">Non-residents have access to our summer scholarship and all of our services.</p>
+  </div>
+
+  <h3 class="text-header text-align-center pb-xl">Select the scholarship that fits your scenario</h3>
+  <div id="non-resident-explanation" class="hidden">
+    <p class="text-italic text-align-center max-w-100">Non-residents only have access to our summer scholarship.<br/>However, they still have access to all of our other services.</p>
+  </div>
+
+  <div class="scholarship-options pt-xl pb-xxxxl">
+    {% include components/scholarship-option.html 
+      logo="<p id='scholarship-option--logo--occ' class='text-header text-header--brand text-align-center'>OCC</p>"
+      name="Oakland Community</br>College Scholarship"
+      criteria--attending="Attending OCC"
+      criteria--grade="Freshman or Sophomore"
+      criteria--semester="Fall or Winter semester"
+      selected="true"
+    %}
+
+    {% include components/scholarship-option.html 
+      logo="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z'/></svg>"
+      name="University</br>Scholarship"
+      criteria--attending="Attending a non-OCC college or university"
+      criteria--grade="Freshman or Sophomore"
+      criteria--semester="Fall or Winter semester"
+    %}
+
+    {% include components/scholarship-option.html 
+      logo='<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+              viewBox="0 0 398.97 398.97" xml:space="preserve">
+            <g>
+              <g id="Layer_5_59_">
+                <g>
+                  <path d="M225.092,276.586c-7.101,4.355-16.195,6.754-25.607,6.754c-9.412,0-18.506-2.398-25.607-6.754L57.946,205.484
+                    c0,0-10.464-6.414-10.464,8.116c0,16.5,0,66,0,66c0,0.66,0,3.973,0,5c0,37.402,68.053,77.723,152,77.723s152-40.32,152-77.723
+                    c0-1.027,0-4.34,0-5c0,0,0-52.502,0-70.003c0-11.663-7.439-5.964-7.439-5.964L225.092,276.586z"/>
+                  <path d="M392.289,148.927c8.908-5.463,8.908-14.403,0-19.867L215.681,40.745c-8.908-5.463-23.485-5.463-32.393,0L6.681,129.06
+                    c-8.908,5.463-8.908,14.403,0,19.867l176.607,108.315c8.908,5.463,23.485,5.463,32.393,0"/>
+                  <path d="M384.985,309.475c0-29.906,0-119.625,0-119.625s0.083-5.666-3.279-3.795c-2.697,1.501-9.308,5.186-11.637,7.212
+                    c-2.689,2.337-2.083,7.583-2.083,7.583s0,81.469,0,108.625c0,1.542-1.325,2.278-1.957,2.65
+                    c-6.105,3.589-10.21,10.214-10.21,17.809c0,11.414,9.252,20.667,20.667,20.667c11.414,0,20.666-9.253,20.666-20.667
+                    c0-7.624-4.135-14.27-10.279-17.85C386.262,311.728,384.985,311.016,384.985,309.475z"/>
+                </g>
+              </g>
+            </g>
+            </svg>'
+      name="Junior/Senior</br>Scholarship"
+      criteria--attending="Attending any college or university"
+      criteria--grade="Junior or Senior (in college)"
+      criteria--semester="Fall or Winter semester"
+    %}
+
+    {% include components/scholarship-option.html 
+      id="scholarship-option--summer"
+      logo='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>'
+      name="Summer</br>Scholarship"
+      criteria--attending="Attending any college or university"
+      criteria--grade="Any grade"
+      criteria--semester="Spring or Summer semester"
+    %}
+
+  </div>
+
+  <h3 class="text-header text-align-center pb-xxl">What grade did you start attending Hazel Park Schools?</h3>
+  <div class="card">
+    <div id="grade-range-background">
+      <div id="grade-range-fill"></div>
+      {% include components/grade-range-radio-option.html
+        grade="5th or lower"
+        percentage="100"
+        checked="true"
+      %}
+      {% include components/grade-range-radio-option.html
+        grade="6th-8th"
+        percentage="90"
+      %}
+      {% include components/grade-range-radio-option.html
+        grade="9th"
+        percentage="75"
+      %}
+      {% include components/grade-range-radio-option.html
+        grade="10th"
+        percentage="50"
+      %}
+      {% include components/grade-range-radio-option.html
+        grade="11th"
+        percentage="30"
+      %}
+      {% include components/grade-range-radio-option.html
+        grade="12th"
+        percentage="20"
+      %}
+    </div>
+  </div>
 
 </div>
