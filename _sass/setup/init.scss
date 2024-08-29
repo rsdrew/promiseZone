@@ -376,7 +376,7 @@ input[type="radio"]:checked + .radio {
 }
 
 .hidden:not(.show) .card {
-  padding: 0;
+  padding-block: 0;
   box-shadow: none;
   transition: padding 0.3s ease; // The padding for a card goes to 0 when hidden. This gives time for the padding to slowly go to 0 so it isn't so jarring.
 }
