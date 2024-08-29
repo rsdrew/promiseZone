@@ -49,6 +49,7 @@ input:checked ~ .grade-radio-button-checkmark {
   transform: translateY(-50%);
   // left: is caculated in grade-range-radio-option.js
   text-wrap: nowrap;
+  font-weight: 600;
 }
 
 .grade-radio-button-percentage {

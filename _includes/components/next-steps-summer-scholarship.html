@@ -1,0 +1,24 @@
+<div id="next-steps-summer-scholarship" class="next-steps hidden">
+  <div class="card">
+    <div class="next-steps__list">
+      {% include components/checkmark-and-text.html
+        text='<p class="pb-xxl">Fill out the Summer Scholarship application below to upload the required documents to receive your scholarship.</p>'  
+      %}
+    
+      <div class="mb-xxl">
+        <a class="w-100" href="https://docs.google.com/forms/d/e/1FAIpQLSeyc6TS9N7dUnMUvM-mi_uG50eHBIVe4clk0HWo9zAsDw5p8w/viewform?usp=pp_url" target="_blank"><button class="button w-100" type="button">Fill out Summer Scholarship application</button></a>
+      </div>
+    
+      {% capture download-file %}
+        <p class="mb-xxl">Download the file below for the school you will be attending in the summer. There are additional steps you must complete. If your school is not listed below, please <a href="{{site.baseurl}}/contact.html">contact us</a> for further details.</p>
+      {% endcapture %}
+    
+      {% include components/checkmark-and-text.html
+        text=download-file 
+      %}
+      <button class="button w-100 mb-xl download-occ-summer-tuition-process" class="button w-100" type="button">Download OCC summer tuition process</button>
+      <button class="button w-100 mb-xl download-macomb-summer-tuition-process" class="button w-100" type="button">Download Macomb summer tuition process</button>
+      <button class="button w-100 mb-xl download-henry-ford-summer-tuition-process" class="button w-100" type="button">Download Henry Ford summer tuition process</button>
+    </div>
+  </div>
+</div>

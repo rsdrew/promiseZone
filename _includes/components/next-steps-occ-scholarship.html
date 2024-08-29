@@ -1,0 +1,30 @@
+<div id="next-steps-occ-scholarship" class="next-steps hidden show">
+  <div class="card">
+    <div class="next-steps__list">
+      {% include components/checkmark-and-text.html
+        text='
+          <div>
+            <p class="pb-md">Fill out <button class="link-button download-waiver" type="button">this waiver</button> and email it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if you haven\'t already.</p>
+            <p class="text-italic text-normal">Failing to submit a waiver form can result in deregistration from classes and the Promise Zone won\'t be able to do anything until we receive your signed waiver form.</p>
+          </div>
+        '  
+      %}
+    
+      {% capture contact-us %}
+        <p><a href="{{site.baseurl}}/contact.html">Contact us</a> and let us know you are taking classes at OCC before registration.</p>
+      {% endcapture %}
+    
+      {% include components/checkmark-and-text.html
+        text=contact-us 
+      %}
+    
+      {% include components/checkmark-and-text.html
+        text='<p>Register for courses, and attend class.</p>'  
+      %}
+    
+      {% include components/checkmark-and-text.html
+        text='<p>About 4-5 weeks after the semester begins, the Promise Zone will receive your tuition bill and make payments directly to school.</p>'  
+      %}
+    </div>
+  </div>
+</div>

@@ -3,13 +3,15 @@ layout: default
 title: Scholarships
 ---
 
-<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/download-waiver.js" defer></script>
+<script type="module" src="{{ site.baseurl }}/assets/javascript/download-waiver.js" defer></script>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/scholarships.js" defer></script>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/grade-range-radio-option.js" defer></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/next-steps.js" defer></script>
+<script type="module" src="{{ site.baseurl }}/assets/javascript/download-summer-tuition-process-files.js" defer></script>
 
 <div class="container">
   <h1 class="text-page-header">Apply for your scholarship today!</h1>
-  <h2 class="text-page-subheader"><span class="text-page-subheader--bold">We are dedicated to helping students in any scenario.</span> Complete the form below to discover your next steps to receive a Hazel Park Promise Zone Scholarship!</h2>
+  <h2 class="text-page-subheader text-align-center"><span class="text-page-subheader--bold">We are dedicated to helping students in any scenario.</span> Complete the form below to discover your next steps to receive a Hazel Park Promise Zone Scholarship!</h2>
 
   <h3 class="text-header text-align-center pb-xl">General Information</h3>
   <p class="text-align-center pb-xxl">Review the information below that applies to ALL scholarship recipients.</p>
@@ -37,10 +39,17 @@ title: Scholarships
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
+      <div>
+        <p class="pb-md">Scholarships are a "last-dollar scholarship", meaning students will draw from other funding sources before being awarded the Promise Zone Scholarship.</p>
+        <p class="text-italic text-normal">For example, a student who is eligible for $1,500 of the Promise Zone scholarship and receives $1,000 from a Pell Grant will only receive $500 from the Promise Zone.</p>
+      </div>
+    </div>
+    <div class="general-information-item">
+      {% include svgs/checkbox.html class="fill-brand" %}
       <p>Students must fill out the waiver below and send it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if they haven’t already</p>
     </div>
     <div class="general-information-item">
-      <button type="button" id="download-waiver" class="button text-align-center">Download Waiver</button>
+      <button type="button" class="download-waiver button text-align-center mi-auto">Download Waiver</button>
     </div>
   </div>
 
@@ -67,6 +76,7 @@ title: Scholarships
 
   <div class="scholarship-options pt-xl pb-xxxxl">
     {% include components/scholarship-option.html 
+      id="scholarship-option--occ"
       logo="<p id='scholarship-option--logo--occ' class='text-header text-header--brand text-align-center'>OCC</p>"
       name="Oakland Community</br>College Scholarship"
       criteria--attending="Attending OCC"
@@ -76,6 +86,7 @@ title: Scholarships
     %}
 
     {% include components/scholarship-option.html 
+      id="scholarship-option--university"
       logo="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z'/></svg>"
       name="University</br>Scholarship"
       criteria--attending="Attending a non-OCC college or university"
@@ -84,6 +95,7 @@ title: Scholarships
     %}
 
     {% include components/scholarship-option.html 
+      id="scholarship-option--junior-senior"
       logo='<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
               viewBox="0 0 398.97 398.97" xml:space="preserve">
             <g>
@@ -116,39 +128,50 @@ title: Scholarships
       criteria--grade="Any grade"
       criteria--semester="Spring or Summer semester"
     %}
-
   </div>
 
-  <h3 class="text-header text-align-center pb-xxl">What grade did you start attending Hazel Park Schools?</h3>
-  <div class="card">
-    <div id="grade-range-background">
+  <h3 class="text-header text-align-center pb-xl">Next steps</h3>
+  <p class="text-align-center pb-xxl">Follow these steps to receive your scholarship for the next semester.</p>
+  {% include components/next-steps-occ-scholarship.html %}
+  {% include components/next-steps-university-scholarship.html %}
+  {% include components/next-steps-junior-senior-scholarship.html %}
+  {% include components/next-steps-summer-scholarship.html %}
+
+  <h3 class="text-header text-align-center pt-xxxxl pb-xl">See how much you qualify for</h3>
+  <p class="text-align-center pb-xxl">Students are eligible for a portion of the Promise Zone scholarships depending on when they began enrollment at Hazel Park Schools.</p>
+  <div class="card mb-xxxxl">
+    <p class="text-body text-body--bold text-align-center mi-auto pb-xl">What grade did you first attend Hazel Park Schools?</p>
+    <p class="text-align-center mi-auto pb-xxxl">Select one of the options below.</p>
+    <div id="grade-range-background" class="mb-xxl">
       <div id="grade-range-fill"></div>
       {% include components/grade-range-radio-option.html
-        grade="5th or lower"
+        grade="5th grade or lower"
         percentage="100"
         checked="true"
       %}
       {% include components/grade-range-radio-option.html
-        grade="6th-8th"
+        grade="6th-8th grade"
         percentage="90"
       %}
       {% include components/grade-range-radio-option.html
-        grade="9th"
+        grade="9th grade"
         percentage="75"
       %}
       {% include components/grade-range-radio-option.html
-        grade="10th"
+        grade="10th grade"
         percentage="50"
       %}
       {% include components/grade-range-radio-option.html
-        grade="11th"
+        grade="11th grade"
         percentage="30"
       %}
       {% include components/grade-range-radio-option.html
-        grade="12th"
+        grade="12th grade"
         percentage="20"
       %}
     </div>
+    <p class="text-header text-align-center pb-xl">Congratulations! You are eligible for up to <span id="scholarship-percentage">100%</span> of the scholarship!</p>
+    <p class="text-header text-align-center pb-xxl">That's an estimated value of <span id="scholarship-estimated-value">$1,500!</span></p>
+    <p class="text-italic text-align-center mi-auto pb-0">100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.</p>
   </div>
-
 </div>

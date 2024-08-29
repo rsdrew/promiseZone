@@ -1,0 +1,10 @@
+.checkmark-and-text-wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: var(--sp-xl);
+
+  svg {
+    width: var(--sp-xxl);
+    height: var(--sp-xxl);
+  }
+}

@@ -124,7 +124,7 @@ a {
   font-family: var(--ff-body);
   font-size: var(--fs-lg);
   font-weight: 400;
-  max-width: 75ch;
+  max-width: 75ch !important;
   line-height: 1.6;
   padding-bottom: var(--sp-xxxl);
 
@@ -138,7 +138,7 @@ p, .text-body {
   font-size: var(--fs-lg);
   font-weight: 400;
   line-height: 1.6;
-  max-width: 75ch;
+  max-width: 75ch !important;
   color: var(--base-800);
 }
 
@@ -197,7 +197,7 @@ p, .text-body {
 }
 
 .text-small {
-  font-size: var(--fs-sm);
+  font-size: var(--fs-md);
 }
 
 .text-italic {
@@ -205,7 +205,11 @@ p, .text-body {
 }
 
 .text-bold {
-  font-weight: 700;
+  font-weight: 700 !important;
+}
+
+.text-normal {
+  font-weight: 400 !important;
 }
 /* END TYPOGRAPHY */
 
@@ -317,6 +321,10 @@ p, .text-body {
     @include generate-padding-and-margin("m#{$side-shorthand}", "margin-#{$full-side-name}");
   }
 
+  .mi-auto {
+    margin-inline: auto;
+  }
+
 /* END PADDING AND MARGIN */
 
 /* MISC */
@@ -358,12 +366,18 @@ input[type="radio"]:checked + .radio {
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.2s ease;
 
-  & * {
-    overflow: hidden;
+  &.show {
+    grid-template-rows: 1fr;
   }
-
-&.show {
-  grid-template-rows: 1fr;
 }
+
+.hidden *:not(a) {
+  overflow: hidden;
+}
+
+.hidden:not(.show) .card {
+  padding: 0;
+  box-shadow: none;
+  transition: padding 0.3s ease; // The padding for a card goes to 0 when hidden. This gives time for the padding to slowly go to 0 so it isn't so jarring.
 }
 /* END MISC */

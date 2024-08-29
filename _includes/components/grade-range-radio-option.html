@@ -1,7 +1,7 @@
 <div class="grade-radio-button-wrapper">
   <input class="grade-radio-button-real-input" type="radio" name="grade" value="{{ include.percentage }}" aria-label="{{ include.grade }}" {% if include.checked == 'true' %}checked{% endif %} />
   <div class="grade-radio-button-checkmark" data-grade="{{ include.grade }}" data-percentage="{{ include.percentage }}">
-    <div class="grade-radio-button-grade text-body--bold">{{ include.grade }}</div>
+    <p class="grade-radio-button-grade pb-0">{{ include.grade }}</p>
     <div class="grade-radio-button-percentage text-italic">{{ include.percentage }}%</div>
   </div>
 </div>
