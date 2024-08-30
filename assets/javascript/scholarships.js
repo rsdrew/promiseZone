@@ -81,16 +81,19 @@ const handleResidentOnClick = () => {
 
           if (index === 0) {
             option.classList.add("selected");
+            option.click();
           };
         });
 
         nonResidentExplanation.classList.remove("show");
       }
 
+      // The user is not a resident. Disable all options besides Summer Scholarship. Select the summer scholarship.
       else if (event.target.checked && event.target.value === "false") {
         scholarshipOptions.forEach(option => {
           if (option.id === "scholarship-option--summer") {
             option.classList.add("selected");
+            option.click();
           }
           else {
             option.classList.add("disabled");
@@ -100,8 +103,6 @@ const handleResidentOnClick = () => {
 
         nonResidentExplanation.classList.add("show");
       }
-
-      // The user is not a resident. Disable all options besides Summer Scholarship. Select the summer scholarship.
     })
   })
 
