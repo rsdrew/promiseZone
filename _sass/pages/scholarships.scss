@@ -103,6 +103,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--sp-xxl);
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .scholarship-option {
@@ -179,6 +187,14 @@
   background-color: var(--base-50);
   box-shadow: var(--shadow);
   margin-inline: auto;
+
+  @media (max-width: 600px) {
+    margin-right: 33%;
+  }
+
+  @media (max-width: 400px) {
+    margin-right: 23%;
+  }
 }
 
 #grade-range-fill {
@@ -198,7 +214,8 @@
   font-family: var(--ff-header);
 }
 
-.next-steps {
+.next-steps,
+.scholarship-info {
   max-width: 60rem;
 
   p {

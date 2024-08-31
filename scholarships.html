@@ -13,39 +13,36 @@ title: Scholarships
   <h2 class="text-page-subheader text-align-center"><span class="text-page-subheader--bold">We are dedicated to helping students in any scenario.</span> Complete the form below to discover your next steps to receive a Hazel Park Promise Zone Scholarship!</h2>
 
   <h3 class="text-header text-align-center pb-xl">General Information</h3>
-  <p class="text-align-center pb-xxl">Review the information below that applies to ALL scholarship recipients.</p>
+  <p class="text-align-center pb-xxl">First, review the information below that applies to ALL scholarship recipients.</p>
 
   <div class="general-information-list card mb-xxxxl">
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students must attend a college/university in the state of Michigan</p>
+      <p>Students must be a Hazel Park Schools graduate.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students must reapply for a scholarship every semester</p>
+      <p>Students must attend a college/university in the state of Michigan.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students must complete FAFSA every year</p>
+      <p>Students must reapply for a scholarship every semester.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students must maintain a 2.0 GPA every semester</p>
+      <p>Students must complete FAFSA every year.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students may receive scholarships for up to 6 years after graduation</p>
+      <p>Students must maintain a 2.0 GPA every semester.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <div>
-        <p class="pb-md">Scholarships are a "last-dollar scholarship", meaning students will draw from other funding sources before being awarded the Promise Zone Scholarship.</p>
-        <p class="text-italic text-normal">For example, a student who is eligible for $1,500 of the Promise Zone scholarship and receives $1,000 from a Pell Grant will only receive $500 from the Promise Zone.</p>
-      </div>
+      <p>Students may receive scholarships for up to 6 years after graduation.</p>
     </div>
     <div class="general-information-item">
       {% include svgs/checkbox.html class="fill-brand" %}
-      <p>Students must fill out the waiver below and send it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if they haven’t already</p>
+      <p>Students must fill out the waiver below and send it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if they haven’t already.</p>
     </div>
     <div class="general-information-item">
       <button type="button" class="download-waiver button text-align-center mi-auto">Download Waiver</button>
@@ -129,48 +126,68 @@ title: Scholarships
     %}
   </div>
 
-  <h3 class="text-header text-align-center pb-xl">Next steps</h3>
-  <p class="text-align-center pb-xxl">Follow these steps to receive your scholarship for the next semester.</p>
-  {% include components/next-steps-occ-scholarship.html %}
-  {% include components/next-steps-university-scholarship.html %}
-  {% include components/next-steps-junior-senior-scholarship.html %}
-  {% include components/next-steps-summer-scholarship.html %}
+  <div class="mb-xxxxl w-fit-content mi-auto">
+    <h3 class="text-header text-align-center pb-xxl">Scholarship specific information</h3>
+    {% include components/info-occ-scholarship.html %}
+    {% include components/info-university-scholarship.html %}
+    {% include components/info-junior-senior-scholarship.html %}
+    {% include components/info-summer-scholarship.html %}
+  </div>
 
-  <h3 class="text-header text-align-center pt-xxxxl pb-xl">See how much you qualify for</h3>
-  <p class="text-align-center pb-xxl">Students are eligible for a portion of the Promise Zone scholarships depending on when they began enrollment at Hazel Park Schools.</p>
-  <div class="card mb-xxxxl">
-    <p class="text-body text-body--bold text-align-center mi-auto pb-xl">What grade did you first attend Hazel Park Schools?</p>
-    <p class="text-align-center mi-auto pb-xxxl">Select one of the options below.</p>
-    <div id="grade-range-background" class="mb-xxl">
-      <div id="grade-range-fill"></div>
-      {% include components/grade-range-radio-option.html
-        grade="5th grade or lower"
-        percentage="100"
-        checked="true"
-      %}
-      {% include components/grade-range-radio-option.html
-        grade="6th-8th grade"
-        percentage="90"
-      %}
-      {% include components/grade-range-radio-option.html
-        grade="9th grade"
-        percentage="75"
-      %}
-      {% include components/grade-range-radio-option.html
-        grade="10th grade"
-        percentage="50"
-      %}
-      {% include components/grade-range-radio-option.html
-        grade="11th grade"
-        percentage="30"
-      %}
-      {% include components/grade-range-radio-option.html
-        grade="12th grade"
-        percentage="20"
-      %}
+  <div id="scholarship-eligibility-calculator">
+    <h3 class="text-header text-align-center pb-xl">See how much you are eligible for</h3>
+    <p class="text-align-center pb-xxl mi-auto">Students are eligible for a portion of the Promise Zone scholarships depending on when they began enrollment at Hazel Park Schools.</p>
+    <div class="card mb-xxxxl">
+      <p class="text-body text-body--bold text-align-center mi-auto pb-xl">What grade did you first attend Hazel Park Schools?</p>
+      <p class="text-align-center mi-auto pb-xxxl">Select one of the options below.</p>
+      <div id="grade-range-background" class="mb-xxl">
+        <div id="grade-range-fill"></div>
+        {% include components/grade-range-radio-option.html
+          grade="5th grade or earlier"
+          percentage="100"
+          checked="true"
+        %}
+        {% include components/grade-range-radio-option.html
+          grade="6th-8th grade"
+          percentage="90"
+        %}
+        {% include components/grade-range-radio-option.html
+          grade="9th grade"
+          percentage="75"
+        %}
+        {% include components/grade-range-radio-option.html
+          grade="10th grade"
+          percentage="50"
+        %}
+        {% include components/grade-range-radio-option.html
+          grade="11th grade"
+          percentage="30"
+        %}
+        {% include components/grade-range-radio-option.html
+          grade="12th grade"
+          percentage="20"
+        %}
+      </div>
+      <p class="text-header text-align-center pb-xl">Congratulations! You are eligible for up to <span id="scholarship-percentage">100%</span> of the scholarship!</p>
+      <p class="text-header text-align-center pb-xxl">That's an estimated value of <span id="scholarship-estimated-value">$1,500!</span></p>
+      <p id="grade-range-helper-text" class="text-italic text-align-center mi-auto pb-0">100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.</p>
     </div>
-    <p class="text-header text-align-center pb-xl">Congratulations! You are eligible for up to <span id="scholarship-percentage">100%</span> of the scholarship!</p>
-    <p class="text-header text-align-center pb-xxl">That's an estimated value of <span id="scholarship-estimated-value">$1,500!</span></p>
-    <p class="text-italic text-align-center mi-auto pb-0">100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.</p>
+  </div>
+
+  <h3 class="text-header text-align-center pb-xl">Next steps</h3>
+  <p class="text-align-center pb-xxl">Follow these steps to receive your scholarship for the upcoming semester.</p>
+  <div class="mb-xxxxl w-fit-content mi-auto">
+    {% include components/next-steps-occ-scholarship.html %}
+    {% include components/next-steps-university-scholarship.html %}
+    {% include components/next-steps-junior-senior-scholarship.html %}
+    {% include components/next-steps-summer-scholarship.html %}
+  </div>
+
+  <h3 class="text-header text-align-center pb-xl">Still have questions?</h3>
+  <p class="mb-xxxl text-align-center">Please reach out to us with any questions, comments, or concerns. We're happy to help!</p>
+  <div class="mi-auto w-fit-content">
+    <a href="{{site.baseurl}}/contact.html">
+      <button type="button" class="button mi-auto">Contact us</button>
+    </a>
   </div>
 </div>

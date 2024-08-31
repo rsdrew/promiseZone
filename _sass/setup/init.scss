@@ -290,6 +290,10 @@ p, .text-body {
    .max-w-100 {
     max-width: 100% !important;
    }
+
+   .w-fit-content {
+    width: fit-content !important;
+   }
 /* END WIDTH */
 
 /* PADDING AND MARGIN */
@@ -379,5 +383,9 @@ input[type="radio"]:checked + .radio {
   padding-block: 0;
   box-shadow: none;
   transition: padding 0.3s ease; // The padding for a card goes to 0 when hidden. This gives time for the padding to slowly go to 0 so it isn't so jarring.
+}
+
+.d-none {
+  display: none;
 }
 /* END MISC */

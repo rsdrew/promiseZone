@@ -12,6 +12,15 @@ const universityNextSteps = document.getElementById("next-steps-university-schol
 const juniorSeniorNextSteps = document.getElementById("next-steps-junior-senior-scholarship");
 const summerNextSteps = document.getElementById("next-steps-summer-scholarship");
 
+const scholarshipInfo = document.querySelectorAll(".scholarship-info");
+const occInfo = document.getElementById("info-occ-scholarship");
+const universityInfo = document.getElementById("info-university-scholarship");
+const juniorSeniorInfo = document.getElementById("info-junior-senior-scholarship");
+const summerInfo = document.getElementById("info-summer-scholarship");
+
+const scholarshipEligibilityCalculator = document.getElementById("scholarship-eligibility-calculator");
+const gradeRangeHelperText = document.getElementById("grade-range-helper-text");
+
 const handleScholarshipOptionsOnClick = () => {
   scholarshipOptions.forEach(option => {
     option.addEventListener('click', () => {
@@ -26,6 +35,41 @@ const handleScholarshipOptionsOnClick = () => {
   
       // Select the clicked option
       option.classList.add("selected");
+
+      // Hide all of the Scholarship Specific Information
+      scholarshipInfo.forEach(info => {
+        info.classList.remove("show");
+      })
+
+      // Give some time for the previous "Scholarship Speicific Information" to go away.
+      setTimeout(() => {
+        // Display the correct Scholarship Specific Information
+        let infoToShow = null;
+
+        switch (option.id) {
+          case occScholarship.id:
+            infoToShow = occInfo;
+            break;
+
+          case universityScholarship.id:
+            infoToShow = universityInfo;
+            break;
+        
+          case juniorSeniorScholarship.id:
+            infoToShow = juniorSeniorInfo;
+            break;
+
+          case summerScholarship.id:
+            infoToShow = summerInfo;
+            break;
+
+          default:
+            break;
+        }
+
+        infoToShow.classList.add("show");
+        }, 300);
+
 
       // Hide all of the Next Steps
       nextSteps.forEach(nextStep => {
@@ -61,6 +105,22 @@ const handleScholarshipOptionsOnClick = () => {
         nextStepsToShow.classList.add("show");
         }, 300);
 
+
+      // Change the OCC specific helper text when the Junior/Senior scholarship option is selected.
+      if (option.id === juniorSeniorScholarship.id) {
+        gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to $500.";
+      }
+      else {
+        gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.";
+      }
+
+      // Hide the entire scholarship eligibility calculator when the Summer Scholarship option is selected.
+      if (option.id === summerScholarship.id) {
+        scholarshipEligibilityCalculator.classList.add("d-none");
+      }
+      else {
+        scholarshipEligibilityCalculator.classList.remove("d-none");
+      }
     });
   })
 };
