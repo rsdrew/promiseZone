@@ -78,7 +78,7 @@ a {
   font-family: var(--ff-header);
   font-size: var(--fs-xxxl);
   font-weight: 700;
-  padding-bottom: var(--sp-xxxl);
+  padding-bottom: var(--sp-xxl);
   line-height: 1.1;
 
   &--light {
@@ -138,7 +138,6 @@ p, .text-body {
   font-size: var(--fs-lg);
   font-weight: 400;
   line-height: 1.6;
-  max-width: 75ch !important;
   color: var(--base-800);
 }
 
@@ -387,5 +386,10 @@ input[type="radio"]:checked + .radio {
 
 .d-none {
   display: none;
+}
+
+li {
+  margin-left: var(--sp-xl);
+  margin-bottom: var(--sp-md);
 }
 /* END MISC */

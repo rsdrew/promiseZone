@@ -82,10 +82,26 @@ footer {
   }
 }
 
+#privacy-policy-and-terms-and-conditions-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: var(--sp-xl);
+
+  a {
+    font-size: var(--fs-lg);
+  }
+
+  * {
+    color: var(--base-100);
+    text-wrap: nowrap;
+  }
+}
+
 .website-by {
   width: 100%;
   margin-inline: auto;
-  padding-bottom: var(--sp-xxl);
 
   a {
     color: var(--base-100);
