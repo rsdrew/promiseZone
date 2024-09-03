@@ -23,9 +23,9 @@
       </div>
       <ul class="links">
         <li class="about-list">
-          <a href="#">About</a>
+          <button type="button" aria-expanded="false" aria-controls="about-menu">About</button>
           <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-          <ul class="htmlCss-sub-menu sub-menu">
+          <ul id="about-menu" class="htmlCss-sub-menu sub-menu">
             <li><a href="{{ site.baseurl }}/staff.html">Staff</a></li>
             <li>
               <a href="{{ site.baseurl }}/board-of-directors.html"
@@ -50,9 +50,9 @@
           </ul>
         </li>
         <li class="services-list">
-          <a href="#">Services</a>
+          <button type="button" aria-expanded="false" aria-controls="services-menu">Services</button>
           <i class="bx bxs-chevron-down js-arrow arrow"></i>
-          <ul class="js-sub-menu sub-menu">
+          <ul id="services-menu" class="js-sub-menu sub-menu">
             <li>
               <a href="{{ site.baseurl }}/college-preparation.html"
                 >College Preparation</a
@@ -89,9 +89,7 @@
           <a href="{{ site.baseurl }}/contact.html">Contact</a>
         </li>
         <li class="nav-item donate">
-          <a href="{{ site.baseurl }}/donate.html">
-            <button class="button button--alt">Donate</button>
-          </a>
+          <a href="{{ site.baseurl }}/donate.html" class="button button--alt">Donate</a>
         </li>
       </ul>
     </div>

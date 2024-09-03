@@ -52,13 +52,11 @@ title: Scholarships
   <h3 class="text-header text-align-center pb-xxl">Are you a Hazel Park resident?</h3>
   <div class="card resident-options-card mb-xxxxl">
     <div class="resident-options mb-xl">
-      <label class="resident-radio-button-label">Yes
-        <input type="radio" name="resident" checked value="true">
-        <span class="resident-radio-button-checkmark"></span>
+      <label id="resident-radio-button-label--true" class="resident-radio-button-label checked" tabindex="0" role="radio" aria-label="Yes, you are a Hazel Park resident.">Yes
+        <span id="resident-radio-button-checkmark--true" class="resident-radio-button-checkmark"></span>
       </label>
-      <label class="resident-radio-button-label">No
-        <input type="radio" name="resident" value="false">
-        <span class="resident-radio-button-checkmark"></span>
+      <label id="resident-radio-button-label--false" class="resident-radio-button-label" tabindex="0" role="radio" aria-label="No, you are not a Hazel Park resident.">No
+        <span id="resident-radio-button-checkmark--false" class="resident-radio-button-checkmark"></span>
       </label>
     </div>
     <p class="text-italic text-align-center max-w-100">Hazel Park residents have access to all of our scholarships and services.</p>
@@ -70,7 +68,7 @@ title: Scholarships
     <p class="text-italic text-align-center max-w-100">Non-residents only have access to our summer scholarship.<br/>However, they still have access to all of our other services.</p>
   </div>
 
-  <div class="scholarship-options pt-xl pb-xxxxl">
+  <div class="scholarship-options pt-xl pb-xxxxl" role="radiogroup">
     {% include components/scholarship-option.html 
       id="scholarship-option--occ"
       logo="<p id='scholarship-option--logo--occ' class='text-header text-header--brand text-align-center'>OCC</p>"
@@ -140,7 +138,7 @@ title: Scholarships
     <div class="card mb-xxxxl">
       <p class="text-body text-body--bold text-align-center mi-auto pb-xl">What grade did you first attend Hazel Park Schools?</p>
       <p class="text-align-center mi-auto pb-xxxl">Select one of the options below.</p>
-      <div id="grade-range-background" class="mb-xxl">
+      <div id="grade-range-background" class="mb-xxl" role="radiogroup">
         <div id="grade-range-fill"></div>
         {% include components/grade-range-radio-option.html
           grade="5th grade or earlier"
@@ -186,8 +184,6 @@ title: Scholarships
   <h3 class="text-header text-align-center pb-xl">Still have questions?</h3>
   <p class="mb-xxxl text-align-center">Please reach out to us with any questions, comments, or concerns. We're happy to help!</p>
   <div class="mi-auto w-fit-content">
-    <a href="{{site.baseurl}}/contact.html">
-      <button type="button" class="button mi-auto">Contact us</button>
-    </a>
+    <a href="{{site.baseurl}}/contact.html" class="button mi-auto">Contact us</a>
   </div>
 </div>

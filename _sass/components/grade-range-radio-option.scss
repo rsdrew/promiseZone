@@ -6,7 +6,8 @@
   height: var(--sp-xl);
   transition: transform 0.2s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.1);
   }
 }
@@ -33,9 +34,9 @@
   transition: all 0.2s ease;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a brand background color */
 .grade-radio-button-checkmark:hover {
-  background-color: var(--base-200);
+  background-color: rgba(127, 1, 13, 0.5);
 }
 
 /* When the radio button is checked, add a background */

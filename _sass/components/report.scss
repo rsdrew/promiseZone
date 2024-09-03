@@ -5,13 +5,14 @@
   object-fit: contain;
   margin-bottom: var(--sp-xxl);
   grid-area: reports;
+  padding: var(--sp-xxl);
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
   &__title {
-    padding-bottom: var(--sp-xl);
+    padding-bottom: var(--sp-xxl);
   }
 
   &__button {

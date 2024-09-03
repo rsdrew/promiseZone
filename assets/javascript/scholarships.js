@@ -21,7 +21,13 @@ const summerInfo = document.getElementById("info-summer-scholarship");
 const scholarshipEligibilityCalculator = document.getElementById("scholarship-eligibility-calculator");
 const gradeRangeHelperText = document.getElementById("grade-range-helper-text");
 
+const isResidentOption = document.getElementById("resident-radio-button-label--true");
+const isNotResidentOption = document.getElementById("resident-radio-button-label--false");
+const isResidentOptions = document.querySelectorAll(".resident-radio-button-label");
+
 const handleScholarshipOptionsOnClick = () => {
+
+
   scholarshipOptions.forEach(option => {
     option.addEventListener('click', () => {
 
@@ -125,57 +131,12 @@ const handleScholarshipOptionsOnClick = () => {
   })
 };
 
-const handleResidentOnClick = () => {
-  let isResidentOption = document.querySelector("input[name='resident'][value='true']");
-  let isNotResidentOption = document.querySelector("input[name='resident'][value='false']");
-
-  let isResidentOptions = document.querySelectorAll("input[name='resident']");
-
-  isResidentOptions.forEach(option => {
-    option.addEventListener("change", (event) => {
-      // The user is a resident. Enable all options. Select the first option.
-      if (event.target.checked && event.target.value === "true") {
-        scholarshipOptions.forEach((option, index) => {
-          option.classList.remove("disabled");
-          option.classList.remove("selected");
-
-          if (index === 0) {
-            option.classList.add("selected");
-            option.click();
-          };
-        });
-
-        nonResidentExplanation.classList.remove("show");
-      }
-
-      // The user is not a resident. Disable all options besides Summer Scholarship. Select the summer scholarship.
-      else if (event.target.checked && event.target.value === "false") {
-        scholarshipOptions.forEach(option => {
-          if (option.id === "scholarship-option--summer") {
-            option.classList.add("selected");
-            option.click();
-          }
-          else {
-            option.classList.add("disabled");
-            option.classList.remove("selected");
-          }
-        });
-
-        nonResidentExplanation.classList.add("show");
-      }
-    })
-  })
-
-  isResidentOption.addEventListener("click", enableAllScholarshipOptions);
-  isNotResidentOption.addEventListener("click", enableOnlySummerScholarshipOption);
-}
-
 const enableAllScholarshipOptions = () => {
   scholarshipOptions.forEach(option => {
     option.classList.remove("disabled");
     option.classList.remove("selected");
   });
-}
+};
 
 const enableOnlySummerScholarshipOption = () => {
   scholarshipOptions.forEach(option => {
@@ -183,7 +144,57 @@ const enableOnlySummerScholarshipOption = () => {
       option.classList.add("disabled");
     }
   })
-}
+};
+
+const handleResidentOnClick = (event) => {
+  // Deselect all options
+  isResidentOptions.forEach(option => option.classList.remove("checked"));
+  // Select the clicked option
+  event.target.classList.add("checked");
+
+
+  // The user is a resident. Enable all options. Select the first option.
+  if (event.target === isResidentOption) {
+    scholarshipOptions.forEach((option, index) => {
+      option.classList.remove("disabled");
+      option.classList.remove("selected");
+
+      if (index === 0) {
+        option.classList.add("selected");
+        option.click();
+      };
+    });
+
+    nonResidentExplanation.classList.remove("show");
+  }
+
+  // The user is not a resident. Disable all options besides Summer Scholarship. Select the summer scholarship.
+  else {
+    scholarshipOptions.forEach(option => {
+      if (option.id === "scholarship-option--summer") {
+        option.classList.add("selected");
+        option.click();
+      }
+      else {
+        option.classList.add("disabled");
+        option.classList.remove("selected");
+      }
+    });
+
+    nonResidentExplanation.classList.add("show");
+  }
+};
 
 handleScholarshipOptionsOnClick();
-handleResidentOnClick();
+
+isResidentOption.addEventListener("click", enableAllScholarshipOptions);
+isNotResidentOption.addEventListener("click", enableOnlySummerScholarshipOption);
+isResidentOptions.forEach(option => {
+  option.addEventListener("click", (event) => handleResidentOnClick(event));
+  option.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleResidentOnClick(event);
+    }
+  });
+});

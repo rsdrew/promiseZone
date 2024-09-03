@@ -1,4 +1,4 @@
-<div class="grade-radio-button-wrapper">
+<div class="grade-radio-button-wrapper" role="radio" tabindex="0">
   <input class="grade-radio-button-real-input" type="radio" name="grade" value="{{ include.percentage }}" aria-label="{{ include.grade }}" {% if include.checked == 'true' %}checked{% endif %} />
   <div class="grade-radio-button-checkmark" data-grade="{{ include.grade }}" data-percentage="{{ include.percentage }}">
     <p class="grade-radio-button-grade pb-0">{{ include.grade }}</p>

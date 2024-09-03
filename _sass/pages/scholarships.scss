@@ -44,15 +44,10 @@
   user-select: none;
   font-weight: 700;
   font-family: var(--ff-header);
-}
 
-/* Hide the browser's default radio button */
-.resident-radio-button-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 #non-resident-explanation {
@@ -72,13 +67,19 @@
   transition: background-color 0.2s ease;
 }
 
-/* On mouse-over, add a grey background color */
-.resident-radio-button-label:hover input ~ .resident-radio-button-checkmark {
-  background-color: var(--base-200);
+/* On mouse-over, add a brand background color */
+.resident-radio-button-label:hover:not(.selected) .resident-radio-button-checkmark
+//.resident-radio-button-label:focus .resident-radio-button-checkmark
+ {
+  background-color: rgba(127, 1, 13, 0.5);
 }
 
+// .resident-radio-button-label:focus {
+//   border: 2px solid black;
+// }
+
 /* When the radio button is checked, add a background */
-.resident-radio-button-label input:checked ~ .resident-radio-button-checkmark {
+.resident-radio-button-label.checked .resident-radio-button-checkmark {
   background-color: var(--brand);
 }
 
