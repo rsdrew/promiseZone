@@ -1,3 +1,9 @@
+*:focus-visible {
+  outline: 4px solid rgb(0, 0, 0);
+  outline-offset: 4px;
+  border-radius: var(--border-radius);
+}
+
 html {
   line-height: 1.6;
   scroll-behavior: smooth;
@@ -30,6 +36,27 @@ a {
 
 #content {
   padding: 0 1rem;
+}
+
+.skip {
+  position: fixed;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--base-900);
+  color: var(--base-100);
+  padding: var(--sp-xl);
+  margin: var(--sp-xl);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.skip:focus-visible {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
 }
 
 .container {

@@ -63,8 +63,14 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {% include components/navbar.html %}
-    {{ content }}
+    <header>
+      <a href="#main" class="skip">Skip to main content</a>
+      <a href="#footer" class="skip">Skip to footer</a>
+      {% include components/navbar.html %}
+    </header>
+    <main id="main">
+      {{ content }}
+    </main>
     {% include components/footer.html %}
   </body>
 </html>

@@ -8,7 +8,7 @@ nav {
   width: 100%;
   background: var(--brand);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  z-index: 99;
+  z-index: 1;
   transition: top 0.2s ease-in-out;
 }
 
@@ -177,6 +177,7 @@ nav .navbar .links li:hover .js-sub-menu {
   }
   nav .navbar .nav-links {
     position: fixed;
+    height: 100%;
     top: 0;
     left: -100%;
     display: block;
@@ -255,6 +256,7 @@ nav .navbar .links li:hover .js-sub-menu {
   .navbar .nav-links.show-about-list .links .htmlCss-sub-menu,
   .navbar .nav-links.show-services-list .links .js-sub-menu {
     display: block;
+    height: fit-content;
   }
   .navbar .nav-links.show-about-list .links .htmlcss-arrow,
   .navbar .nav-links.show-services-list .links .js-arrow {
@@ -270,8 +272,8 @@ nav .navbar .links li:hover .js-sub-menu {
     border: none;
   }
 
-  .donate {
-    margin-top: 0.5rem;
+  nav .navbar .links li.donate {
+    margin-top: var(--sp-xl);
   }
 }
 @media (max-width: 370px) {

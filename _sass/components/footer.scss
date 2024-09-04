@@ -33,6 +33,10 @@
 
 footer {
   background-color: var(--base-900);
+
+  & *:focus-visible {
+    outline-color: var(--base-100);
+  }
 }
 
 .footer {

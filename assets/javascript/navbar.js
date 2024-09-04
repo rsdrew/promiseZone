@@ -1,18 +1,20 @@
-let navbar = document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 
 // sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+const navLinks = document.querySelector(".nav-links");
+const menuOpenBtn = document.querySelector(".navbar .bx-menu");
+const menuCloseBtn = document.querySelector(".nav-links .bx-x");
+
 menuOpenBtn.onclick = function () {
   if (navLinks.style.left === "0px") {
-    navLinks.style.left = "-100%";
+    hideMenu();
   } else {
-    navLinks.style.left = "0px";
+    showMenu();
   }
 };
+
 menuCloseBtn.onclick = function () {
-  navLinks.style.left = "-100%";
+  hideMenu();
 };
 
 let aboutList = document.querySelector(".about-list");
@@ -59,3 +61,20 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = window.scrollY;
 });
+
+function showMenu() {
+  navLinks.style.left = "0px";
+  navLinks.setAttribute("aria-hidden", "false");
+}
+
+function hideMenu() {
+  navLinks.style.left = "-100%";
+  navLinks.setAttribute("aria-hidden", "true");
+}
+
+// Show the sidemenu when focused
+document.querySelectorAll(".nav-links a, .nav-links button").forEach(element => {
+  element.addEventListener("focus", showMenu);
+});
+
+document.querySelector(".nav-links").addEventListener("focusout", hideMenu);
