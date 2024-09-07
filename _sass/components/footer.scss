@@ -1,3 +1,63 @@
+.mc-field-group {
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-template-areas: "email submit"
+                       "required required";
+  max-width: 60rem;
+  margin-inline: auto;
+  column-gap: var(--sp-xxl);
+
+  input[type="email"] {
+    grid-area: email;
+  }
+
+  input[type="submit"] {
+    grid-area: submit;
+  }
+
+  .mce_inline_error:not(input) {
+    grid-area: required;
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-top: var(--sp-xl) !important;
+    color: yellow !important;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: auto;
+    grid-template-areas: "email"
+                         "required"
+                         "submit";
+
+    input[type="submit"] {
+      margin-top: var(--sp-xxl);
+    }
+  }
+}
+
+#mce-responses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+#mce-responses .response {
+  width: 100%;
+  margin-top: var(--sp-xl);
+  font-size: var(--fs-lg);
+}
+
+#mce-error-response {
+  color: yellow;
+}
+
+#mce-success-response {
+  color: #3ee13e;
+}
+
 .newsletter {
 
   box-shadow: var(--shadow--top);
@@ -10,25 +70,25 @@
     padding-bottom: var(--sp-xxxl);
   }
 
-  form {
-    display: flex;
-    flex-direction: row;
-    gap: var(--sp-xxl);
-    max-width: 60rem;
-    margin-inline: auto;
+  // form {
+  //   display: flex;
+  //   flex-direction: row;
+  //   gap: var(--sp-xxl);
+  //   max-width: 60rem;
+  //   margin-inline: auto;
 
-    @media (max-width: 700px) {
-      flex-wrap: wrap;
+  //   @media (max-width: 700px) {
+  //     flex-wrap: wrap;
 
-      button {
-        flex-grow: 1;
-      }
-    }
+  //     button {
+  //       flex-grow: 1;
+  //     }
+  //   }
 
-    input[type="email"] {
-      flex-grow: 1;
-    }
-  }
+  //   input[type="email"] {
+  //     flex-grow: 1;
+  //   }
+  // }
 }
 
 footer {
