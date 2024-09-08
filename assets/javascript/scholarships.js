@@ -25,176 +25,173 @@ const isResidentOption = document.getElementById("resident-radio-button-label--t
 const isNotResidentOption = document.getElementById("resident-radio-button-label--false");
 const isResidentOptions = document.querySelectorAll(".resident-radio-button-label");
 
-const handleScholarshipOptionsOnClick = () => {
+const handleScholarshipOptionsOnClick = (option) => {
+  // Ignore clicks from disabled options
+  if (option.classList.contains("disabled")) return;
 
+  // Ignore clicks from the already selected option
+  if (option.classList.contains("selected")) return;
 
-  scholarshipOptions.forEach(option => {
-    option.addEventListener('click', () => {
-
-      // Ignore clicks from disabled options
-      if (option.classList.contains("disabled")) return;
-  
-      // Deselect all options
-      scholarshipOptions.forEach(option2 => {
-        option2.classList.remove("selected");
-      })
-  
-      // Select the clicked option
-      option.classList.add("selected");
-
-      // Hide all of the Scholarship Specific Information
-      scholarshipInfo.forEach(info => {
-        info.classList.remove("show");
-      })
-
-      // Give some time for the previous "Scholarship Speicific Information" to go away.
-      setTimeout(() => {
-        // Display the correct Scholarship Specific Information
-        let infoToShow = null;
-
-        switch (option.id) {
-          case occScholarship.id:
-            infoToShow = occInfo;
-            break;
-
-          case universityScholarship.id:
-            infoToShow = universityInfo;
-            break;
-        
-          case juniorSeniorScholarship.id:
-            infoToShow = juniorSeniorInfo;
-            break;
-
-          case summerScholarship.id:
-            infoToShow = summerInfo;
-            break;
-
-          default:
-            break;
-        }
-
-        infoToShow.classList.add("show");
-        }, 300);
-
-
-      // Hide all of the Next Steps
-      nextSteps.forEach(nextStep => {
-        nextStep.classList.remove("show");
-      })
-
-      // Give some time for the previous "Next Steps" to go away.
-      setTimeout(() => {
-        // Display the correct Next Steps
-        let nextStepsToShow = null;
-
-        switch (option.id) {
-          case occScholarship.id:
-            nextStepsToShow = occNextSteps;
-            break;
-
-          case universityScholarship.id:
-            nextStepsToShow = universityNextSteps;
-            break;
-        
-          case juniorSeniorScholarship.id:
-            nextStepsToShow = juniorSeniorNextSteps;
-            break;
-
-          case summerScholarship.id:
-            nextStepsToShow = summerNextSteps;
-            break;
-
-          default:
-            break;
-        }
-
-        nextStepsToShow.classList.add("show");
-        }, 300);
-
-
-      // Change the OCC specific helper text when the Junior/Senior scholarship option is selected.
-      if (option.id === juniorSeniorScholarship.id) {
-        gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to $500.";
-      }
-      else {
-        gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.";
-      }
-
-      // Hide the entire scholarship eligibility calculator when the Summer Scholarship option is selected.
-      if (option.id === summerScholarship.id) {
-        scholarshipEligibilityCalculator.classList.add("d-none");
-      }
-      else {
-        scholarshipEligibilityCalculator.classList.remove("d-none");
-      }
-    });
+  // Deselect all options
+  scholarshipOptions.forEach(option2 => {
+    option2.classList.remove("selected");
   })
+
+  // Select the clicked option
+  option.classList.add("selected");
+
+  // Hide all of the Scholarship Specific Information
+  scholarshipInfo.forEach(info => {
+    info.classList.remove("show");
+  })
+
+  // Give some time for the previous "Scholarship Speicific Information" to go away.
+  setTimeout(() => {
+    // Display the correct Scholarship Specific Information
+    let infoToShow = null;
+
+    switch (option.id) {
+      case occScholarship.id:
+        infoToShow = occInfo;
+        break;
+
+      case universityScholarship.id:
+        infoToShow = universityInfo;
+        break;
+    
+      case juniorSeniorScholarship.id:
+        infoToShow = juniorSeniorInfo;
+        break;
+
+      case summerScholarship.id:
+        infoToShow = summerInfo;
+        break;
+
+      default:
+        break;
+    }
+
+    infoToShow.classList.add("show");
+    }, 300);
+
+  // Hide all of the Next Steps
+  nextSteps.forEach(nextStep => {
+    nextStep.classList.remove("show");
+    const tabableElements = nextStep.querySelectorAll("a, button");
+    tabableElements.forEach(element => element.setAttribute("tabindex", -1));
+  });
+
+  // Give some time for the previous "Next Steps" to go away.
+  setTimeout(() => {
+    // Display the correct Next Steps
+    let nextStepsToShow = null;
+
+    switch (option.id) {
+      case occScholarship.id:
+        nextStepsToShow = occNextSteps;
+        break;
+
+      case universityScholarship.id:
+        nextStepsToShow = universityNextSteps;
+        break;
+    
+      case juniorSeniorScholarship.id:
+        nextStepsToShow = juniorSeniorNextSteps;
+        break;
+
+      case summerScholarship.id:
+        nextStepsToShow = summerNextSteps;
+        break;
+
+      default:
+        break;
+    }
+
+    nextStepsToShow.classList.add("show");
+    const tabableElements = nextStepsToShow.querySelectorAll("a, button");
+    tabableElements.forEach(element => element.setAttribute("tabindex", 0));
+
+    }, 300);
+
+
+  // Change the OCC specific helper text when the Junior/Senior scholarship option is selected.
+  if (option.id === juniorSeniorScholarship.id) {
+    gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to $500.";
+  }
+  else {
+    gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.";
+  }
+
+  // Hide the entire scholarship eligibility calculator when the Summer Scholarship option is selected.
+  if (option.id === summerScholarship.id) {
+    scholarshipEligibilityCalculator.classList.add("d-none");
+  }
+  else {
+    scholarshipEligibilityCalculator.classList.remove("d-none");
+  }
 };
 
-const enableAllScholarshipOptions = () => {
-  scholarshipOptions.forEach(option => {
+const handleIsResidentOnClick = () => {
+  isResidentOption.classList.add("checked");
+  isNotResidentOption.classList.remove("checked");
+
+  // The user is a resident. Enable all scholarship options. Select the first option.
+  scholarshipOptions.forEach((option, index) => {
     option.classList.remove("disabled");
     option.classList.remove("selected");
+    option.setAttribute("tabindex", 0);
+
+    if (index === 0) {
+      option.classList.add("selected");
+      option.click();
+    };
   });
+
+  nonResidentExplanation.classList.remove("show");
 };
 
-const enableOnlySummerScholarshipOption = () => {
+const handleIsNotResidentOnClick = () => {
+  isResidentOption.classList.remove("checked");
+  isNotResidentOption.classList.add("checked");
+
+  // The user is not a resident. Disable all scholarship options besides Summer Scholarship. Select the summer scholarship.
   scholarshipOptions.forEach(option => {
-    if (option.id !== "scholarship-option--summer") {
+    if (option.id === "scholarship-option--summer") {
+      option.classList.add("selected");
+      option.click();
+    }
+    else {
       option.classList.add("disabled");
+      option.classList.remove("selected");
+      option.setAttribute("tabindex", -1);
+      option.setAttribute("aria-disabled", true);
+    }
+  });
+
+  nonResidentExplanation.classList.add("show");
+};
+
+isResidentOption.addEventListener("click", handleIsResidentOnClick);
+isResidentOption.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    handleIsResidentOnClick();
+  }
+});
+
+isNotResidentOption.addEventListener("click", handleIsNotResidentOnClick);
+isNotResidentOption.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    handleIsNotResidentOnClick();
+  }
+});
+
+scholarshipOptions.forEach(option => {
+  option.addEventListener("click", () => handleScholarshipOptionsOnClick(option));
+  option.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleScholarshipOptionsOnClick(option);
     }
   })
-};
-
-const handleResidentOnClick = (event) => {
-  // Deselect all options
-  isResidentOptions.forEach(option => option.classList.remove("checked"));
-  // Select the clicked option
-  event.target.classList.add("checked");
-
-
-  // The user is a resident. Enable all options. Select the first option.
-  if (event.target === isResidentOption) {
-    scholarshipOptions.forEach((option, index) => {
-      option.classList.remove("disabled");
-      option.classList.remove("selected");
-
-      if (index === 0) {
-        option.classList.add("selected");
-        option.click();
-      };
-    });
-
-    nonResidentExplanation.classList.remove("show");
-  }
-
-  // The user is not a resident. Disable all options besides Summer Scholarship. Select the summer scholarship.
-  else {
-    scholarshipOptions.forEach(option => {
-      if (option.id === "scholarship-option--summer") {
-        option.classList.add("selected");
-        option.click();
-      }
-      else {
-        option.classList.add("disabled");
-        option.classList.remove("selected");
-      }
-    });
-
-    nonResidentExplanation.classList.add("show");
-  }
-};
-
-handleScholarshipOptionsOnClick();
-
-isResidentOption.addEventListener("click", enableAllScholarshipOptions);
-isNotResidentOption.addEventListener("click", enableOnlySummerScholarshipOption);
-isResidentOptions.forEach(option => {
-  option.addEventListener("click", (event) => handleResidentOnClick(event));
-  option.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      handleResidentOnClick(event);
-    }
-  });
 });
