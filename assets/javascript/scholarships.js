@@ -76,7 +76,7 @@ const handleScholarshipOptionsOnClick = (option) => {
 
   // Hide all of the Next Steps
   nextSteps.forEach(nextStep => {
-    nextStep.classList.remove("show");
+    nextStep.classList.add("d-none");
     const tabableElements = nextStep.querySelectorAll("a, button");
     tabableElements.forEach(element => element.setAttribute("tabindex", -1));
   });
@@ -107,7 +107,7 @@ const handleScholarshipOptionsOnClick = (option) => {
         break;
     }
 
-    nextStepsToShow.classList.add("show");
+    nextStepsToShow.classList.remove("d-none");
     const tabableElements = nextStepsToShow.querySelectorAll("a, button");
     tabableElements.forEach(element => element.setAttribute("tabindex", 0));
 
