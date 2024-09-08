@@ -1,13 +1,5 @@
 .contact-wrapper{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
-
-  @media (max-width: 1200px) {
-    grid-template-columns: 1fr;
-
-    img {
-      display: none;
-    }
-  }
 }

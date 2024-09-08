@@ -7,16 +7,24 @@ const allElements = [slideUpElements, slideLeftElements, slideRightElements, fad
 
 const windowHeight = window.innerHeight;
 
-document.addEventListener("scroll", () => {
+const updateAnimations = () => {
   allElements.forEach(elements => {
     elements.forEach(element => {addVisibleClassWhenElementIsOnScreen(element)});
   });
+};
+
+// Animate any items showing on page load.
+updateAnimations();
+
+// Animate items as user scrolls.
+document.addEventListener("scroll", () => {
+  updateAnimations();
 });
 
 function addVisibleClassWhenElementIsOnScreen(el) {
   const elementTop = el.getBoundingClientRect().top;
 
-  if (elementTop < windowHeight - 200) {
+  if (elementTop < windowHeight - 50) {
     el.classList.add("visible");
   }
 }
