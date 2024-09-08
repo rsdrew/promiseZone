@@ -168,6 +168,8 @@
     background-position: 30% 0;
 
     &__title {
+      position: relative;
+      z-index: 1;
       padding: 0;
       margin: 1rem 1rem 3rem 0;
 
@@ -185,10 +187,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 0;
     }
   
     &__subtitle {
+      position: relative;
+      z-index: 1;
       margin-bottom: 8rem;
       font-weight: 400;
       font-family: var(--ff-body);
