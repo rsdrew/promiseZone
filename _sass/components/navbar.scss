@@ -12,6 +12,17 @@ nav {
   transition: top 0.2s ease-in-out;
 }
 
+.bx-menu, .bx-x
+ {
+  font-size: 3rem;
+  color: var(--base-200);
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--base-400);
+  }
+}
+
 nav.container {
   padding-top: var(--sp-md);
   padding-bottom: var(--sp-md);
@@ -196,11 +207,6 @@ nav .navbar .links li:hover .js-sub-menu {
     justify-content: space-between;
   }
   .sidebar-logo .logo-name {
-    color: var(--base-200);
-  }
-  .sidebar-logo i,
-  .navbar .bx-menu {
-    font-size: 3rem;
     color: var(--base-200);
   }
   nav .navbar .links {
