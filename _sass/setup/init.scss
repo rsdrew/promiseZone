@@ -39,6 +39,10 @@ a {
   padding: 0 1rem;
 }
 
+#main {
+  overflow: hidden;
+}
+
 .skip {
   position: fixed;
   left: -10000px;
