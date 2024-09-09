@@ -143,7 +143,7 @@ const handleIsResidentOnClick = () => {
 
     if (index === 0) {
       option.classList.add("selected");
-      option.click();
+      handleScholarshipOptionsOnClick(option);
     };
   });
 
@@ -158,7 +158,7 @@ const handleIsNotResidentOnClick = () => {
   scholarshipOptions.forEach(option => {
     if (option.id === "scholarship-option--summer") {
       option.classList.add("selected");
-      option.click();
+      handleScholarshipOptionsOnClick(option);
     }
     else {
       option.classList.add("disabled");
