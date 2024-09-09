@@ -28,7 +28,7 @@ const isResidentOptions = document.querySelectorAll(".resident-radio-button-labe
 const handleScholarshipOptionsOnClick = (option) => {
   // Ignore clicks from disabled options
   if (option.classList.contains("disabled")) return;
-
+  
   // Ignore clicks from the already selected option
   if (option.classList.contains("selected")) return;
 
@@ -142,7 +142,6 @@ const handleIsResidentOnClick = () => {
     option.setAttribute("tabindex", 0);
 
     if (index === 0) {
-      option.classList.add("selected");
       handleScholarshipOptionsOnClick(option);
     };
   });
@@ -157,7 +156,6 @@ const handleIsNotResidentOnClick = () => {
   // The user is not a resident. Disable all scholarship options besides Summer Scholarship. Select the summer scholarship.
   scholarshipOptions.forEach(option => {
     if (option.id === "scholarship-option--summer") {
-      option.classList.add("selected");
       handleScholarshipOptionsOnClick(option);
     }
     else {
