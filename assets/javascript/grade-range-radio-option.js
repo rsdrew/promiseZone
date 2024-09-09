@@ -72,6 +72,7 @@ gradeRadioButtonWrappers.forEach(wrapper => {
   wrapper.addEventListener("click", () => handleGradeRadioButtonWrapperOnClick(wrapper));
   wrapper.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
       handleGradeRadioButtonWrapperOnClick(wrapper);
     }
   });

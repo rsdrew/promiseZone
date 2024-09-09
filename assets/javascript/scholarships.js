@@ -191,6 +191,7 @@ scholarshipOptions.forEach(option => {
   option.addEventListener("click", () => handleScholarshipOptionsOnClick(option));
   option.addEventListener("keydown", event => {
     if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
       handleScholarshipOptionsOnClick(option);
     }
   })
