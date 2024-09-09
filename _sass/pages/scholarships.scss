@@ -68,8 +68,7 @@
 }
 
 /* On mouse-over, add a brand background color */
-.resident-radio-button-label:hover:not(.selected) .resident-radio-button-checkmark
-//.resident-radio-button-label:focus .resident-radio-button-checkmark
+.resident-radio-button-label:hover:not(.checked) .resident-radio-button-checkmark
  {
   background-color: rgba(127, 1, 13, 0.5);
 }
