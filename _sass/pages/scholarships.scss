@@ -6,8 +6,8 @@
 }
 
 .general-information-item {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: min-content auto;
   gap: var(--sp-xl);
 
   p {
