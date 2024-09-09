@@ -141,7 +141,7 @@ footer {
     width: 40px;
   }
 
-  a:not(.footer__email) {
+  a:not(.footer__email, .footer__phone-number) {
     text-decoration: none;
   }
 }
