@@ -4,12 +4,22 @@
       {% include components/checkmark-and-text.html
         text='
           <div>
-            <p class="pb-md">Fill out <button class="link-button download-waiver" type="button">this waiver</button> and email it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if you haven\'t already.</p>
-            <p class="text-italic text-normal  text-small max-w-100">Failing to submit a waiver form can result in deregistration from classes and the Promise Zone won\'t be able to do anything until we receive your signed waiver form.</p>
+            <p>Download and fill out the waiver below, and email it to <a href="mailto:moussa.traore@myhpsd.org">moussa.traore@myhpsd.org</a> if you haven\'t already. You only need to do this once, not every semester.</p>
+            <p class="text-italic text-normal text-small max-w-100">Failing to submit a waiver form can result in deregistration from classes and the Promise Zone won\'t be able to do anything until we receive your signed waiver form.</p>
           </div>
         '  
       %}
-    
+      <button class="button download-waiver mb-xl" type="button">Download Promise Zone waiver</button>
+
+      {% include components/checkmark-and-text.html
+        text='
+        <div>
+          <p>If you are a high school senior, fill out the Promise Zone application if you haven\'t already. You only need to do this once, not every semester.</p>
+        </div>
+        '  
+      %}
+      <a class="button w-100 mb-xl" href="https://www.tfaforms.com/4848809" target="_blank">Fill out Promise Zone application</a>
+
       {% capture contact-us %}
         <p><a href="{{site.baseurl}}/contact.html">Contact us</a> and let us know you are taking classes at OCC before registration.</p>
       {% endcapture %}

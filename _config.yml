@@ -22,7 +22,8 @@ title: Hazel Park Promise Zone
 email: moussatraore@myhpsd.org
 description: >- # this means to ignore newlines until "baseurl:"
   The official site for the Hazel Park Promise Zone! Apply for our scholarships, oin the mentor program, donate to the cause, and much more!
-baseurl: "/promiseZone" # the subpath of your site, e.g. /blog
+baseurl: "/promiseZone" # the subpath of your site, e.g. /blog. USED FOR DEVELOPMENT
+#baseurl: "" # the subpath of your site, e.g. /blog. USED FOR PRODUCTION
 url: "https://hazelparkpromise.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
