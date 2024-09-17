@@ -20,11 +20,11 @@
       width: 300px;
       border-radius: 50%;
       object-fit: cover;
-      padding-bottom: var(--sp-xl);
+      margin-bottom: var(--sp-xl);
     }
 
     &__name {
-      padding-bottom: var(--sp-md);
+      margin-bottom: var(--sp-md);
     }
 
   }

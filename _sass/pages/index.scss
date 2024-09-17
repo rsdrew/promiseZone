@@ -33,8 +33,15 @@
     line-height: 1.5;
   }
 
-  &__button--apply-now {
-    margin-right: 2rem;
+  #cta-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--sp-xxl);
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
 
 }

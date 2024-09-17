@@ -153,16 +153,16 @@ const handleIsNotResidentOnClick = () => {
   isResidentOption.classList.remove("checked");
   isNotResidentOption.classList.add("checked");
 
-  // The user is not a resident. Disable all scholarship options besides Summer Scholarship. Select the summer scholarship.
+  // The user is not a resident. Disable the OCC and University Scholarship options. Select the Junior/Senior scholarship.
   scholarshipOptions.forEach(option => {
-    if (option.id === "scholarship-option--summer") {
-      handleScholarshipOptionsOnClick(option);
-    }
-    else {
+    if (option === occScholarship || option === universityScholarship) {
       option.classList.add("disabled");
       option.classList.remove("selected");
       option.setAttribute("tabindex", -1);
       option.setAttribute("aria-disabled", true);
+    }
+    else if (option === juniorSeniorScholarship) {
+      handleScholarshipOptionsOnClick(option);
     }
   });
 

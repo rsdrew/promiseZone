@@ -54,7 +54,7 @@ a {
   margin: var(--sp-xl);
   border-radius: var(--border-radius);
   overflow: hidden;
-  z-index: 2;
+  z-index: 11;
 }
 
 .skip:focus-visible {
@@ -110,7 +110,7 @@ a {
   font-family: var(--ff-header);
   font-size: var(--fs-xxxl);
   font-weight: 700;
-  padding-bottom: var(--sp-xxl);
+  margin-bottom: var(--sp-xxl);
   line-height: 1.1;
 
   &--light {
@@ -324,6 +324,10 @@ p, .text-body {
 
    .w-fit-content {
     width: fit-content !important;
+
+    @media (max-width: 700px) {
+      width: 100% !important;
+    }
    }
 /* END WIDTH */
 
