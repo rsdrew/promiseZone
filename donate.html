@@ -22,9 +22,16 @@ title: Donate
     <div class="line line--vertical"></div>
     <div class="donations__credit-card slide-left">
       <svg class="pb-md" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z"/></svg>
-      <h3 class="text-header">Credit Card</h3>
-      <p class="donations__description">Credit cards can be processed through PayPal.</p>
-      <a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=C3ZJNZZT2WQT2&source=url" target="_blank" class="button">Donate</a>
+      <h3 class="text-header">Debit/Credit Card</h3>
+      <p class="donations__description mb-xl">Debit/credit cards can be processed directly through our bank,</p>
+      <form id="donate-form" name="PrePage" method="post" target="_blank" action="https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx">
+        <input type="hidden" name="LinkId" value="3ac671d6-8b79-41ce-97d9-eef6eeb226ac" />
+        <input type="submit" value="Donate" class="button mb-xxl">
+      </form> 
+      <p class="mb-xl">or you can donate through PayPal.</p>
+      <a id="button--paypal" href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=C3ZJNZZT2WQT2&source=url" target="_blank" class="button button--alt">
+        <img src="{{site.baseurl}}/assets/images/backgrounds/paypal.png" alt="PayPal logo" />
+      </a>
     </div>
   </div>
   <p class="text-small text-italic text-align-center">The Hazel Park Promise Zone is a US tax-exempt 501(c)(3) nonprofit organization.</p>

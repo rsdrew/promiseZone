@@ -45,11 +45,33 @@
     fill: var(--brand);
   }
 
-  &__description {
-    padding-bottom: var(--sp-xxl);
+  a, button, input[type='submit'] {
+    width: 100%;
   }
 
-  a, button {
+  #donate-form {
     width: 100%;
+  }
+
+  $payPalLightBlue: #0070E0;
+  $payPalDarkBlue: #003087;
+
+  #button--paypal {
+    background-color: $payPalLightBlue;
+    box-shadow: 0px 0.5rem 0px 0px $payPalDarkBlue, var(--shadow);
+    line-height: 0;
+
+    &:hover {
+      box-shadow: 0px 0.25rem 0px 0px $payPalDarkBlue, 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0px 0px 0px 0px $payPalDarkBlue;
+    }
+    
+    img {
+      height: 32px;
+    }
+
   }
 }
