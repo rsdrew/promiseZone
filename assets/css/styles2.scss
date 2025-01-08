@@ -29,6 +29,7 @@ $baseurl: "{{ site.baseurl }}";
 @import "components/job";
 @import "components/resource";
 @import "components/sponsor-tier";
+@import "components/additional-sponsor-opportunity";
 @import "components/sponsor";
 @import "components/grade-range-radio-option";
 @import "components/checkmark-and-text";

@@ -1,6 +1,6 @@
-.sponsor-tiers {
+.additional-sponsor-opportunities {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--sp-xxl);
   margin-bottom: var(--sp-xxxxl);
 
@@ -13,8 +13,7 @@
   }
 }
 
-.sponsor-tier {
-
+.additional-sponsor-opportunity {
   background-color: var(--base-100);
   padding: var(--sp-xxl);
   border-radius: var(--border-radius);
@@ -31,11 +30,6 @@
     color: var(--brand);
     font-size: var(--fs-xxxxl);
     font-weight: 700;
-  }
-
-  &__contributes,
-  &__includes {
-    padding-bottom: var(--sp-xl);
   }
 
   .line {

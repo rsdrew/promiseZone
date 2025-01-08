@@ -1,15 +1,24 @@
+{% assign num-mentoring_defined = (include.num-mentoring && include.num-mentoring != "") %}
+{% assign num-tuition_defined = (include.num-tuition && include.num-tuition != "") %}
+{% assign num-mentoring = include.num-mentoring | plus: 0 %} <!--Convert to int-->
+{% assign num-tuition = include.num-tuition | plus: 0 %} <!--Convert to int-->
+
 <div class="sponsor-tier slide-up">
   <p class="sponsor-tier__title">{{ include.title }}</p>
   <p class="sponsor-tier__price">{{ include.price }}</p>
   <div class="line line--horizontal"></div>
-  <div class="sponsor-tier__contributes">
-    <p class="text-body text-body--bold">Contributes</p>
-    <p>Mentoring for <span class="text-bold">{{include.num-mentoring}}</span> students</p>
-    {% if include.num-tuition != "" %}
-    <div class="line line--horizontal line--light"></div>
-    <p>OCC tuition for <span class="text-bold">{{include.num-tuition}}</span> students</p>
-    {% endif %}
-  </div>
+  {% if num-mentoring_defined || num-tuition_defined %}
+    <div class="sponsor-tier__contributes">
+      <p class="text-body text-body--bold">Contributes</p>
+      {% if num-mentoring_defined %}
+        <p>One year of mentoring for <span class="text-bold">{{num-mentoring}}</span> high school student{% if num-mentoring > 1 %}s{% endif %}</p>
+      {% endif %}
+      {% if num-tuition_defined %}
+        <div class="line line--horizontal line--light"></div>
+        <p>One year of OCC tuition for <span class="text-bold">{{num-tuition}}</span> college student{% if num-tuition > 1 %}s{% endif %}</p>
+      {% endif %}
+    </div>
+  {% endif %}
   <div class="sponsor-tier__includes">
     <p class="text-body text-body--bold">Includes</p>
 
@@ -17,16 +26,19 @@
     <div class="line line--horizontal line--light"></div>
 
     {% if include.ad-size == "full-and-half" %}
-      <p><span class="text-bold">Full-page ad</span> (5” x 8”) and <span class="text-bold">half-page ad</span> (5" x 4") in program booklet</p>
+      <p><span class="text-bold">Full-page ad</span> (8”W x 10”H) and <span class="text-bold">half-page ad</span> (8"W x 5"H) in program booklet</p>
     {% elsif include.ad-size == "full" %}
-      <p><span class="text-bold">Full-page ad</span> (5” x 8”) in program booklet</p>
+      <p><span class="text-bold">Full-page ad</span> (8”W x 10”H) in program booklet</p>
     {% elsif include.ad-size == "half" %}
-      <p><span class="text-bold">Half-page ad</span> (5” x 4”) in program booklet</p>
+      <p><span class="text-bold">Half-page ad</span> (8”W x 5”H) in program booklet</p>
     {% elsif include.ad-size == "quarter" %}
-      <p><span class="text-bold">Quarter-page ad</span> (2.5” x 4”) in program booklet</p>
+      <p><span class="text-bold">Quarter-page ad</span> (4”W x 5”H) in program booklet</p>
     {% endif %}
 
+    {% if include.ad-size %}
     <div class="line line--horizontal line--light"></div>
+    {% endif %}
+
     <p>Company name and logo listed as <span class="text-bold">{{ include.sponsor-level }}</span> Sponsor on slideshow</p>
 
     {% if include.num-tickets-for-dinner != "" %}
@@ -42,6 +54,11 @@
     {% if include.promotional-table == "true" %}
       <div class="line line--horizontal line--light"></div>
       <p>Promotional table setup in banquet center foyer</p>
+    {% endif %}
+
+    {% if include.speak-at-dinner == "true" %}
+      <div class="line line--horizontal line--light"></div>
+      <p>Opportunity for company representative to speak at the event</p>
     {% endif %}
   </div>
 </div>
