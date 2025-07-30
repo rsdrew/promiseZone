@@ -1,7 +1,7 @@
 @mixin slide($direction, $distance, $delay:"") {
   opacity: 0;
   transform: translate#{$direction}($distance);
-  transition: transform 0.5s ease-out #{$delay}, opacity 0.5s ease-out #{$delay};
+  transition: transform 0.25s ease-out #{$delay}, opacity 0.25s ease-out #{$delay};
 
   &.visible {
     opacity: 1;
@@ -19,11 +19,11 @@
     }
 
     &:nth-child(3n + 2) {
-      @include slide("Y", $slide-distance, "0.2s");
+      @include slide("Y", $slide-distance, "0.1s");
     }
 
     &:nth-child(3n) {
-      @include slide("Y", $slide-distance, "0.4s");
+      @include slide("Y", $slide-distance, "0.2s");
     }
   }
 
@@ -38,7 +38,7 @@
 
 .fade-in {
   opacity: 0;
-  transition: opacity 1s ease-out;
+  transition: opacity 0.5s ease-out;
 
   &.visible {
     opacity: 1;

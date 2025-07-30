@@ -18,9 +18,6 @@ const universityInfo = document.getElementById("info-university-scholarship");
 const juniorSeniorInfo = document.getElementById("info-junior-senior-scholarship");
 const summerInfo = document.getElementById("info-summer-scholarship");
 
-const scholarshipEligibilityCalculator = document.getElementById("scholarship-eligibility-calculator");
-const gradeRangeHelperText = document.getElementById("grade-range-helper-text");
-
 const isResidentOption = document.getElementById("resident-radio-button-label--true");
 const isNotResidentOption = document.getElementById("resident-radio-button-label--false");
 const isResidentOptions = document.querySelectorAll(".resident-radio-button-label");
@@ -47,6 +44,7 @@ const handleScholarshipOptionsOnClick = (option) => {
 
   // Give some time for the previous "Scholarship Speicific Information" to go away.
   setTimeout(() => {
+    debugger;
     // Display the correct Scholarship Specific Information
     let infoToShow = null;
 
@@ -112,23 +110,6 @@ const handleScholarshipOptionsOnClick = (option) => {
     tabableElements.forEach(element => element.setAttribute("tabindex", 0));
 
     }, 300);
-
-
-  // Change the OCC specific helper text when the Junior/Senior scholarship option is selected.
-  if (option.id === juniorSeniorScholarship.id) {
-    gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to $500.";
-  }
-  else {
-    gradeRangeHelperText.innerText = "100% of the scholarship is equivalent to the cost of tuition at Oakland Community College for one semester. This is an estimated value of $1,500.";
-  }
-
-  // Hide the entire scholarship eligibility calculator when the Summer Scholarship option is selected.
-  if (option.id === summerScholarship.id) {
-    scholarshipEligibilityCalculator.classList.add("d-none");
-  }
-  else {
-    scholarshipEligibilityCalculator.classList.remove("d-none");
-  }
 };
 
 const handleIsResidentOnClick = () => {
@@ -137,6 +118,7 @@ const handleIsResidentOnClick = () => {
 
   // The user is a resident. Enable all scholarship options. Select the first option.
   scholarshipOptions.forEach((option, index) => {
+    debugger;
     option.classList.remove("disabled");
     option.classList.remove("selected");
     option.setAttribute("tabindex", 0);
