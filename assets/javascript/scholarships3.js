@@ -44,7 +44,6 @@ const handleScholarshipOptionsOnClick = (option) => {
 
   // Give some time for the previous "Scholarship Speicific Information" to go away.
   setTimeout(() => {
-    debugger;
     // Display the correct Scholarship Specific Information
     let infoToShow = null;
 
@@ -118,7 +117,6 @@ const handleIsResidentOnClick = () => {
 
   // The user is a resident. Enable all scholarship options. Select the first option.
   scholarshipOptions.forEach((option, index) => {
-    debugger;
     option.classList.remove("disabled");
     option.classList.remove("selected");
     option.setAttribute("tabindex", 0);
