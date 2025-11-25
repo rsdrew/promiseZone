@@ -1,16 +1,31 @@
 .three-column-person-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    'person1 text person2';
   max-width: 80rem;
   gap: var(--sp-xxxxl);
   padding-bottom: var(--sp-xxxxl);
 
-  @media (max-width:700px) {
+  @media (max-width:1200px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'person1 person2'
+      'text text';
+  }
+
+    @media (max-width:800px) {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'person1'
+      'person2'
+      'text';
   }
 
   &__person {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,5 +42,16 @@
       margin-bottom: var(--sp-md);
     }
 
+    &:nth-child(1) {
+      grid-area: person1;
+    }
+
+    &:nth-child(2) {
+      grid-area: person2;
+    }
+  }
+
+  &__text {
+    grid-area: text;
   }
 }
