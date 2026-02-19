@@ -11,7 +11,6 @@
   justify-items: center;
   column-gap: var(--sp-xxxxl);
   row-gap: var(--sp-xxxxl);
-  
 
   &--college-preparation {
     grid-template-columns: repeat(4, 1fr);
@@ -25,7 +24,56 @@
     }
   }
 
-  &--college-success-coaching,
+  &--college-success-coaching {
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 1600px) {
+      grid-template-columns: repeat(6, 1fr);
+
+      .icon-item {
+        grid-column-end: span 2;
+      }
+
+      grid-template-rows: auto auto;
+
+      .icon-item:nth-child(4) {
+        grid-column-start: 2;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+
+      .icon-item {
+        grid-column-end: span 1;
+      }
+
+      .icon-item:last-child {
+        grid-column-end: span 2;
+      }
+
+      .icon-item:nth-child(4) {
+        grid-column-start: auto;
+      }
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+
+      .icon-item {
+        grid-column-end: span 1;
+      }
+
+      .icon-item:last-child {
+        grid-column-end: auto;
+      }
+
+      .icon-item:nth-child(4) {
+        grid-column-start: auto;
+      }
+    }
+  }
+
   &--sat-test-prep {
     grid-template-columns: repeat(3, 1fr);
 
@@ -56,6 +104,7 @@
     &__svg {
       fill: var(--brand);
       height: var(--sp-xxxxxl);
+      width: fit-content;
       margin-bottom: var(--sp-xl);
     }
 

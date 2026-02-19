@@ -1,0 +1,22 @@
+.college-success-coaching__task-list {
+  grid-area: task-list;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxl);
+  max-width: 800px;
+  margin-inline: auto;
+  padding-left: clamp(var(--sp-md), 5vw, var(--sp-xl));
+
+  &__task {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: var(--sp-xl);
+
+    svg {
+      margin-top: var(--sp-md);
+      min-height: var(--sp-xxl);
+      min-width: var(--sp-xxl);
+      fill: var(--brand);
+    }
+  }
+}

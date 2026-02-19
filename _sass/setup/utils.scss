@@ -22,3 +22,11 @@ h5, .h5 {
 h6, .h6 {
   font-size: var(--fs-sm);
 }
+
+.card {
+  background-color: var(--base-100);
+  box-shadow: var(--shadow);
+  padding: var(--sp-xxxl);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--sp-xxxxl);
+}
