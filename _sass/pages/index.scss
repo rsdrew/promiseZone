@@ -157,12 +157,7 @@
     font-family: var(--ff-header);
     font-size: var(--fs-xxxl);
     color: var(--base-100);
-    padding-bottom: var(--sp-xxl);
     font-weight: 800;
-
-    @media (max-width: 1000px) {
-      padding-bottom: var(--sp-xxxl);
-    }
   }
 
   &__body {
