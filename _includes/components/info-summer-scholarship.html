@@ -1,23 +1,29 @@
 <div id="info-summer-scholarship" class="scholarship-info hidden">
   <div class="card">
     <div class="scholarship-info__list">
-      {% include components/checkmark-and-text.html
-        text='
-          <div>
-            <p class="pb-md">Residents may receive 6 credits covered at OCC each summer.</p>
-            <p class="text-italic text-small text-normal max-w-100">While students are able to receive this scholarship for summer courses at other in-state universities, the scholarship amount will be based on the pricing of the equivalent course at OCC, which is likely a fraction of the cost of the university course. For this reason, students are encouraged to take summer courses at OCC.</p>
-          </div>
-        '
-      %}
+      {% include components/checkmark-and-text.html text='
+      <div>
+        <p class="pb-md">
+          Scholars who currently attend Oakland Community College, or whose in-district community college is Oakland Community College, may receive up to 6
+          credits covered.
+        </p>
+      </div>
+      ' %} {% include components/checkmark-and-text.html text='
+      <div>
+        <p class="pb-md">Scholars whose in-district community college is not Oakland Community College may receive up to 4 credits covered.</p>
+      </div>
+      ' %}
 
-      {% include components/checkmark-and-text.html
-        text='
-          <div>
-            <p class="pb-md">Non-residents may receive 4 credits covered at their in-district community college each summer.</p>
-            <p class="text-italic text-small text-normal max-w-100">While students are able to receive this scholarship for summer courses at other in-state universities, the scholarship amount will be based on the pricing of the equivalent course at their in-district community college, which is likely a fraction of the cost of the university course. For this reason, students are encouraged to take summer courses at their in-district community college.</p>
-          </div>
-        '
-      %}
+      {% include components/checkmark-and-text.html text='
+      <div>
+        <p class="pb-md">Scholars who would like to take summer courses at another Michigan college or university may receive up to 4 credits covered at the equivalent cost of their in-district community college.</p>
+        <p class="text-italic text-small text-normal max-w-100">
+          <span class="text-bold">IMPORTANT NOTE:</span> Each scholarship amount will be based on the pricing of the equivalent course at the Scholars’ in-district community college, which is
+          likely a fraction of the cost of summer courses at their main postsecondary institution. To ensure our scholarship funding benefits as many Scholars
+          as possible, we encourage students to take courses at their in-district community college.
+        </p>
+      </div>
+      ' %}
     </div>
   </div>
 </div>

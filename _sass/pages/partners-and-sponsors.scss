@@ -14,13 +14,14 @@
   }
 }
 
-.community-funders {
+.community-supporters {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: var(--sp-xxxxl);
   row-gap: var(--sp-xl);
   align-items: center;
+  text-align: center;
 
   @media (max-width: 1000px) {
     justify-content: center;

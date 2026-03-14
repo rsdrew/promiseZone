@@ -18,7 +18,6 @@
     height: var(--sp-xxl);
     width: var(--sp-xxl);
   }
-
 }
 
 .resident-options-card {
@@ -68,8 +67,7 @@
 }
 
 /* On mouse-over, add a brand background color */
-.resident-radio-button-label:hover:not(.checked) .resident-radio-button-checkmark
- {
+.resident-radio-button-label:hover:not(.checked) .resident-radio-button-checkmark {
   background-color: rgba(127, 1, 13, 0.5);
 }
 
@@ -135,7 +133,7 @@
       justify-content: center;
     }
   }
-  
+
   &::after {
     content: "";
     display: block;
@@ -170,8 +168,11 @@
 }
 
 #scholarship-option--logo--occ {
-  font-size: var(--sp-xxl);
-  padding-bottom: var(--sp-xl);
+  font-family: var(--ff-header);
+  font-size: var(--fs-xxl);
+  color: var(--brand);
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 .scholarship-option__criteria {
