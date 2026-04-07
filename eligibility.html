@@ -1,0 +1,67 @@
+---
+layout: default
+title: Eligibility
+---
+
+{% capture contact_text %}
+<p class="pb-xl">
+  Alumni from prior to six years, or those who are not currently enrolled in college, receive one-on-one coaching on an as-needed basis.
+  <a href="{{ site.baseurl }}/contact.html">Contact us!</a>
+</p>
+{% endcapture %} {% capture scholarship_page_text %}
+<p class="pb-xl">
+  See our
+  <a href="{{ site.baseurl }}/scholarships.html">scholarships page</a> for more details regarding scholarship amount, residency requirements, and other
+  requirements.
+</p>
+{% endcapture %}
+
+<div class="container">
+  <h1 class="text-page-header">Eligibility</h1>
+  <h2 class="text-page-subheader">
+    <span class="text-page-subheader--bold">The Promise Zone has a lot to offer!</span> Take a look at everything our students are eligible for.
+  </h2>
+
+  <div class="mb-xxxxl w-fit-content mi-auto">
+    <div class="eligibility-items-wrapper">
+      <div>
+        <div class="card">
+          <h2 class="text-subheader text-align-center">College Preparation</h2>
+          {% include components/checkmark-and-text.html text='
+          <p class="pb-xl">
+            All students in the Hazel Park School District are eligible for one-on-one support in career guidance, planning their college and scholarship
+            searches, completing admissions and financial aid applications, and selecting the postsecondary institution that best matches their personal,
+            financial, and career goals.
+          </p>
+          ' %} {% include components/checkmark-and-text.html text='
+          <p class="pb-xl">
+            There are dedicated professionals at Hazel Park High School, Hazel Park Advantage High School, and INVEST-Roosevelt High School to assist students
+            in all aspects of postsecondary planning.
+          </p>
+          ' %} {% include components/checkmark-and-text.html text='
+          <p class="pb-xl">
+            Vikings Virtual Academy students are encouraged to reach out to the professional at their most-recently enrolled high school for guidance.
+          </p>
+          ' %}
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="text-subheader text-align-center">Postsecondary Success Coaching</h2>
+        {% include components/checkmark-and-text.html text='
+        <p class="pb-xl">
+          Currently enrolled Hazel Park School District alumni from the last six calendar years are eligible to receive personalized, equity-centered academic,
+          financial, career, and socioemotional coaching.
+        </p>
+        ' %} {% include components/checkmark-and-text.html text=contact_text %}
+      </div>
+      <div class="card">
+        <h2 class="text-subheader text-align-center">Scholarships</h2>
+        {% include components/checkmark-and-text.html text='
+        <p class="pb-xl">
+          All Hazel Park School District graduates may receive funding to pursue a college education for up to six years after high school graduation.
+        </p>
+        ' %} {% include components/checkmark-and-text.html text=scholarship_page_text %}
+      </div>
+    </div>
+  </div>
+</div>

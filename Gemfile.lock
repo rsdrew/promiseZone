@@ -42,6 +42,8 @@ GEM
       webrick (~> 1.7)
     jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-prettier (0.0.0)
+      jekyll (>= 3.8)
     jekyll-sass-converter (3.1.0)
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
@@ -95,6 +97,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.3)
   jekyll-feed (~> 0.12)
+  jekyll-prettier
   logger
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
