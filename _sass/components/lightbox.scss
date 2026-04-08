@@ -66,4 +66,15 @@
   .photo-wrapper {
     width: 100%;
   }
+
+  #lightbox #close-lightbox {
+    top: 5%;
+    width: fit-content;
+  }
+
+  #lightbox #prev-photo,
+  #lightbox #next-photo {
+    top: 90%;
+    width: fit-content;
+  }
 }
