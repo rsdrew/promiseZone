@@ -97,14 +97,14 @@ footer {
 
 .footer {
   padding: var(--sp-xxl);
+  padding-bottom: var(--sp-sm);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--sp-xxxxl);
+  gap: var(--sp-xxxl);
 
   &__column {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-xl);
 
     &__header {
       color: var(--base-100);
@@ -112,7 +112,7 @@ footer {
       font-family: var(--ff-header);
       font-size: var(--fs-xl);
       font-weight: 600;
-      padding-bottom: var(--sp-lg);
+      padding-bottom: var(--sp-md);
     }
 
     &__item {
@@ -156,14 +156,5 @@ footer {
   * {
     color: var(--base-100);
     text-wrap: nowrap;
-  }
-}
-
-.website-by {
-  width: 100%;
-  margin-inline: auto;
-
-  a {
-    color: var(--base-100);
   }
 }

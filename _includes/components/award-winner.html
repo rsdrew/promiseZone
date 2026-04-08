@@ -1,0 +1,12 @@
+<div class="award-winner slide-up">
+  <div class="award-winner__top">
+    <div class="award-winner__name text-align-center text-subheader text-subheader--light">{{ include.name }}</div>
+  </div>
+  <div class="award-winner__middle">
+    <img class="award-winner__picture" src="{{ site.baseurl }}/assets/images/award-winners/{{ include.filename }}.webp" alt="{{ include.name }}" height="300" width="300" />
+  </div>
+  <div class="award-winner__bottom">
+    <div class="award-winner__award-name text-bold fs-xl text-align-center text-body--dark mb-xl">{{ include.award-name }}</div>
+    <p class="award-winner__other-info text-small text-italic text-align-center text-body-dark">{{ include.other-info }}</p>
+  </div>
+</div>

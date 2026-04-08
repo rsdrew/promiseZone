@@ -28,6 +28,7 @@ h6, .h6 {
   box-shadow: var(--shadow);
   padding: var(--sp-xxxl);
   border-radius: var(--border-radius);
+  max-width: 60rem;
 }
 
 .fw-light {
@@ -44,4 +45,20 @@ h6, .h6 {
 
 .fw-bold {
   font-weight: var(--fw-bold);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.d-block {
+  display: block;
 }

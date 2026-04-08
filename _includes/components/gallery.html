@@ -1,0 +1,13 @@
+<div class="gallery-wrapper card">
+  <div class="gallery">
+  {% for photo in site.data.photos.annual_fundraiser_2026.photos %}
+  <div class="photo-wrapper slide-in" onclick="photoWrapperOnClick(event)">
+    <div class="photo-overlay">
+      <i class="fa fa-search"></i>
+    </div>
+    <img class="photo" src="/assets/images/annual_fundraiser_2026/{{ photo.file }}" loading="lazy" />
+  </div>
+  {% endfor %}
+  </div>
+</div>
+{% include components/lightbox.html %}

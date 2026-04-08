@@ -1,11 +1,5 @@
 .eligibility-items-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--sp-xxl);
-
-  @media (max-width: 1400px) {
     display: flex;
     flex-direction: column;
     gap: var(--sp-xxl);
-  }
 }
