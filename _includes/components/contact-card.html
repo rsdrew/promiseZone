@@ -1,0 +1,28 @@
+<div class="contact-card slide-up">
+  <div class="contact-card__top">
+    <div class="contact-card__name text-align-center text-subheader text-subheader--light">{{ include.name }}</div>
+    <div class="contact-card__position text-align-center text-small text-italic text-body--light">{{ include.position }}</div>
+  </div>
+  <div class="contact-card__middle">
+    <img
+      class="contact-card__picture"
+      src="{{ site.baseurl }}/assets/images/staff/{{ include.filename }}.webp"
+      alt="{{ include.name }}"
+      height="300"
+      width="300"
+    />
+  </div>
+  <div class="contact-card__bottom">
+    {% if include.phoneNumberDisplay %}
+    <div class="contact-card__bottom__phone">
+      {% include svgs/phone.html %}
+      <a href="tel:{{ include.phoneNumberTel }}">{{ include.phoneNumberDisplay }}</a>
+    </div>
+    {% endif %} {% if include.email %}
+    <div class="contact-card__bottom__email">
+      {% include svgs/envelope.html %}
+      <a href="mailto:{{ include.email }}">{{ include.email }}</a>
+    </div>
+    {% endif %}
+  </div>
+</div>

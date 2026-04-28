@@ -1,5 +1,6 @@
 ---
 ---
+
 $baseurl: "{{ site.baseurl }}";
 @import "setup/reset";
 @import "setup/variables";
@@ -37,5 +38,6 @@ $baseurl: "{{ site.baseurl }}";
 @import "components/checkmark-and-text";
 @import "components/gallery";
 @import "components/award-winner";
+@import "components/contact-card";
 @import "components/lightbox";
 @import "components/footer";

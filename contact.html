@@ -5,26 +5,64 @@ title: Contact
 
 <div class="container">
   <h1 class="text-page-header">Get in touch with us!</h1>
-  <h2 class="text-page-subheader"><span class="text-page-subheader--bold">We’re here to assist you</span> with any questions, feedback, or support you may need. Whether you’re seeking more information about our programs, need help with your application, or want to get involved, our team is ready to help. Reach out to us by phone, email, or fill out the form below!</h2>
+  <h2 class="text-page-subheader">
+    <span class="text-page-subheader--bold">We’re here to assist you</span> with any questions, feedback, or support you may need. Whether you’re seeking more
+    information about our programs, need help with your application, or want to get involved, our team is ready to help. Reach out to us by phone, email, or
+    fill out the form below!
+  </h2>
 
-  <div class="contact-methods slide-up">
-    <div class="contact-methods__phone slide-right">
-      <div class="pb-xxl">
-        {% include svgs/phone.html %}
-      </div>
-      <a href="tel:+12486585183" class="contact-methods__phone__phone-number text-header">(248)-658-5183</a>
-    </div>
-    <div class="line line--vertical"></div>
-    <div class="contact-methods__email slide-left">
-      <div class="pb-xxl">
-        {% include svgs/envelope.html %}
-      </div>
-      <a href="mailto:fernando.monge@myhpsd.org" class="contact-methods__email__email-address text-header">fernando.monge@myhpsd.org</a>
-      <a href="mailto:promisezone@myhpsd.org" class="contact-methods__email__email-address text-header">promisezone@myhpsd.org</a>
-    </div>
+  <div class="contact-card-list">
+    <!-- prettier-ignore -->
+    {% include components/contact-card.html
+    name="Fernando Monge M.S, M.B.A"
+    position="Executive Director"
+    filename="fernando-monge1"
+    phoneNumberTel="+12486585183"
+    phoneNumberDisplay="(248)-658-5183"
+    email="fernando.monge@myhpsd.org"
+  %}
+
+    <!-- prettier-ignore -->
+    {% include components/contact-card.html
+    name="Katrina “Kitty” Groeller, M.A"
+    position="Manager of College Success Programs"
+    filename="katrina-groeller"
+    email="katrina.groeller@myhpsd.org"
+  %}
+
+    <!-- prettier-ignore -->
+    {% include components/contact-card.html
+    name="Shaunti Finley"
+    position="College Advisor at Hazel Park High School"
+    filename="shaunti-finley"
+    email="shaunti.finley@myhpsd.org"
+  %}
+
+    <!-- prettier-ignore -->
+    {% include components/contact-card.html
+    name="Drai Hall"
+    position="Oakland80 Navigator at Advantage Alternative High School"
+    filename="drai-hall"
+    email="drai.hall@myhpsd.org"
+  %}
+
+    <!-- prettier-ignore -->
+    {% include components/contact-card.html
+    name="Jacob Yonan"
+    position="Oakland80 Navigator at INVEST-Roosevelt High School"
+    filename="jacob-yonan"
+    email="jacob.yonan@myhpsd.org"
+  %}
   </div>
 
   <div class="contact-wrapper slide-up">
-    <iframe class="contact-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdvRmSQe8nMAQXBTilMoDndnktWRd_Pdyo46rh4mtM-gns5lQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe
+      class="contact-form"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdvRmSQe8nMAQXBTilMoDndnktWRd_Pdyo46rh4mtM-gns5lQ/viewform?embedded=true"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      >Loading…</iframe
+    >
   </div>
 </div>
