@@ -5,29 +5,32 @@ title: College Preparation
 
 <div class="container">
   <h1 class="text-page-header">Get ready for college with Ms. Finley, Ms. Hall, and Mr. Yonan!</h1>
-  {% include components/two-column-person-info.html
-    name="Shaunti Finley"
-    filename="shaunti-finley"
-    title="College Advisor"
-    bold-text="Ms. Finley"
-    text="works hard to assist each and every Hazel Park High School senior through the college exploration, admissions, and financial aid processes.<br/><br/>The Hazel Park Promise Zone is thrilled to be able to provide this service to students and encourages students of all ages and their parents to reach out to our College Adviser to begin planning for life after high school."  
-  %}  
+  <div class="three-person-headshots-wrapper">
+    <!-- prettier-ignore -->
+    {% include components/headshot-name-title.html filename="shaunti-finley" name="Shaunti Finley" title="College Advisor<br />Hazel Park High School" %}
+    <!-- prettier-ignore -->
+    {% include components/headshot-name-title.html filename="drai-hall" name="Drai Hall" title="Oakland80 Navigator<br />Advantage Alternative High School" %}
+    <!-- prettier-ignore -->
+    {% include components/headshot-name-title.html filename="jacob-yonan" name="Jacob Yonan" title="Oakland80 Navigator<br />INVEST-Roosevelt High School" %}
+  </div>
+  <p class="text-page-subheader"><span class="text-page-subheader--bold">Our team of college advisers and navigators</span> work hard to assist each and every Hazel Park School District senior through career exploration, college admissions, and financial aid processes.
+The Hazel Park Promise Zone is thrilled to be able to provide this service to students and encourages students of all ages and their parents to reach out to these individuals to begin planning for life after high school.
+</h2>
   <div class="icon-item-list-background">
-    <h2 class="text-header text-header--dark text-align-center">Ms. Finley can tackle any task</h2>
+    <h2 class="text-header text-header--dark text-align-center">Our advisor and navigators can tackle any task</h2>
     <div class="icon-item-list icon-item-list--college-preparation">
+
       <div class="icon-item slide-up">
-        <svg class="icon-item__svg" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
-          <rect fill="none" height="4.8" rx="1.6" width="27.2" x="12.4" y="26"/>
-          <rect fill="none" height="4.8" rx="1.6" width="24" x="12.4" y="35.6"/>
-          <g>
-            <path d="m36.4 14.8h8.48a1.09 1.09 0 0 0 1.12-1.12 1 1 0 0 0 -.32-.8l-10.56-10.56a1 1 0 0 0 -.8-.32 1.09 1.09 0 0 0 -1.12 1.12v8.48a3.21 3.21 0 0 0 3.2 3.2z"/>
-            <path d="m44.4 19.6h-11.2a4.81 4.81 0 0 1 -4.8-4.8v-11.2a1.6 1.6 0 0 0 -1.6-1.6h-16a4.81 4.81 0 0 0 -4.8 4.8v38.4a4.81 4.81 0 0 0 4.8 4.8h30.4a4.81 4.81 0 0 0 4.8-4.8v-24a1.6 1.6 0 0 0 -1.6-1.6zm-32-1.6a1.62 1.62 0 0 1 1.6-1.55h6.55a1.56 1.56 0 0 1 1.57 1.55v1.59a1.63 1.63 0 0 1 -1.59 1.58h-6.53a1.55 1.55 0 0 1 -1.58-1.58zm24 20.77a1.6 1.6 0 0 1 -1.6 1.6h-20.8a1.6 1.6 0 0 1 -1.6-1.6v-1.57a1.6 1.6 0 0 1 1.6-1.6h20.8a1.6 1.6 0 0 1 1.6 1.6zm3.2-9.6a1.6 1.6 0 0 1 -1.6 1.63h-24a1.6 1.6 0 0 1 -1.6-1.6v-1.6a1.6 1.6 0 0 1 1.6-1.6h24a1.6 1.6 0 0 1 1.6 1.6z"/>
-          </g>
+        <svg class="icon-item__svg" xmlns="http://www.w3.org/2000/svg" viewBox="50 60 535 485">
+          <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+          <path
+            d="M264 112L376 112C380.4 112 384 115.6 384 120L384 160L256 160L256 120C256 115.6 259.6 112 264 112zM208 120L208 160L128 160C92.7 160 64 188.7 64 224L64 320L576 320L576 224C576 188.7 547.3 160 512 160L432 160L432 120C432 89.1 406.9 64 376 64L264 64C233.1 64 208 89.1 208 120zM576 368L384 368L384 384C384 401.7 369.7 416 352 416L288 416C270.3 416 256 401.7 256 384L256 368L64 368L64 480C64 515.3 92.7 544 128 544L512 544C547.3 544 576 515.3 576 480L576 368z"
+          />
         </svg>
-        <p class="icon-item__title">FAFSA<br/>Application</p>
-        <p class="icon-item__description">Easily navigate this complex form.</p>
+        <p class="icon-item__title">Career Exploration</p>
+        <p class="icon-item__description">Explore careers to find the right fit for you and your interests!</p>
       </div>
-  
+
       <div class="icon-item slide-up">
         <svg class="icon-item__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
           viewBox="0 0 398.97 398.97" xml:space="preserve">
@@ -47,22 +50,30 @@ title: College Preparation
           </g>
         </g>
         </svg>
-        <p class="icon-item__title">College<br/>Selection</p>
-        <p class="icon-item__description">Find the right fit for you and your interests!</p>
+        <p class="icon-item__title">College<br/>Applications</p>
+        <p class="icon-item__description">Apply to colleges and send transcripts to be admitted.</p>
       </div>
-  
+
       <div class="icon-item slide-up">
-        <svg class="icon-item__svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0392 15.6244C18.2714 14.084 19.0082 12.1301 19.0082 10.0041C19.0082 5.03127 14.9769 1 10.0041 1C5.03127 1 1 5.03127 1 10.0041C1 14.9769 5.03127 19.0082 10.0041 19.0082C12.1301 19.0082 14.084 18.2714 15.6244 17.0392L21.2921 22.707C21.6828 23.0977 22.3163 23.0977 22.707 22.707C23.0977 22.3163 23.0977 21.6828 22.707 21.2921L17.0392 15.6244ZM10.0041 17.0173C6.1308 17.0173 2.99087 13.8774 2.99087 10.0041C2.99087 6.1308 6.1308 2.99087 10.0041 2.99087C13.8774 2.99087 17.0173 6.1308 17.0173 10.0041C17.0173 13.8774 13.8774 17.0173 10.0041 17.0173Z"/>
-        </svg>
-        <p class="icon-item__title">Scholarship<br/>Search</p>
-        <p class="icon-item__description">Don't leave free money on the table!</p>
+        <svg class="icon-item__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M541.4 162.6C549 155 561.7 156.9 565.5 166.9C572.3 184.6 576 203.9 576 224C576 312.4 504.4 384 416 384C398.5 384 381.6 381.2 365.8 376L178.9 562.9C150.8 591 105.2 591 77.1 562.9C49 534.8 49 489.2 77.1 461.1L264 274.2C258.8 258.4 256 241.6 256 224C256 135.6 327.6 64 416 64C436.1 64 455.4 67.7 473.1 74.5C483.1 78.3 484.9 91 477.4 98.6L388.7 187.3C385.7 190.3 384 194.4 384 198.6L384 240C384 248.8 391.2 256 400 256L441.4 256C445.6 256 449.7 254.3 452.7 251.3L541.4 162.6z"/></svg>
+        <p class="icon-item__title">Apprenticeships and Trades</p>
+        <p class="icon-item__description">Find a hands-on program that provides great benefits.</p>
       </div>
-  
+
       <div class="icon-item slide-up">
-        <svg class="icon-item__svg" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve">
+        <svg
+          class="icon-item__svg"
+          version="1.1"
+          id="_x32_"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
           <g>
-            <path class="st0" d="M406.195,383.984c-8.391,15.734-19.922,28.859-34.516,39.609c-14.656,10.719-32.188,18.703-52.563,23.969
+            <path
+              class="st0"
+              d="M406.195,383.984c-8.391,15.734-19.922,28.859-34.516,39.609c-14.656,10.719-32.188,18.703-52.563,23.969
               c-8.906,2.25-18.234,3.813-27.703,5.094V512h-70.828v-58.156c-20.172-1.703-39.453-4.844-57.609-9.844
               c-27.719-7.594-64.016-38.25-64.016-38.25c-3.109-1.813-5.172-5-5.609-8.531c-0.453-3.563,0.766-7.156,3.313-9.688l35.484-35.5
               c3.828-3.781,9.766-4.5,14.359-1.688c0,0,26.563,23.063,46.688,28.563c20.125,5.469,40.094,8.219,60.016,8.219
@@ -75,16 +86,16 @@ title: College Preparation
               c-17.016-4.438-34.891-6.688-53.719-6.688c-24.609,0-42.797,4.719-54.531,14.109c-11.781,9.453-17.625,21.734-17.625,36.875
               c0,13.641,4.109,24.078,12.531,31.359c8.359,7.344,22.469,12.109,42.359,14.125l55.703,4.75
               c41.297,3.656,72.563,14.625,93.734,32.922c21.203,18.328,31.781,45.016,31.781,80.016
-              C418.742,350.016,414.554,368.281,406.195,383.984z"/>
+              C418.742,350.016,414.554,368.281,406.195,383.984z"
+            />
           </g>
-          </svg>
-        <p class="icon-item__title">Tuition Incentive Program</p>
-        <p class="icon-item__description">Michigan offers additional assistance to Medicaid.</p>
+        </svg>
+        <p class="icon-item__title">Financial Aid</p>
+        <p class="icon-item__description">Complete the FAFSA and search for scholarships to finish college without student loans!</p>
       </div>
-  
     </div>
   </div>
 
-  <h2 class="text-header text-align-center">Get ready for college today!</h2>
+  <!-- <h2 class="text-header text-align-center">Get ready for college today!</h2> -->
   <!-- <iframe class="contact-form slide-up" src="https://docs.google.com/forms/d/e/1FAIpQLSftDM6mTTIXYTURfVBdq-zymihRvon32gdFgL6nKlXz2yh1Iw/viewform?embedded=true" width="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
 </div>

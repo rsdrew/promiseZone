@@ -3,3 +3,10 @@
   grid-template-columns: 1fr 1fr;
   max-width: 30rem;
 }
+
+.three-person-headshots-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-xl);
+  margin-bottom: var(--sp-xxl);
+}

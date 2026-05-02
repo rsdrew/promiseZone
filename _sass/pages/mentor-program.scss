@@ -1,29 +1,12 @@
 .students,
 .mentors {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: var(--sp-xxxxl);
   margin-bottom: var(--sp-xxxxxl);
 }
 
-.students {
-  grid-template-areas: "header ."
-                       "task-list image";
-  grid-template-columns: 2fr 3fr;
-}
-
-.mentors {
-  grid-template-areas: ". header"
-                       "image task-list";
-  grid-template-columns: 3fr 2fr;
-}
-
-
-.mentor-program__header {
-  grid-area: header;
-}
-
 .mentor-program__task-list {
-  grid-area: task-list;
   display: flex;
   flex-direction: column;
   gap: var(--sp-xxl);
@@ -43,7 +26,6 @@
 }
 
 .mentor-program__image {
-  grid-area: image;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   background-image: url($baseurl + "/assets/images/backgrounds/mentorProgram.jpg");

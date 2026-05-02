@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-xxl);
+  margin-bottom: var(--sp-xxxxl);
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
@@ -70,12 +71,12 @@
     }
 
     &__title {
-      padding-bottom: var(--sp-xxl);
+      margin-bottom: var(--sp-xl);
     }
 
     &__description {
       flex-grow: 1;
-      padding-bottom: var(--sp-xxxxl);
+      padding-bottom: var(--sp-xxl);
     }
 
     &__button {
@@ -86,4 +87,13 @@
       }
     }
   } 
+}
+
+.resources-category-header {
+  margin-bottom: var(--sp-xl);
+}
+
+.resources-category-description {
+  max-width: 85ch;
+  padding-bottom: var(--sp-xxl);
 }

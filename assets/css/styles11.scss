@@ -39,5 +39,6 @@ $baseurl: "{{ site.baseurl }}";
 @import "components/gallery";
 @import "components/award-winner";
 @import "components/contact-card";
+@import "components/headshot-name-title";
 @import "components/lightbox";
 @import "components/footer";
