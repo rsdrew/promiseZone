@@ -23,9 +23,9 @@
 
     &__logo {
       padding: var(--sp-xxl);
-      background-color: var(--base-700);
+      padding-bottom: 0;
       width: 100%;
-      height: 190px;
+      height: 120px;
       display: flex;
       justify-content: center;
       align-items: center;
