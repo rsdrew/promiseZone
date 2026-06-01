@@ -15,12 +15,20 @@
     max-width: 625px;
     font-weight: 600;
 
-    &--focus {
+    &__focus {
       font-size: clamp(2rem, 1.4444rem + 2.963vw, 5rem);
       color: var(--brand);
       width: fit-content;
       text-transform: uppercase;
       font-weight: 800;
+
+      &__all-hp {
+        text-wrap: nowrap;
+
+        @media (max-width: 400px) {
+          text-wrap: wrap;
+        }
+      }
     }
   }
 
@@ -43,7 +51,6 @@
       flex-direction: column;
     }
   }
-
 }
 
 #tagline-wrapper {
@@ -54,43 +61,8 @@
   text-transform: uppercase;
   text-align: center;
   font-family: var(--ff-header);
+  margin-bottom: 0;
   padding-bottom: 0;
-}
-
-#why-choose-text {
-  display: grid;
-  grid-template-columns: 1fr 4px 1fr;
-  gap: var(--sp-xl);
-  padding-top: var(--sp-xxl);
-
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
-
-  & > p {
-    max-width: 50ch;
-
-    @media (max-width: 700px) {
-      max-width: initial;
-    }
-  }
-
-  & > p:first-child {
-    margin-left: auto;
-
-    @media (max-width: 700px) {
-      margin-left: 0;
-      margin-bottom: var(--sp-xxl);
-    }
-  }
-
-  & > .line {
-
-    @media (max-width: 700px) {
-      display: none;
-    }
-  }
 }
 
 #making-a-difference-background {
@@ -135,7 +107,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 0px;
     left: 0px;
     height: 100%;
@@ -176,7 +148,7 @@
       padding: 0;
       margin: 1rem 1rem 3rem 0;
 
-      &--focus {
+      &__focus {
         background: none;
         backdrop-filter: none;
       }
@@ -186,14 +158,14 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgb(231,231,231, 0.7);
+      background: rgb(231, 231, 231, 0.7);
       backdrop-filter: blur(8px);
       position: absolute;
       top: 0;
       left: 0;
       z-index: 0;
     }
-  
+
     &__subtitle {
       position: relative;
       z-index: 1;
@@ -201,11 +173,10 @@
       font-weight: 400;
       font-family: var(--ff-body);
     }
-  
+
     &__button--apply-now {
       margin-bottom: 2rem;
     }
-  
   }
 }
 
@@ -264,7 +235,8 @@
     }
   }
 
-  .cta__students, .cta__supporters {
+  .cta__students,
+  .cta__supporters {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,11 +252,7 @@
     padding-bottom: var(--sp-xxxxl);
     flex-grow: 1;
   }
-
-  
 }
-
-
 
 @media (max-width: 600px) {
   #hero {

@@ -98,23 +98,19 @@
 }
 
 .scholarship-options {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   gap: var(--sp-xxl);
-
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .scholarship-option {
   position: relative;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
+
+  width: clamp(300px, 100%, 400px);
 
   &__logo {
     width: 100%;

@@ -3,6 +3,7 @@ const occScholarship = document.getElementById("scholarship-option--occ");
 const universityScholarship = document.getElementById("scholarship-option--university");
 const juniorSeniorScholarship = document.getElementById("scholarship-option--junior-senior");
 const summerScholarship = document.getElementById("scholarship-option--summer");
+const textbookReimbursement = document.getElementById("scholarship-option--textbook-reimbursement");
 
 const nonResidentExplanation = document.querySelector("#non-resident-explanation");
 
@@ -11,12 +12,14 @@ const occNextSteps = document.getElementById("next-steps-occ-scholarship");
 const universityNextSteps = document.getElementById("next-steps-university-scholarship");
 const juniorSeniorNextSteps = document.getElementById("next-steps-junior-senior-scholarship");
 const summerNextSteps = document.getElementById("next-steps-summer-scholarship");
+const textbookReimbursementNextSteps = document.getElementById("next-steps-textbook-reimbursement");
 
 const scholarshipInfo = document.querySelectorAll(".scholarship-info");
 const occInfo = document.getElementById("info-occ-scholarship");
 const universityInfo = document.getElementById("info-university-scholarship");
 const juniorSeniorInfo = document.getElementById("info-junior-senior-scholarship");
 const summerInfo = document.getElementById("info-summer-scholarship");
+const textbookReimbursementInfo = document.getElementById("info-textbook-reimbursement");
 
 const isResidentOption = document.getElementById("resident-radio-button-label--true");
 const isNotResidentOption = document.getElementById("resident-radio-button-label--false");
@@ -64,6 +67,10 @@ const handleScholarshipOptionsOnClick = (option) => {
         infoToShow = summerInfo;
         break;
 
+      case textbookReimbursement.id:
+        infoToShow = textbookReimbursementInfo;
+        break;
+
       default:
         break;
     }
@@ -98,6 +105,10 @@ const handleScholarshipOptionsOnClick = (option) => {
 
       case summerScholarship.id:
         nextStepsToShow = summerNextSteps;
+        break;
+
+      case textbookReimbursement.id:
+        nextStepsToShow = textbookReimbursementNextSteps;
         break;
 
       default:

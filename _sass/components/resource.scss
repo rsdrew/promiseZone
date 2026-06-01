@@ -12,6 +12,13 @@
     grid-template-columns: 1fr;
   }
 
+  :last-child:nth-child(3n + 1) {
+    grid-column: 2;
+
+    @media (max-width: 1200px) {
+      grid-column: 1;
+    }
+  }
 
   .resource {
     display: flex;

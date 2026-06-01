@@ -1,40 +1,30 @@
 <div id="next-steps-occ-scholarship" class="next-steps">
-  <div class="card">
+  <div class="card mb-xxxxl">
     <div class="next-steps__list">
-      {% include components/checkmark-and-text.html
-        text='
-        <div>
-          <p>Fill out the Promise Zone application if you haven\'t already. You only need to do this once, not every semester.</p>
-        </div>
-        '  
-      %}
-      <a class="button w-100 mb-xl" href="https://www.tfaforms.com/4848809" target="_blank">Fill out Promise Zone application</a>
-
-      {% include components/checkmark-and-text.html
-        text='
-          <div>
-            <p>Download and fill out the waiver below, and email it to <a href="mailto:fernando.monge@myhpsd.org">fernando.monge@myhpsd.org</a> if you haven\'t already. You only need to do this once, not every semester.</p>
-            <p class="text-italic text-normal text-small max-w-100">Failing to submit a waiver form can result in deregistration from classes and the Promise Zone won\'t be able to do anything until we receive your signed waiver form.</p>
-          </div>
-        '  
-      %}
+      {% include components/checkmark-and-text.html text='
+      <div>
+        <p>
+          Download and fill out the waiver below, and email it to <a href="mailto:fernando.monge@myhpsd.org">fernando.monge@myhpsd.org</a> if you haven\'t
+          already. You only need to do this once, not every semester.
+        </p>
+        <p class="text-italic text-normal text-small max-w-100">
+          Failing to submit a waiver form can result in deregistration from classes and the Promise Zone won\'t be able to do anything until we receive your
+          signed waiver form.
+        </p>
+      </div>
+      ' %}
       <button class="button download-waiver mb-xl w-100" type="button">Download Promise Zone waiver</button>
 
       {% capture contact-us %}
-        <p><a href="{{site.baseurl}}/contact.html">Contact us</a> and let us know you are taking classes at OCC before registration.</p>
-      {% endcapture %}
-    
-      {% include components/checkmark-and-text.html
-        text=contact-us 
-      %}
-    
-      {% include components/checkmark-and-text.html
-        text='<p>Register for courses, and attend class.</p>'  
-      %}
-    
-      {% include components/checkmark-and-text.html
-        text='<p>About 4-5 weeks after the semester begins, the Promise Zone will receive your tuition bill and make payments directly to school.</p>'  
-      %}
+      <p><a href="{{site.baseurl}}/contact.html">Contact us</a> and let us know you are taking classes at OCC before registration.</p>
+      {% endcapture %} {% include components/checkmark-and-text.html text=contact-us %} {% include components/checkmark-and-text.html text='
+      <p>Register for courses, and attend class.</p>
+      ' %} {% include components/checkmark-and-text.html text='
+      <p>
+        Oakland Community College will bill the Promise Zone directly. If you have completed these steps, disregard the bill on your student account during the
+        semester.
+      </p>
+      ' %}
     </div>
   </div>
 </div>
