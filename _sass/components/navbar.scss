@@ -24,6 +24,7 @@ nav {
 }
 
 nav.container {
+  height: 100px;
   padding-top: var(--sp-md);
   padding-bottom: var(--sp-md);
 }
@@ -44,12 +45,9 @@ nav .navbar {
   font-family: var(--ff-header);
 }
 .navbar .logo a {
-  font-size: 30px;
-  color: var(--base-200);
-  text-decoration: none;
-  font-weight: 600;
+  display: block;
+  height: 80px;
 }
-
 
 nav .navbar .links {
   display: flex;
@@ -159,9 +157,6 @@ nav .navbar .links li:hover .js-sub-menu {
     max-width: 100%;
   }
 
-  nav .navbar .logo a {
-    font-size: 27px;
-  }
   nav .navbar .links li {
     padding: 0.5rem;
     white-space: nowrap;

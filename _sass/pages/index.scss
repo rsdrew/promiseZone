@@ -5,36 +5,32 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: calc(100svh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--sp-xxxxl);
   padding: 2rem 10vw;
+
+  &__opacity {
+    position: absolute;
+  }
 
   &__title {
     z-index: 3;
-    font-size: clamp(1.75rem, 1.2407rem + 2.716vw, 4.5rem);
-    margin: 1rem 1rem 3rem 0;
-    padding: 1rem 1rem 1rem 0;
+    font-size: clamp(1.75rem, 1.2407rem + 2.716vw, 3.5rem);
     max-width: 625px;
     font-weight: 600;
 
     &__focus {
-      font-size: clamp(2rem, 1.4444rem + 2.963vw, 5rem);
       color: var(--brand);
       width: fit-content;
       text-transform: uppercase;
       font-weight: 800;
-
-      &__all-hp {
-        text-wrap: nowrap;
-
-        @media (max-width: 400px) {
-          text-wrap: wrap;
-        }
-      }
     }
   }
 
   &__subtitle {
     font-size: var(--fs-lg);
-    margin-bottom: 6rem;
     font-weight: 400;
     font-family: var(--ff-body);
     max-width: 600px;
@@ -42,6 +38,7 @@
   }
 
   #cta-buttons-wrapper {
+    flex-grow: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -145,8 +142,6 @@
     &__title {
       position: relative;
       z-index: 1;
-      padding: 0;
-      margin: 1rem 1rem 3rem 0;
 
       &__focus {
         background: none;
@@ -159,7 +154,7 @@
       width: 100%;
       height: 100%;
       background: rgb(231, 231, 231, 0.7);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(40px);
       position: absolute;
       top: 0;
       left: 0;
@@ -169,13 +164,8 @@
     &__subtitle {
       position: relative;
       z-index: 1;
-      margin-bottom: 8rem;
       font-weight: 400;
       font-family: var(--ff-body);
-    }
-
-    &__button--apply-now {
-      margin-bottom: 2rem;
     }
   }
 }

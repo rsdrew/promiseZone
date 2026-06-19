@@ -1,9 +1,15 @@
 .staff-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: var(--sp-xxl);
+
+  :last-child:nth-child(3n + 1) {
+    grid-column: 2;
+
+    @media (max-width: 1200px) {
+      grid-column: 1;
+    }
+  }
 }
 
 .staff {
@@ -41,9 +47,10 @@
   &__picture {
     border-radius: 50%;
     border: var(--sp-md) solid var(--brand);
-    max-width: 80vw;
-    max-height: 80vw;
+    max-width: 60vw;
+    max-height: 60vw;
     object-fit: cover;
+    object-position: top;
   }
 
   &__name {
