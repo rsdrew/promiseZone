@@ -35,6 +35,10 @@ a {
   color: var(--brand);
 }
 
+a > button {
+  text-decoration: none;
+}
+
 #content {
   padding: 0 1rem;
 }
