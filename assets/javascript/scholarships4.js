@@ -1,23 +1,23 @@
 const scholarshipOptions = document.querySelectorAll(".scholarship-option");
 const occScholarship = document.getElementById("scholarship-option--occ");
 const universityScholarship = document.getElementById("scholarship-option--university");
-const juniorSeniorScholarship = document.getElementById("scholarship-option--junior-senior");
+const vikingScholarship = document.getElementById("scholarship-option--junior-senior");
 const summerScholarship = document.getElementById("scholarship-option--summer");
 const textbookReimbursement = document.getElementById("scholarship-option--textbook-reimbursement");
 
-const nonResidentExplanation = document.querySelector("#non-resident-explanation");
+const scholarshipExplanation = document.querySelector("#scholarship-explanation");
 
 const nextSteps = document.querySelectorAll(".next-steps");
 const occNextSteps = document.getElementById("next-steps-occ-scholarship");
 const universityNextSteps = document.getElementById("next-steps-university-scholarship");
-const juniorSeniorNextSteps = document.getElementById("next-steps-junior-senior-scholarship");
+const vikingNextSteps = document.getElementById("next-steps-junior-senior-scholarship");
 const summerNextSteps = document.getElementById("next-steps-summer-scholarship");
 const textbookReimbursementNextSteps = document.getElementById("next-steps-textbook-reimbursement");
 
 const scholarshipInfo = document.querySelectorAll(".scholarship-info");
 const occInfo = document.getElementById("info-occ-scholarship");
 const universityInfo = document.getElementById("info-university-scholarship");
-const juniorSeniorInfo = document.getElementById("info-junior-senior-scholarship");
+const vikingInfo = document.getElementById("info-junior-senior-scholarship");
 const summerInfo = document.getElementById("info-summer-scholarship");
 const textbookReimbursementInfo = document.getElementById("info-textbook-reimbursement");
 
@@ -28,22 +28,22 @@ const isResidentOptions = document.querySelectorAll(".resident-radio-button-labe
 const handleScholarshipOptionsOnClick = (option) => {
   // Ignore clicks from disabled options
   if (option.classList.contains("disabled")) return;
-  
+
   // Ignore clicks from the already selected option
   if (option.classList.contains("selected")) return;
 
   // Deselect all options
-  scholarshipOptions.forEach(option2 => {
+  scholarshipOptions.forEach((option2) => {
     option2.classList.remove("selected");
-  })
+  });
 
   // Select the clicked option
   option.classList.add("selected");
 
   // Hide all of the Scholarship Specific Information
-  scholarshipInfo.forEach(info => {
+  scholarshipInfo.forEach((info) => {
     info.classList.remove("show");
-  })
+  });
 
   // Give some time for the previous "Scholarship Speicific Information" to go away.
   setTimeout(() => {
@@ -58,9 +58,9 @@ const handleScholarshipOptionsOnClick = (option) => {
       case universityScholarship.id:
         infoToShow = universityInfo;
         break;
-    
-      case juniorSeniorScholarship.id:
-        infoToShow = juniorSeniorInfo;
+
+      case vikingScholarship.id:
+        infoToShow = vikingInfo;
         break;
 
       case summerScholarship.id:
@@ -76,13 +76,13 @@ const handleScholarshipOptionsOnClick = (option) => {
     }
 
     infoToShow.classList.add("show");
-    }, 300);
+  }, 300);
 
   // Hide all of the Next Steps
-  nextSteps.forEach(nextStep => {
+  nextSteps.forEach((nextStep) => {
     nextStep.classList.add("d-none");
     const tabableElements = nextStep.querySelectorAll("a, button");
-    tabableElements.forEach(element => element.setAttribute("tabindex", -1));
+    tabableElements.forEach((element) => element.setAttribute("tabindex", -1));
   });
 
   // Give some time for the previous "Next Steps" to go away.
@@ -98,9 +98,9 @@ const handleScholarshipOptionsOnClick = (option) => {
       case universityScholarship.id:
         nextStepsToShow = universityNextSteps;
         break;
-    
-      case juniorSeniorScholarship.id:
-        nextStepsToShow = juniorSeniorNextSteps;
+
+      case vikingScholarship.id:
+        nextStepsToShow = vikingNextSteps;
         break;
 
       case summerScholarship.id:
@@ -117,27 +117,33 @@ const handleScholarshipOptionsOnClick = (option) => {
 
     nextStepsToShow.classList.remove("d-none");
     const tabableElements = nextStepsToShow.querySelectorAll("a, button");
-    tabableElements.forEach(element => element.setAttribute("tabindex", 0));
-
-    }, 300);
+    tabableElements.forEach((element) => element.setAttribute("tabindex", 0));
+  }, 300);
 };
 
 const handleIsResidentOnClick = () => {
   isResidentOption.classList.add("checked");
   isNotResidentOption.classList.remove("checked");
 
-  // The user is a resident. Enable all scholarship options. Select the first option.
+  // The user is a resident. Enable all scholarship options besides the Viking scholarship. Select the first option.
   scholarshipOptions.forEach((option, index) => {
-    option.classList.remove("disabled");
-    option.classList.remove("selected");
-    option.setAttribute("tabindex", 0);
+    if (option === vikingScholarship) {
+      option.classList.add("disabled");
+      option.classList.remove("selected");
+      option.setAttribute("tabindex", -1);
+      option.setAttribute("aria-disabled", true);
+    } else {
+      option.classList.remove("disabled");
+      option.classList.remove("selected");
+      option.setAttribute("tabindex", 0);
+    }
 
     if (index === 0) {
       handleScholarshipOptionsOnClick(option);
-    };
+    }
   });
 
-  nonResidentExplanation.classList.remove("show");
+  scholarshipExplanation.textContent = "Hazel Park residents have access to our Oakland Community College Scholarship, University Scholarship, Summer Scholarship, textbook/materials reimbursement, and all of our services.";
 };
 
 const handleIsNotResidentOnClick = () => {
@@ -145,19 +151,21 @@ const handleIsNotResidentOnClick = () => {
   isNotResidentOption.classList.add("checked");
 
   // The user is not a resident. Disable the OCC and University Scholarship options. Select the Junior/Senior scholarship.
-  scholarshipOptions.forEach(option => {
+  scholarshipOptions.forEach((option) => {
     if (option === occScholarship || option === universityScholarship) {
       option.classList.add("disabled");
       option.classList.remove("selected");
       option.setAttribute("tabindex", -1);
       option.setAttribute("aria-disabled", true);
-    }
-    else if (option === juniorSeniorScholarship) {
+    } else if (option === vikingScholarship) {
+      option.classList.remove("disabled");
+      option.classList.remove("selected");
+      option.setAttribute("tabindex", 0);
       handleScholarshipOptionsOnClick(option);
     }
   });
 
-  nonResidentExplanation.classList.add("show");
+  scholarshipExplanation.textContent = "Non-residents have access to our Viking Scholarship, Summer Scholarship, textbook/materials reimbursement, and all of our services.";
 };
 
 isResidentOption.addEventListener("click", handleIsResidentOnClick);
@@ -176,12 +184,12 @@ isNotResidentOption.addEventListener("keydown", (event) => {
   }
 });
 
-scholarshipOptions.forEach(option => {
+scholarshipOptions.forEach((option) => {
   option.addEventListener("click", () => handleScholarshipOptionsOnClick(option));
-  option.addEventListener("keydown", event => {
+  option.addEventListener("keydown", (event) => {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       handleScholarshipOptionsOnClick(option);
     }
-  })
+  });
 });

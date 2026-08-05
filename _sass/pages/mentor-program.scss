@@ -1,9 +1,13 @@
-.students,
-.mentors {
+.student-and-mentors-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: var(--sp-xxxxl);
-  margin-bottom: var(--sp-xxxxxl);
+  margin-bottom: var(--sp-xxxxl);
+}
+
+.students > .card,
+.mentors > .card {
+  height: 100%;
 }
 
 .mentor-program__task-list {
@@ -25,19 +29,22 @@
   }
 }
 
+.mentor-program__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--sp-xxxxl);
+}
+
 .mentor-program__image {
+  display: block;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  background-image: url($baseurl + "/assets/images/backgrounds/mentorProgram.jpg");
-  background-position: center;
-  background-size: cover;
+  max-width: 85ch;
 
-  &--students {
-    background-image: url($baseurl + "/assets/images/backgrounds/mentorProgram.jpg");
-  }
-
-  &--mentors {
-    background-image: url($baseurl + "/assets/images/backgrounds/mentorProgram2.jpg");
+  &__caption {
+    margin-top: var(--sp-md);
+    max-width: 85ch;
   }
 }
 
@@ -63,8 +70,9 @@
       flex-grow: 1;
       margin-bottom: var(--sp-xxxxl);
     }
-    
-    a, button {
+
+    a,
+    button {
       width: 100%;
     }
   }
@@ -73,8 +81,9 @@
 @media (max-width: 900px) {
   .students,
   .mentors {
-    grid-template-areas: "header"
-                         "task-list";
+    grid-template-areas:
+      "header"
+      "task-list";
     grid-template-columns: 1fr;
   }
 

@@ -4,10 +4,7 @@ title: Eligibility
 ---
 
 {% capture contact_text %}
-<p class="pb-xl">
-  Alumni from prior to six years, or those who are not currently enrolled in college, receive one-on-one coaching on an as-needed basis.
-  <a href="{{ site.baseurl }}/contact.html">Contact us!</a>
-</p>
+<p class="pb-xl">Alumni who are not currently enrolled in college can receive one-on-one coaching on an as-needed basis.</p>
 {% endcapture %} {% capture scholarship_page_text %}
 <p class="pb-xl">
   See our
@@ -49,10 +46,13 @@ title: Eligibility
         <h2 class="text-subheader text-align-center">Postsecondary Success Coaching</h2>
         {% include components/checkmark-and-text.html text='
         <p class="pb-xl">
-          Currently enrolled Hazel Park School District alumni from the last six calendar years are eligible to receive personalized, equity-centered academic,
-          financial, career, and socioemotional coaching.
+          All currently enrolled Hazel Park School District alumni from the last six calendar years are eligible to receive personalized, equity-centered
+          academic, financial, career, and socioemotional coaching.
         </p>
         ' %} {% include components/checkmark-and-text.html text=contact_text %}
+        <div class="mi-auto w-fit-content slide-up">
+          <a href="{{site.baseurl}}/contact.html" class="button mi-auto">Contact us</a>
+        </div>
       </div>
       <div class="card">
         <h2 class="text-subheader text-align-center">Scholarships</h2>

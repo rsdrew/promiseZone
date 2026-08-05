@@ -1,15 +1,63 @@
+{% capture contact_text %}
+<div>
+  <p class="pb-xxxl">
+    If a student’s name does not appear on the book list for the Promise Zone, please <a href="{{ site.baseurl }}/contact.html">contact us</a>.
+  </p>
+</div>
+{% endcapture %}
+
 <div id="next-steps-textbook-reimbursement" class="next-steps d-none">
   <div class="card mb-xxxxl">
-    <div class="next-steps__list">
-      {% include components/checkmark-and-text.html text='
-      <p class="pb-md">Apply for textbook and school supply reimbursement</p>
-      ' %}
-      <a
-        class="button w-100"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSct6Z8NBjNyco76dg2ZGD0hDb6VOW-w4nEWoMQWrUxipeMUOg/viewform?usp=publish-editor"
-        target="_blank"
-        >Apply for textbook and school supply reimbursement</a
-      >
+    <h4 class="text-subheader text-align-center">OCC Bookstore Instructions</h4>
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text='
+    <div>
+      <p class="pb-md">For in-person purchases at any OCC bookstore:</p>
+      <p class="text-normal pb-xl">Students provide the cashier with their name, student ID number, and the Promise Zone name.</p>
     </div>
+    ' %}
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text='
+    <div>
+      <p class="pb-md">For online purchases at the OCC bookstore:</p>
+      <p class="text-normal pb-xl">
+        Students select “Financial Aid”, type in their student ID number followed by the word PROMISE (example:
+        <span class="text-italic">7654321 Promise</span>), which will ensure the charges are applied to their Promise account.
+      </p>
+    </div>
+    ' %}
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text='
+    <div>
+      <p class="pb-md">Be aware of the cap amount of $500!</p>
+      <p class="text-normal pb-xl">
+        If a student exceeds the semesterly limit, it could result in full or partial cancellation of the order, requiring a redo of the purchase. Keep detailed
+        notes of your purchases and their cost.
+      </p>
+    </div>
+    ' %}
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text='
+    <div>
+      <p class="pb-xl">
+        Students can return their book for any reason in accordance with the
+        <a href="https://www.bkstr.com/oaklandccstore/help-faq/return-policy" target="_blank">Bookstore’s Return Policy</a>.
+      </p>
+    </div>
+    ' %}
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text=contact_text %}
+
+    <h4 class="text-subheader text-align-center">All Other College and Universities</h4>
+    <!-- prettier-ignore -->
+    {% include components/checkmark-and-text.html text='
+    <p class="pb-xxl">Click the button below to apply:</p>
+    ' %}
+    <a
+      class="button w-100"
+      href="https://docs.google.com/forms/d/e/1FAIpQLSct6Z8NBjNyco76dg2ZGD0hDb6VOW-w4nEWoMQWrUxipeMUOg/viewform?usp=publish-editor"
+      target="_blank"
+      >Apply for textbook and school supply reimbursement</a
+    >
   </div>
 </div>

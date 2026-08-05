@@ -4,7 +4,7 @@ title: Scholarships
 ---
 
 <script type="module" src="{{ site.baseurl }}/assets/javascript/download-waiver.js" defer></script>
-<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/scholarships3.js" defer></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/scholarships4.js" defer></script>
 <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/grade-range-radio-option.js" defer></script>
 <script type="module" src="{{ site.baseurl }}/assets/javascript/download-summer-tuition-process-files.js" defer></script>
 
@@ -62,14 +62,10 @@ title: Scholarships
         <span id="resident-radio-button-checkmark--false" class="resident-radio-button-checkmark"></span>
       </label>
     </div>
-    <p class="text-italic text-align-center max-w-100">Hazel Park residents have access to all of our scholarships and services.</p>
-    <p class="text-italic text-align-center max-w-100">Non-residents have access to our junior/senior scholarship, our summer scholarship, books and materials reimbursement, and all of our services.</p>
+    <p id="scholarship-explanation" class="text-italic text-align-center">Hazel Park residents have access to our Oakland Community College Scholarship, University Scholarship, Summer Scholarship, textbook/materials reimbursement, and all of our services.</p>
   </div>
 
   <h3 class="text-header text-align-center mb-xl">Select the scholarship that fits your scenario</h3>
-  <div id="non-resident-explanation" class="hidden">
-    <p class="text-italic text-align-center max-w-100">Non-residents only have access to our junior/senior scholarship, and our summer scholarship.<br/>However, they still have access to all of our other services.</p>
-  </div>
 
   <div class="scholarship-options pt-xl pb-xxxxl" role="radiogroup">
     {% include components/scholarship-option.html 
@@ -87,12 +83,13 @@ title: Scholarships
       logo="<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d='M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z'/></svg>"
       name="University</br>Scholarship"
       criteria--attending="Attending a non-OCC college or university in Michigan"
-      criteria--grade="Freshman or Sophomore"
+      criteria--grade="All four years"
       criteria--semester="Fall or Winter/Spring semester"
     %}
 
     {% include components/scholarship-option.html 
       id="scholarship-option--junior-senior"
+      disabled="true"
       logo='<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
               viewBox="0 0 398.97 398.97" xml:space="preserve">
             <g>
@@ -111,9 +108,9 @@ title: Scholarships
               </g>
             </g>
             </svg>'
-      name="Junior/Senior</br>Scholarship"
+      name="Viking</br>Scholarship"
       criteria--attending="Attending any college or university in Michigan"
-      criteria--grade="Junior or Senior (in college)"
+      criteria--grade="Any year in college"
       criteria--semester="Fall or Winter/Spring semester"
     %}
 
