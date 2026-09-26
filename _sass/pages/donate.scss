@@ -4,7 +4,7 @@
   justify-items: center;
   margin-bottom: var(--sp-xxxxl);
   gap: var(--sp-xxl);
-  background-color: var(--base-100);
+  background-color: var(--base-50);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   padding: var(--sp-xxl);
@@ -36,7 +36,6 @@
       @media (max-width: 700px) {
         flex-grow: 0;
       }
-
     }
   }
 
@@ -45,7 +44,9 @@
     fill: var(--brand);
   }
 
-  a, button, input[type='submit'] {
+  a,
+  button,
+  input[type="submit"] {
     width: 100%;
   }
 
@@ -53,25 +54,28 @@
     width: 100%;
   }
 
-  $payPalLightBlue: #0070E0;
+  $payPalLightBlue: #0070e0;
   $payPalDarkBlue: #003087;
 
   #button--paypal {
     background-color: $payPalLightBlue;
-    box-shadow: 0px 0.5rem 0px 0px $payPalDarkBlue, var(--shadow);
+    box-shadow:
+      0px 0.5rem 0px 0px $payPalDarkBlue,
+      var(--shadow);
     line-height: 0;
 
     &:hover {
-      box-shadow: 0px 0.25rem 0px 0px $payPalDarkBlue, 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+      box-shadow:
+        0px 0.25rem 0px 0px $payPalDarkBlue,
+        0 4px 8px 2px rgba(0, 0, 0, 0.1);
     }
 
     &:active {
       box-shadow: 0px 0px 0px 0px $payPalDarkBlue;
     }
-    
+
     img {
       height: 32px;
     }
-
   }
 }

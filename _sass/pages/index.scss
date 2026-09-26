@@ -52,6 +52,7 @@
 
 #tagline-wrapper {
   background-color: var(--brand);
+  box-shadow: var(--shadow);
 }
 
 #tagline {
@@ -80,58 +81,16 @@
 #stats-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-xxl);
-  margin: var(--sp-xxxxl) auto;
+  gap: 3rem;
 
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 1fr);
-    margin-bottom: 0;
-  }
-}
-
-.stat {
-  position: relative;
-  height: 200px;
-  width: 200px;
-  line-height: 200px;
-  text-align: center;
-  margin-inline: auto;
-
-  @media (max-width: 1000px) {
-    margin: var(--sp-xxl) auto;
   }
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    transform: rotateZ(45deg);
-    background-color: var(--brand);
-    border-radius: var(--border-radius);
-    z-index: 0;
-    box-shadow: var(--shadow);
-  }
-
-  & > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__header {
-    top: 1.5rem;
-    font-family: var(--ff-header);
-    font-size: var(--fs-xxxl);
-    color: var(--base-100);
-    font-weight: 800;
-  }
-
-  &__body {
-    line-height: 1.2;
-    font-size: var(--fs-lg);
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 
@@ -241,6 +200,46 @@
   p {
     padding-bottom: var(--sp-xxxxl);
     flex-grow: 1;
+  }
+}
+
+.recent-news {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: var(--base-100);
+  border-radius: var(--border-radius);
+  max-width: 800px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+
+    &__image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text-wrapper {
+    padding: var(--sp-xxl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__text {
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .recent-news {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 }
 

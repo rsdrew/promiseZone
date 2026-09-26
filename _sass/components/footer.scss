@@ -1,8 +1,9 @@
 .mc-field-group {
   display: grid;
   grid-template-columns: auto min-content;
-  grid-template-areas: "email submit"
-                       "required required";
+  grid-template-areas:
+    "email submit"
+    "required required";
   max-width: 60rem;
   margin-inline: auto;
   column-gap: var(--sp-xxl);
@@ -26,9 +27,10 @@
 
   @media (max-width: 700px) {
     grid-template-columns: auto;
-    grid-template-areas: "email"
-                         "required"
-                         "submit";
+    grid-template-areas:
+      "email"
+      "required"
+      "submit";
 
     input[type="submit"] {
       margin-top: var(--sp-xxl);
@@ -79,8 +81,29 @@ footer {
   background-color: var(--base-900);
 
   & *:focus-visible {
-    outline-color: var(--base-100);
+    outline-color: var(--base-50);
   }
+}
+
+.wave {
+  width: 100%;
+  overflow: hidden;
+  height: 60px;
+
+  background-repeat: repeat-x;
+  background-size: auto 60px;
+}
+
+#newsletter-wave {
+  background-color: var(--base-50);
+  background-image: url($baseurl + "/assets/images/svgs/waves--newsletter.svg");
+  background-position: left bottom;
+}
+
+#footer-wave {
+  background-color: var(--brand);
+  background-image: url($baseurl + "/assets/images/svgs/waves--footer.svg");
+  background-position: center bottom;
 }
 
 .footer {
@@ -95,7 +118,7 @@ footer {
     flex-direction: column;
 
     &__header {
-      color: var(--base-100);
+      color: var(--base-50);
       text-transform: uppercase;
       font-family: var(--ff-header);
       font-size: var(--fs-xl);
@@ -104,7 +127,7 @@ footer {
     }
 
     &__item {
-      color: var(--base-200);
+      color: var(--base-400);
       font-family: var(--ff-body);
       font-size: var(--fs-lg);
     }
@@ -142,7 +165,7 @@ footer {
   }
 
   * {
-    color: var(--base-100);
+    color: var(--base-50);
     text-wrap: nowrap;
   }
 }

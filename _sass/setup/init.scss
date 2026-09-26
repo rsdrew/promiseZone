@@ -9,18 +9,36 @@ html {
   line-height: 1.6;
   scroll-behavior: smooth;
   transition: opacity 1s ease-in-out;
-  font-family: "Rubik", sans-serif;
-  background-color: var(--base-200);
+  background-color: var(--base-50);
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   letter-spacing: -1%;
   font-family: var(--ff-header);
   font-weight: 700;
   line-height: 1.4;
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   border-radius: var(--border-radius);
   padding: var(--sp-lg);
   font-size: var(--fs-lg);
@@ -28,11 +46,11 @@ input[type="text"], input[type="email"], textarea {
   min-width: 10rem;
   min-height: var(--sp-xxxxl);
   border: none;
-  background-color: var(--base-100);
+  background-color: var(--base-50);
 }
 
 a {
-  color: var(--brand);
+  color: var(--cta);
 }
 
 a > button {
@@ -53,7 +71,7 @@ a > button {
   width: 1px;
   height: 1px;
   background-color: var(--base-900);
-  color: var(--base-100);
+  color: var(--base-50);
   padding: var(--sp-xl);
   margin: var(--sp-xl);
   border-radius: var(--border-radius);
@@ -83,18 +101,43 @@ a > button {
     max-width: 1600px;
     margin-inline: auto;
   }
-
 }
 
 /* TYPOGRAPHY */
-.text-subheader {
+.text-header {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
   font-family: var(--ff-header);
-  font-size: var(--fs-xxl);
-  font-weight: 600;
-  padding-bottom: var(--sp-xxl);
+  font-size: var(--fs-xxxl);
+  font-weight: 700;
+  margin-bottom: var(--sp-xxxxl);
+  line-height: 1.4;
 
   &--light {
-    color: var(--base-100);
+    color: var(--base-50);
+  }
+
+  &--dark {
+    color: var(--base-900);
+  }
+
+  &--brand {
+    color: var(--brand);
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}
+
+.text-subheader {
+  font-family: var(--ff-subheader);
+  font-size: var(--fs-xxxl);
+  font-weight: 700;
+  margin-bottom: var(--sp-xxxxl);
+
+  &--light {
+    color: var(--base-50);
   }
 
   &--dark {
@@ -110,15 +153,14 @@ a > button {
   }
 }
 
-.text-header {
-  font-family: var(--ff-header);
-  font-size: var(--fs-xxxl);
+.text-headshot-name {
+  font-family: var(--ff-subheader);
+  font-size: var(--fs-xxl);
   font-weight: 700;
-  margin-bottom: var(--sp-xxxl);
-  line-height: 1.4;
+  margin-bottom: var(--sp-lg);
 
   &--light {
-    color: var(--base-100);
+    color: var(--base-50);
   }
 
   &--dark {
@@ -127,10 +169,6 @@ a > button {
 
   &--brand {
     color: var(--brand);
-  }
-
-  &--bold {
-    font-weight: 800;
   }
 }
 
@@ -139,7 +177,7 @@ a > button {
   font-family: var(--ff-header);
   font-size: var(--fs-xxxxl);
   font-weight: 900;
-  margin-bottom: var(--sp-xxxl);
+  margin-bottom: var(--sp-xxxxl);
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
@@ -156,29 +194,31 @@ a > button {
   }
 }
 
-.text-page-subheader {
+.text-page-paragraph-intro {
   font-family: var(--ff-body);
   font-size: var(--fs-lg);
   font-weight: 400;
   max-width: 75ch !important;
   line-height: 1.6;
-  padding-bottom: var(--sp-xxxl);
+  margin-bottom: var(--sp-xxxxl);
 
   &--bold {
+    font-family: var(--ff-header);
     font-size: var(--fs-xl);
     font-weight: 600;
   }
 }
 
-p, .text-body {
+p,
+.text-body {
   font-size: var(--fs-lg);
+  font-family: var(--ff-body);
   font-weight: 400;
   line-height: 1.6;
   color: var(--base-800);
 }
 
 .text-body {
-
   &--light {
     color: var(--base-200);
   }
@@ -192,8 +232,7 @@ p, .text-body {
   }
 
   &--bold {
-    font-family: var(--ff-header);
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--fs-xl);
   }
 
@@ -204,7 +243,7 @@ p, .text-body {
 }
 
 .text-lightest {
-  color: var(--base-100);
+  color: var(--base-50);
 }
 
 .text-light {
@@ -249,19 +288,18 @@ p, .text-body {
 /* END TYPOGRAPHY */
 
 /* SVGs */
-  svg.fill-brand {
-    fill: var(--brand);
-  }
+svg.fill-brand {
+  fill: var(--brand);
+}
 
-  svg.fill-white {
-    fill: var(-base-100);
-  }
+svg.fill-white {
+  fill: var(-base-100);
+}
 /* END SVGs */
-
 
 /* BACKGROUND COLORS */
 .bg-lightest {
-  background-color: var(--base-100);
+  background-color: var(--base-50);
 }
 
 .bg-light {
@@ -283,10 +321,9 @@ p, .text-body {
 
 /* LINES */
 .line {
-
   background-color: var(--base-400);
   border-radius: var(--border-radius);
-  
+
   &--vertical {
     width: 4px;
     height: 100%;
@@ -318,55 +355,55 @@ p, .text-body {
 /* END FONT FAMILIIES*/
 
 /* WIDTH */
-   .w-100 {
+.w-100 {
+  width: 100% !important;
+}
+
+.max-w-100 {
+  max-width: 100% !important;
+}
+
+.w-fit-content {
+  width: fit-content !important;
+
+  @media (max-width: 700px) {
     width: 100% !important;
-   }
-
-   .max-w-100 {
-    max-width: 100% !important;
-   }
-
-   .w-fit-content {
-    width: fit-content !important;
-
-    @media (max-width: 700px) {
-      width: 100% !important;
-    }
-   }
+  }
+}
 /* END WIDTH */
 
 /* PADDING AND MARGIN */
-  $sizes: (
-    none: var(--sp-none),
-    xs: var(--sp-xs),
-    sm: var(--sp-sm),
-    md: var(--sp-md),
-    lg: var(--sp-lg),
-    xl: var(--sp-xl),
-    xxl: var(--sp-xxl),
-    xxxl: var(--sp-xxxl),
-    xxxxl: var(--sp-xxxxl)
-  );
+$sizes: (
+  none: var(--sp-none),
+  xs: var(--sp-xs),
+  sm: var(--sp-sm),
+  md: var(--sp-md),
+  lg: var(--sp-lg),
+  xl: var(--sp-xl),
+  xxl: var(--sp-xxl),
+  xxxl: var(--sp-xxxl),
+  xxxxl: var(--sp-xxxxl),
+);
 
-  @mixin generate-padding-and-margin($property-shorthand, $full-property-name) {
-    @each $size, $value in $sizes {
-      .#{$property-shorthand}-#{$size} {
-        #{$full-property-name}: $value !important;
-      }
+@mixin generate-padding-and-margin($property-shorthand, $full-property-name) {
+  @each $size, $value in $sizes {
+    .#{$property-shorthand}-#{$size} {
+      #{$full-property-name}: $value !important;
     }
   }
+}
 
-  @include generate-padding-and-margin("p", "padding");
-  @include generate-padding-and-margin("m", "margin");
+@include generate-padding-and-margin("p", "padding");
+@include generate-padding-and-margin("m", "margin");
 
-  @each $side-shorthand, $full-side-name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
-    @include generate-padding-and-margin("p#{$side-shorthand}", "padding-#{$full-side-name}");
-    @include generate-padding-and-margin("m#{$side-shorthand}", "margin-#{$full-side-name}");
-  }
+@each $side-shorthand, $full-side-name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+  @include generate-padding-and-margin("p#{$side-shorthand}", "padding-#{$full-side-name}");
+  @include generate-padding-and-margin("m#{$side-shorthand}", "margin-#{$full-side-name}");
+}
 
-  .mi-auto {
-    margin-inline: auto;
-  }
+.mi-auto {
+  margin-inline: auto;
+}
 
 /* END PADDING AND MARGIN */
 

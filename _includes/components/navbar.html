@@ -1,15 +1,15 @@
-<nav class="container">
+<nav id="navbar" class="container">
   <div class="navbar">
     <div class="logo">
-      <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/logo/logo-bw.png" height="80px" alt="Hazel Park Promise Zone logo" /></a>
+      <a href="{{ site.baseurl }}/"
+        ><img src="{{ site.baseurl }}/assets/images/logo/hp_pz_logo_full_2026.webp" height="auto" width="400px" alt="Hazel Park Promise Zone logo"
+      /></a>
     </div>
     <div class="nav-links">
       <div class="sidebar-logo">
-        <span class="logo-name">
-          <a href="{{ site.baseurl }}/" tabindex="-1">
-            <img src="{{ site.baseurl }}/assets/images/logo/logo-bw.png" height="100px" alt="Hazel Park Promise Zone logo" />
-          </a>
-        </span>
+        <a href="{{ site.baseurl }}/" tabindex="-1">
+          <img src="{{ site.baseurl }}/assets/images/logo/hp_pz_logo_full_2026.webp" height="auto" width="300px" alt="Hazel Park Promise Zone logo" />
+        </a>
         <i class="bx bx-x"></i>
       </div>
       <ul class="links">
@@ -39,11 +39,13 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="{{ site.baseurl }}/eligibility.html">Eligibility</a>
+        </li>
         <li class="services-list">
           <button type="button" aria-expanded="false" aria-controls="services-menu">Services</button>
           <i class="bx bxs-chevron-down js-arrow arrow"></i>
           <ul id="services-menu" class="js-sub-menu sub-menu d-none">
-            <li><a href="{{ site.baseurl }}/eligibility.html">Eligibility</a></li>
             <li>
               <a href="{{ site.baseurl }}/college-preparation.html">College Preparation</a>
             </li>
@@ -56,9 +58,32 @@
             <li><a href="{{ site.baseurl }}/resources.html">Resources</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a href="{{ site.baseurl }}/scholarships.html">Scholarships</a>
+
+        <li class="scholarships-list">
+          <button type="button" aria-expanded="false" aria-controls="scholarships-menu">Scholarships</button>
+          <i class="bx bxs-chevron-down js-arrow arrow"></i>
+          <ul id="scholarships-menu" class="js-sub-menu sub-menu d-none">
+            <li>
+              <a href="{{ site.baseurl }}/scholarship-eligibility.html">Eligibility</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/occ-scholarship.html">OCC Scholarship</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/university-scholarship.html">University Scholarship</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/viking-scholarship.html">Viking Scholarship</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/summer-scholarship.html">Summer Scholarship</a>
+            </li>
+            <li>
+              <a href="{{ site.baseurl }}/textbooks-and-school-supplies.html">Textbooks and School Supplies</a>
+            </li>
+          </ul>
         </li>
+
         <li class="nav-item">
           <a href="{{ site.baseurl }}/annual-fundraiser.html">Annual Fundraiser</a>
         </li>
@@ -66,11 +91,10 @@
           <a href="{{ site.baseurl }}/contact.html">Contact</a>
         </li>
         <li class="nav-item donate">
-          <a href="{{ site.baseurl }}/donate.html" class="button button--alt">Donate</a>
+          <a href="{{ site.baseurl }}/donate.html" class="button">Donate</a>
         </li>
       </ul>
     </div>
-
     <i class="bx bx-menu"></i>
   </div>
 </nav>

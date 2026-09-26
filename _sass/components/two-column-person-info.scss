@@ -21,10 +21,10 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: var(--sp-xl);
+      border: var(--sp-xl) solid var(--brand-alt);
     }
 
     &__name {
-      padding-bottom: var(--sp-sm);
       text-align: center;
     }
 

@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: var(--sp-xxl);
+  gap: var(--sp-xxxxl);
 }
 
 .testimonial {
@@ -49,6 +49,6 @@
   }
 
   &__name {
-    padding-bottom: var(--sp-lg);
+    margin-bottom: var(--sp-lg);
   }
 }

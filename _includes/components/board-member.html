@@ -1,12 +1,18 @@
 <div class="board-member slide-up">
   <div class="board-member__top">
-    <div class="board-member__name text-align-center text-subheader text-subheader--light">{{ include.name }}</div>
+    <div class="board-member__name text-align-center text-headshot-name text-headshot-name--light">{{ include.name }}</div>
   </div>
   <div class="board-member__middle">
-    <img class="board-member__picture" src="{{ site.baseurl }}/assets/images/board/{{ include.filename }}.webp" alt="{{ include.name }}" height="300" width="300" />
+    <img
+      class="board-member__picture"
+      src="{{ site.baseurl }}/assets/images/board/{{ include.filename }}.webp"
+      alt="{{ include.name }}"
+      height="300"
+      width="300"
+    />
   </div>
   <div class="board-member__bottom">
-    <div class="board-member__position text-header text-align-center text-body--dark mb-xl">{{ include.position }}</div>
+    <div class="board-member__position text-align-center text-headshot-name text-headshot-name--dark">{{ include.position }}</div>
     <p class="board-member__other-job text-small text-italic text-align-center text-body-dark">{{ include.other-job }}</p>
   </div>
 </div>

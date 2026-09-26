@@ -1,10 +1,10 @@
 .report {
-  background-color: var(--base-100);
+  background-color: var(--base-50);
   border-radius: var(--border-radius);
   object-fit: contain;
   margin-bottom: var(--sp-xxl);
   grid-area: reports;
-  padding: var(--sp-xxl);
+  padding-bottom: var(--sp-xxl);
 
   &:last-of-type {
     margin-bottom: 0;

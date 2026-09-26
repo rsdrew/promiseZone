@@ -20,3 +20,40 @@
     }
   }
 }
+
+#roadmap-card, #bottom-cards-wrapper {
+  max-width: 70rem;
+}
+
+.roadmap-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xxxxl);
+
+  .roadmap-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .roadmap-contents {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xxl);
+  }
+
+  .roadmap-button {
+    margin-inline: auto;
+  }
+}
+
+#bottom-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xxxxl);
+  margin-top: var(--sp-xxxxl);
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    gap: var(--sp-xxl);
+  }
+}

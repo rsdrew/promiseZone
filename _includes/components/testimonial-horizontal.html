@@ -1,0 +1,20 @@
+<div class="testimonial-horizontal-wrapper">
+  <div class="testimonial-horizontal">
+    <div class="testimonial-horizontal__person">
+      <div class="testimonial-horizontal__person__image-wrapper">
+        <img
+          class="testimonial-horizontal__person__image-wrapper__image"
+          src="{{ site.baseurl }}/assets/images/testimonials/{{ include.filename }}.webp"
+          alt="{{ include.name }}"
+          height="200"
+          width="200"
+        />
+      </div>
+      <div class="testimonial-horizontal__person__name text-align-center text-headshot-name text-headshot-name--light">{{ include.name }}</div>
+      <div class="testimonial-horizontal__person__university text-align-center text-small text-italic text-body--light">{{ include.university }}</div>
+    </div>
+    <div class="testimonial-horizontal__text-wrapper">
+      <p class="testimonial-horizontal__text-wrapper__text"><span class="text-body--bold">The Hazel Park Promise Zone</span> {{ include.text }}</p>
+    </div>
+  </div>
+</div>

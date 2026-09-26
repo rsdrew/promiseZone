@@ -1,4 +1,4 @@
-.contact-wrapper{
+.contact-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -10,7 +10,7 @@
   justify-items: center;
   margin-bottom: var(--sp-xxxxl);
   gap: var(--sp-xxl);
-  background-color: var(--base-100);
+  background-color: var(--base-50);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   padding: var(--sp-xxl);

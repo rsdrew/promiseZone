@@ -49,7 +49,7 @@
   flex-direction: column;
   border-radius: var(--border-radius);
   overflow: hidden;
-  background-color: var(--base-100);
+  background-color: var(--base-50);
   box-shadow: var(--shadow);
   flex-basis: 31%;
 
@@ -68,7 +68,7 @@
   }
 
   &__middle {
-    background: linear-gradient(to bottom, var(--brand) 50%, var(--base-100) 50%);
+    background: linear-gradient(to bottom, var(--brand) 50%, var(--base-50) 50%);
     display: flex;
     justify-content: center;
   }
@@ -76,20 +76,20 @@
   &__bottom {
     padding: var(--sp-xxl);
     padding-top: var(--sp-xl);
-    background-color: var(--base-100);
+    background-color: var(--base-50);
     flex-grow: 1;
   }
 
   &__picture {
     border-radius: 50%;
-    border: var(--sp-md) solid var(--brand);
+    border: var(--sp-xl) solid var(--brand-alt);
     max-width: 80vw;
     max-height: 80vw;
     object-fit: cover;
   }
 
   &__name {
-    padding-bottom: var(--sp-lg);
+    margin-bottom: var(--sp-lg);
   }
 
   &__other-job {

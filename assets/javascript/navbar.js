@@ -27,6 +27,11 @@ servicesList.onclick = function () {
   navLinks.classList.toggle("show-services-list");
 };
 
+let scholarshipsList = document.querySelector(".scholarships-list");
+scholarshipsList.onclick = function () {
+  navLinks.classList.toggle("show-scholarships-list");
+};
+
 let links = document.querySelectorAll(".links li");
 links.forEach((link) => {
   const a = link.querySelector("a");
