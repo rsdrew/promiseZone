@@ -68,3 +68,20 @@ h6,
 .d-block {
   display: block;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xxl);
+}
+
+.checkbox-with-text {
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: var(--sp-xl);
+
+  svg {
+    height: var(--sp-xxl);
+    width: var(--sp-xxl);
+  }
+}

@@ -2,3 +2,124 @@
 layout: default
 title: OCC Scholarship
 ---
+
+<div class="container">
+  <h1 class="text-page-header">OCC Scholarship Overview</h1>
+
+  <p class="text-page-paragraph-intro">
+    <span class="text-page-paragraph-intro--bold">Hazel Park resident graduates</span> are eligible to receive
+    <span class="text-body--bold text-body--brand">their first certificate or Associate’s Degree for free at Oakland Community College.</span> This is a
+    <span class="text-body--bold text-body--brand">last-dollar scholarship,</span> meaning students will draw from other funding sources before being awarded
+    this scholarship.
+  </p>
+
+  <p class="text-page-paragraph-intro">
+    <span class="text-page-paragraph-intro--bold">All Hazel Park graduates</span> attending Oakland Community College are eligible to receive
+    <span class="text-body--bold text-body--brand">up to $500 each semester</span> for their mandatory books and supplies in their courses and programs
+    <span class="text-body--bold text-body--brand">regardless of high school graduation year.</span> Eligible items for reimbursement include textbooks or books
+    (physical or digital), software and technology, specialty protective or career apparel, and other school and studio supplies.
+  </p>
+
+  <p class="text-page-paragraph-intro mb-xxxxl">
+    <span class="text-page-paragraph-intro--bold">Once you complete the steps below,</span> Oakland Community College will bill the Promise Zone directly. You
+    can disregard the bill on your student account during the semester.
+  </p>
+
+  <div class="card mb-xxxxl">
+    <h2 class="text-subheader text-align-center">OCC Scholarship Eligibility and Requirements</h2>
+    <div class="list">
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold"><a href="https://www.tfaforms.com/4848809" target="_blank">Register with the Promise Zone</a></p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold">Live within the Hazel Park School District</p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold">Graduate from a Hazel Park School District high school within the past 6 years</p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold"><a href="https://www.oaklandcc.edu/admissions/" target="_blank">Apply to Oakland Community College</a></p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <div>
+          <p class="text-bold pb-xl">
+            <a href="https://studentaid.gov/h/apply-for-aid/fafsa" target="_blank">Complete the Free Application for Federal Student Aid (FAFSA) every year</a>
+          </p>
+          <p>
+            <span class="text-bold">IMPORTANT NOTE:</span> Select the Auburn Hills campus on your FAFSA regardless of which OCC campus you will be attending.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold">Complete the OCC Scholarship application <span class="text-italic">(coming soon)</span></p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold">Enroll in at least 6 credits per semester</p>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <div>
+          <p class="text-bold pb-xxl">Buy necessary textbooks and school supplies</p>
+          <div class="checkbox-with-text pb-xl">
+            {% include svgs/checkbox.html class="fill-brand" %}
+            <p>For in-person purchases, provide the cashier with your name, student ID number, and the name of our Promise Zone.</p>
+          </div>
+          <div class="checkbox-with-text pb-xl">
+            {% include svgs/checkbox.html class="fill-brand" %}
+            <p>
+              For online purchases, select “Financial Aid” at checkout and type in your student ID number followed by the word PROMISE
+              <span class="text-italic">(example: 7654321 PROMISE)</span> to ensure the charges are applied to your Promise Zone account.
+            </p>
+          </div>
+          <div class="checkbox-with-text">
+            {% include svgs/checkbox.html class="fill-brand" %}
+            <p>
+              <span class="text-bold">IMPORTANT NOTES:</span> Be aware of the $500 per semester limit, going over could result in full or partial cancellation
+              of your order. Track your purchases carefully. Students can return their purchases in accordance with the
+              <a href="https://www.bkstr.com/oaklandccstore/help-faq/return-policy" target="_blank">Bookstore’s Return Policy</a>. Please
+              <a href="https://www.hazelparkpromise.org/contact.html">contact us</a> if there are any problems.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="checkbox-with-text">
+        {% include svgs/checkbox.html class="fill-brand" %}
+        <p class="text-bold">Maintain a 2.0 cumulative GPA and Satisfactory Academic Progress (SAP)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- prettier-ignore -->
+  {% capture heather-text %}
+  is proud to collaborate with OCC’s academic advisor, Heather Klein M.A LLPC, to serve our students. She is available by email
+  (<a href="mailto:haklein@oaklandcc.edu">haklein@oaklandcc.edu</a>) or
+  <a href="https://www.oaklandcc.edu/counseling-advising/" target="_blank">appointment</a> to help students select the right classes to stay on track for
+  graduation and navigate the transfer process to four-year universities. She can also help students connect to resources, explain college policies, and resolve
+  academic issues that may impact their progress.
+  <!-- prettier-ignore -->
+  {% endcapture %}
+
+  <!-- prettier-ignore -->
+  {% include components/two-column-person-info.html
+    name="Heather Klein M.A LLPC"
+    filename="heather-klein"
+    title="OCC Academic Advisor"
+    bold-text="The Hazel Park Promise Zone"
+    text=heather-text
+  %}
+</div>

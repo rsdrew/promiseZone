@@ -191,6 +191,7 @@ a > button {
     position: absolute;
     left: 0;
     bottom: -1rem;
+    z-index: -1;
   }
 }
 
@@ -200,7 +201,7 @@ a > button {
   font-weight: 400;
   max-width: 75ch !important;
   line-height: 1.6;
-  margin-bottom: var(--sp-xxxxl);
+  margin-bottom: var(--sp-xxxl);
 
   &--bold {
     font-family: var(--ff-header);
@@ -219,6 +220,10 @@ p,
 }
 
 .text-body {
+  &--normal {
+    font-weight: 400;
+  }
+
   &--light {
     color: var(--base-200);
   }
@@ -239,6 +244,10 @@ p,
   &--small {
     font-size: var(--fs-sm);
     font-weight: 200;
+  }
+
+  &--cta {
+    color: var(--cta);
   }
 }
 
@@ -287,6 +296,7 @@ p,
 }
 /* END TYPOGRAPHY */
 
+
 /* SVGs */
 svg.fill-brand {
   fill: var(--brand);
@@ -296,6 +306,7 @@ svg.fill-white {
   fill: var(-base-100);
 }
 /* END SVGs */
+
 
 /* BACKGROUND COLORS */
 .bg-lightest {
@@ -318,6 +329,7 @@ svg.fill-white {
   background-color: var(--brand);
 }
 /* END COLORS */
+
 
 /* LINES */
 .line {
@@ -344,6 +356,7 @@ svg.fill-white {
 }
 /* END LINES */
 
+
 /* FONT FAMILIES */
 .ff-header {
   font-family: var(--ff-header);
@@ -353,6 +366,7 @@ svg.fill-white {
   font-family: var(--ff-body);
 }
 /* END FONT FAMILIIES*/
+
 
 /* WIDTH */
 .w-100 {
@@ -371,6 +385,7 @@ svg.fill-white {
   }
 }
 /* END WIDTH */
+
 
 /* PADDING AND MARGIN */
 $sizes: (
@@ -406,6 +421,7 @@ $sizes: (
 }
 
 /* END PADDING AND MARGIN */
+
 
 /* MISC */
 .shadow {

@@ -3,15 +3,61 @@ layout: default
 title: Scholarship Eligibility
 ---
 
+{% capture card1 %}
+<h2 class="text-subheader text-align-center mb-xxl">Residents</h2>
+<p class="text-align-center text-italic mb-xxxl">Students who live in and graduate from Hazel Park School District are eligible for:</h2>
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/occ-scholarship.html" class="text-body text-body--bold text-body--cta pb-xxl">OCC Scholarship</a>
+' %}
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/university-scholarship.html" class="text-body text-body--bold text-body--cta pb-xxl">University Scholarship</a>
+' %}
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/summer-scholarship.html" class="text-body text-body--bold text-body--cta pb-xxl">Summer Scholarship</a>
+' %}
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/textbooks-and-school-supplies.html" class="text-body text-body--bold text-body--cta">Textbooks and School Supplies Reimbursement</a>
+' %}
+
+<!-- prettier-ignore -->
+{% endcapture %}
+
+<!-- prettier-ignore -->
+{% capture card2 %}
+<h2 class="text-subheader text-align-center mb-xxl">Non-Residents</h2>
+<p class="text-align-center text-italic mb-xxxl">Students who live in any other city (Detroit, Warren, Highland Park, etc) but graduate from the Hazel Park School District are eligible for:</h2>
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/viking-scholarship.html" class="text-body text-body--bold text-body--cta pb-xxl">Viking Scholarship</a>
+' %}
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/summer-scholarship.html" class="text-body text-body--bold text-body--cta pb-xxl">Summer Scholarship</a>
+' %}
+<!-- prettier-ignore -->
+{% include components/checkmark-and-text.html text='
+<a href="/textbooks-and-school-supplies.html" class="text-body text-body--bold text-body--cta">Textbooks and School Supplies Reimbursement</a>
+' %}
+
+<!-- prettier-ignore -->
+ {% endcapture %}
+
 <div class="container">
   <h1 class="text-page-header">Residential and College Eligibility</h1>
 
   <h2 class="text-page-paragraph-intro">
     <span class="text-page-paragraph-intro--bold">Our initial scholarship eligibility</span> is based on
-    <span class="text-body--bold text-body--brand">where students live</span> when they graduate from the Hazel Park School District. In addition, our scholarships are only
-    available to students intending to further their education <span class="text-body--bold text-body--brand">within the state of Michigan in accordance with the Promise Zone Authority Act of 2008.</span> The only
-    two exceptions to this are our Textbook and School Supplies Reimbursement and our Summer Scholarship. Our reimbursement funding is associated with a grant
-    that does not require in-state college enrollment, and out-of-state students are welcome to use our Summer Scholarship for attending their in-district
-    community college for summer courses in Michigan.
+    <span class="text-body--bold text-body--brand">where students live</span> when they graduate from the Hazel Park School District. In addition, our
+    scholarships are only available to students intending to further their education
+    <span class="text-body--bold text-body--brand">within the state of Michigan in accordance with the Promise Zone Authority Act of 2008.</span> The only two
+    exceptions to this are our Textbook and School Supplies Reimbursement and our Summer Scholarship. Our reimbursement funding is associated with a grant that
+    does not require in-state college enrollment, and out-of-state students are welcome to use our Summer Scholarship for attending their in-district community
+    college for summer courses in Michigan.
   </h2>
+
+  {% include components/two-cards-layout.html card1=card1 card2=card2 %}
 </div>

@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 60rem;
-  gap: var(--sp-xxxxl);
+  column-gap: var(--sp-xxxxl);
+  row-gap: var(--sp-xxl);
   padding-bottom: var(--sp-xxl);
 
   @media (max-width:700px) {

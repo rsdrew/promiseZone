@@ -1,0 +1,11 @@
+.two-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-xxxxl);
+}
+
+@media (max-width: 1000px) {
+  .two-cards {
+    grid-template-columns: 1fr;
+  }
+}

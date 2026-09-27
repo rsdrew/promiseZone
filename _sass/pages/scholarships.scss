@@ -1,25 +1,3 @@
-.general-information-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-xxl);
-  max-width: 60rem;
-}
-
-.general-information-item {
-  display: grid;
-  grid-template-columns: min-content auto;
-  gap: var(--sp-xl);
-
-  p {
-    font-weight: 700;
-  }
-
-  svg {
-    height: var(--sp-xxl);
-    width: var(--sp-xxl);
-  }
-}
-
 .resident-options-card {
   max-width: 60rem;
 }
