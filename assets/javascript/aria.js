@@ -63,8 +63,8 @@ class DisclosureNav {
     this.topLevelNodes.forEach((node) => {
       // handle button + menu
       if (
-        node.tagName.toLowerCase() === 'button' &&
-        node.hasAttribute('aria-controls')
+        (node.tagName.toLowerCase() === 'button' &&
+        node.hasAttribute('aria-controls')) 
       ) {
         const menu = node.parentNode.querySelector('ul');
         if (menu) {
@@ -133,7 +133,7 @@ class DisclosureNav {
   }
 
   onButtonClick(event) {
-    var button = event.target;
+    var button = event.currentTarget;
     var buttonIndex = this.topLevelNodes.indexOf(button);
     var buttonExpanded = button.getAttribute('aria-expanded') === 'true';
     this.toggleExpand(buttonIndex, !buttonExpanded);

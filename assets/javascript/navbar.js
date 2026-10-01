@@ -5,6 +5,7 @@ const navLinks = document.querySelector(".nav-links");
 const menuOpenBtn = document.querySelector(".navbar .bx-menu");
 const menuCloseBtn = document.querySelector(".nav-links .bx-x");
 
+// Hamburger icon opens the sidebar nav
 menuOpenBtn.onclick = function () {
   if (navLinks.style.left === "0px") {
     hideMenu();
@@ -13,43 +14,30 @@ menuOpenBtn.onclick = function () {
   }
 };
 
+// Close icon closes sidebar nav
 menuCloseBtn.onclick = function () {
   hideMenu();
 };
 
-let aboutList = document.querySelector(".about-list");
-aboutList.onclick = function () {
-  navLinks.classList.toggle("show-about-list");
-};
 
-let servicesList = document.querySelector(".services-list");
-servicesList.onclick = function () {
-  navLinks.classList.toggle("show-services-list");
-};
+// let links = document.querySelectorAll(".links li");
+// links.forEach((link) => {
+//   const a = link.querySelector("a");
+//   const arrow = link.querySelector("i.arrow");
+//   link.addEventListener("mouseover", (event) => {
+//     a.classList.add("hover");
+//     if (arrow) {
+//       arrow.classList.add("hover");
+//     }
+//   });
 
-let scholarshipsList = document.querySelector(".scholarships-list");
-scholarshipsList.onclick = function () {
-  navLinks.classList.toggle("show-scholarships-list");
-};
-
-let links = document.querySelectorAll(".links li");
-links.forEach((link) => {
-  const a = link.querySelector("a");
-  const arrow = link.querySelector("i.arrow");
-  link.addEventListener("mouseover", (event) => {
-    a.classList.add("hover");
-    if (arrow) {
-      arrow.classList.add("hover");
-    }
-  });
-
-  link.addEventListener("mouseout", (event) => {
-    a.classList.remove("hover");
-    if (arrow) {
-      arrow.classList.remove("hover");
-    }
-  });
-});
+//   link.addEventListener("mouseout", (event) => {
+//     a.classList.remove("hover");
+//     if (arrow) {
+//       arrow.classList.remove("hover");
+//     }
+//   });
+// });
 
 // Have the navbar disappear and reappear when scrolling
 const nav = document.querySelector("nav");
@@ -78,7 +66,7 @@ function hideMenu() {
 }
 
 // Show the sidemenu when focused
-document.querySelectorAll(".nav-links a, .nav-links button").forEach(element => {
+document.querySelectorAll(".nav-links a, .nav-links button").forEach((element) => {
   element.addEventListener("focus", showMenu);
 });
 

@@ -13,10 +13,12 @@
         <i class="bx bx-x"></i>
       </div>
       <ul class="links">
-        <li class="about-list">
-          <button type="button" aria-expanded="false" aria-controls="about-menu">About</button>
-          <i class="bx bxs-chevron-down htmlcss-arrow arrow"></i>
-          <ul id="about-menu" class="htmlCss-sub-menu sub-menu d-none">
+        <li id="about-list" class="nav-list">
+          <button id="about-button" type="button" aria-expanded="false" aria-controls="about-menu">
+            <div>About</div>
+            <i id="about-arrow" class="bx bxs-chevron-down arrow" aria-hidden="true"></i>
+          </button>
+          <ul id="about-menu" class="nav-menu d-none">
             <li><a href="{{ site.baseurl }}/our-work.html">Our Work</a></li>
             <li><a href="{{ site.baseurl }}/staff.html">Staff</a></li>
             <li>
@@ -42,10 +44,11 @@
         <li class="nav-item">
           <a href="{{ site.baseurl }}/eligibility.html">Eligibility</a>
         </li>
-        <li class="services-list">
-          <button type="button" aria-expanded="false" aria-controls="services-menu">Services</button>
-          <i class="bx bxs-chevron-down js-arrow arrow"></i>
-          <ul id="services-menu" class="js-sub-menu sub-menu d-none">
+        <li id="services-list" class="nav-list">
+          <button type="button" aria-expanded="false" aria-controls="services-menu">
+            Services <i class="bx bxs-chevron-down arrow" aria-hidden="true"></i>
+          </button>
+          <ul id="services-menu" class="nav-menu d-none">
             <li>
               <a href="{{ site.baseurl }}/college-preparation.html">College Preparation</a>
             </li>
@@ -59,12 +62,13 @@
           </ul>
         </li>
 
-        <li class="scholarships-list">
-          <button type="button" aria-expanded="false" aria-controls="scholarships-menu">Scholarships</button>
-          <i class="bx bxs-chevron-down js-arrow arrow"></i>
-          <ul id="scholarships-menu" class="js-sub-menu sub-menu d-none">
+        <li id="scholarships-list" class="nav-list">
+          <button type="button" aria-expanded="false" aria-controls="scholarships-menu">
+            Scholarships <i class="bx bxs-chevron-down arrow" aria-hidden="true"></i>
+          </button>
+          <ul id="scholarships-menu" class="nav-menu d-none">
             <li>
-              <a href="{{ site.baseurl }}/scholarship-eligibility.html">Eligibility</a>
+              <a href="{{ site.baseurl }}/scholarship-eligibility.html">Scholarship Eligibility</a>
             </li>
             <li>
               <a href="{{ site.baseurl }}/occ-scholarship.html">OCC Scholarship</a>
