@@ -5,47 +5,60 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: calc(100svh - 100px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--sp-xxxxl);
-  padding: 2rem 10vw;
+  padding: 6rem 10vw;
 
   &__opacity {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(231, 231, 231, 0.7), transparent);
   }
 
-  &__title {
-    z-index: 3;
-    font-size: clamp(1.75rem, 1.2407rem + 2.716vw, 3.5rem);
-    max-width: 625px;
-    font-weight: 600;
-
-    &__focus {
-      color: var(--brand);
-      width: fit-content;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-  }
-
-  &__subtitle {
-    font-size: var(--fs-lg);
-    font-weight: 400;
-    font-family: var(--ff-body);
-    max-width: 600px;
-    line-height: 1.5;
-  }
-
-  #cta-buttons-wrapper {
-    flex-grow: 0;
+  &__text-wrapper {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: var(--sp-xxl);
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--sp-xxxxl);
+    max-width: 625px;
+    width: 100%;
+    height: 100%;
+    padding: var(--sp-xxl);
 
-    @media (max-width: 700px) {
-      flex-direction: column;
+    &__title {
+      z-index: 3;
+      font-size: clamp(1.75rem, 1.2407rem + 2.716vw, 3.5rem);
+      max-width: 625px;
+      font-weight: 600;
+
+      &__focus {
+        color: var(--brand);
+        width: fit-content;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+    }
+
+    &__subtitle {
+      font-size: var(--fs-lg);
+      font-weight: 400;
+      font-family: var(--ff-body);
+      max-width: 600px;
+      line-height: 1.5;
+      z-index: 1;
+    }
+
+    #cta-buttons-wrapper {
+      flex-grow: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: var(--sp-xxl);
+
+      @media (max-width: 700px) {
+        flex-direction: column;
+      }
     }
   }
 }
@@ -113,7 +126,7 @@
       width: 100%;
       height: 100%;
       background: rgb(231, 231, 231, 0.7);
-      backdrop-filter: blur(40px);
+      backdrop-filter: blur(20px);
       position: absolute;
       top: 0;
       left: 0;
